@@ -1,10 +1,14 @@
 <template>
-    <header flex flex-row items-center p-10 w-full rounded-lg drop-shadow-lg bg-white dark:bg-black transition-colors>
-        <div grow justify-start>
-            <slot name="logo"></slot>
-            <span>{{ $props.titleName }}</span>
+    <header class="flex flex-row items-center px-8 py-3 w-full drop-shadow-sm bg-white dark:bg-black">
+        <div class="grow justify-start">
+            <span class="inline-block -translate-y-0.5">
+                <slot name="logo">
+                </slot>
+            </span>
+            <span class="px-1.5"></span>
+            <span class="text-xl font-medium">{{ $props.titleName }}</span>
         </div>
-        <nav justify-end>
+        <nav class="justify-end">
             <NavButton link="/">Mirrors</NavButton>
         </nav>
     </header>
