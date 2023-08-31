@@ -1,6 +1,6 @@
 <template>
     <header class="flex flex-row items-center px-10 py-3 w-full drop-shadow-sm bg-white dark:bg-black">
-        <div class="grow justify-start">
+        <div class="grow justify-start translate-y-0.5">
             <NuxtLink to="/">
                 <span class="inline-block -translate-y-0.5">
                     <slot name="logo">
