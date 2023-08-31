@@ -18,7 +18,4 @@ export default defineNuxtConfig({
             autoprefixer: {},
         },
     },
-    experimental: {
-        renderJsonPayloads: false,
-    },
 })
