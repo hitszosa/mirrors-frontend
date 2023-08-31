@@ -12,6 +12,7 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.8.1",
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.0",
     "@storybook/addon-essentials": "^7.4.0",
