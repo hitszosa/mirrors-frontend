@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    modules: ['@pinia/nuxt', '@nuxtjs/color-mode', 'nuxt-icon', 'dayjs-nuxt'],
+    modules: [
+        '@pinia/nuxt',
+        '@nuxtjs/color-mode',
+        '@nuxt/content',
+        'nuxt-icon',
+        'dayjs-nuxt',
+    ],
     colorMode: {
         classSuffix: '',
     },
