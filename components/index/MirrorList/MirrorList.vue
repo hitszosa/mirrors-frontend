@@ -2,6 +2,21 @@
     <NDataTable :bordered="false" :columns="columns" :data="rowData" class="text-base" />
 </template>
 
+<style lang="scss">
+.n-data-table-base-table {
+    min-height: 24em;
+    position: relative;
+}
+
+.n-data-table-empty {
+    display: inline-block;
+    position: absolute;
+    top: 8em;
+    padding: 0 !important;
+    width: fill;
+}
+</style>
+
 <script setup lang="ts">
 import { h } from 'vue'
 import type { DataTableColumns } from 'naive-ui'
