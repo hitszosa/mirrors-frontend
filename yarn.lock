@@ -4944,6 +4944,19 @@ date-fns@^2.28.0:
   dependencies:
     "@babel/runtime" "^7.21.0"
 
+dayjs-nuxt@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/dayjs-nuxt/-/dayjs-nuxt-1.1.2.tgz#1a6ec33cfaf85346a6ac5f60826d1c33e767eeb1"
+  integrity sha512-hYcAS7MLkfqU6lrUV12HUtckFE8OkqtIKIaII31zCTg+tH63DOy8yHat/TgkepgbjSmvYHH/uzXtub8oKYU5Gg==
+  dependencies:
+    "@nuxt/kit" "^3.5.3"
+    dayjs "^1.11.8"
+
+dayjs@^1.11.8, dayjs@^1.11.9:
+  version "1.11.9"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.9.tgz#9ca491933fadd0a60a2c19f6c237c03517d71d1a"
+  integrity sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==
+
 debug@2.6.9, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
