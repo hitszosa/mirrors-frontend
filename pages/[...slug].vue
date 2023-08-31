@@ -1,8 +1,10 @@
 <template>
-    <article class="max-w-5xl">
+    <article class="max-w-5xl markdown-body"> <!-- TODO: Add dark:prose-invert -->
         <ContentDoc />
     </article>
 </template>
 
-<style lang="ts" scoped>
-</style>
+<script setup lang="ts">
+import 'github-markdown-css'
+import '~/assets/css/markdown-extended.scss'
+</script>

@@ -1,0 +1,31 @@
+$accent_blue: rgb(96 165 250);
+
+.markdown-body {
+    ul {
+        list-style-type: circle;
+    }
+    h2,
+    h3,
+    h4 {
+        a {
+            color: inherit;
+            position: relative;
+            &:hover {
+                text-decoration: none;
+            }
+            &::before {
+                position: absolute;
+                display: none;
+                left: -1em;
+                content: '#';
+                color: $accent_blue;
+            }
+            &:hover::before {
+                display: inline-block;
+            }
+        }
+    }
+    a {
+        color: $accent_blue;
+    }
+}
