@@ -18,6 +18,7 @@
 </style>
 
 <script setup lang="ts">
+// TODO: Replace Naive UI with a stable framework
 import { h } from 'vue'
 import type { DataTableColumns } from 'naive-ui'
 import { NTag, NDataTable } from 'naive-ui'

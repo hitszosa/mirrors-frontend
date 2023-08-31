@@ -17,10 +17,10 @@
                     <NavButton link="/">Home</NavButton>
                 </li>
                 <li>
-                    <NavButton link="/docs">Docs</NavButton>
+                    <NavButton link="/">Docs</NavButton>
                 </li>
                 <li>
-                    <NavButton link="/news">News</NavButton>
+                    <NavButton link="/">News</NavButton>
                 </li>
                 <li>
                     <NavButton link="/about">About</NavButton>
