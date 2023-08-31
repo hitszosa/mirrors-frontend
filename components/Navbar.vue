@@ -11,7 +11,7 @@
                 <span class="text-xl font-medium">{{ $props.titleName }}</span>
             </NuxtLink>
         </div>
-        <nav class="justify-end font-medium">
+        <nav class="justify-end font-medium text-base">
             <ul class="flex flex-row list-none space-x-8">
                 <li>
                     <NavButton link="/">Home</NavButton>
