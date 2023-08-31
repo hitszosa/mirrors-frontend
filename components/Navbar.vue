@@ -10,19 +10,19 @@
                 <span class="text-xl font-medium">{{ $props.titleName }}</span>
             </NuxtLink>
         </div>
-        <nav class="justify-end">
+        <nav class="justify-end font-medium">
             <ul class="flex flex-row list-none space-x-8">
                 <li>
                     <NavButton link="/">Home</NavButton>
                 </li>
                 <li>
-                    <NavButton link="/">Help</NavButton>
+                    <NavButton link="/docs">Docs</NavButton>
                 </li>
                 <li>
-                    <NavButton link="/">News</NavButton>
+                    <NavButton link="/news">News</NavButton>
                 </li>
                 <li>
-                    <NavButton link="/">About</NavButton>
+                    <NavButton link="/about">About</NavButton>
                 </li>
             </ul>
         </nav>
