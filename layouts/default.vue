@@ -5,6 +5,10 @@
                 <Icon size="3em" name="uil:github" />
             </template>
         </Navbar>
-        <slot />
+        <main class="flex justify-center p-10">
+            <slot />
+        </main>
+        <div class="py-4"></div>
+        <Footer></Footer>
     </div>
 </template>
