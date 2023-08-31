@@ -1,6 +1,6 @@
 <template>
     <header
-        class="flex flex-row items-center px-10 h-16 z-50 w-full drop-shadow-sm backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-black/80">
+        class="flex flex-row items-center px-10 h-16 z-50 w-full drop-shadow-sm backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-black/70">
         <div class="grow justify-start translate-y-0.5">
             <NuxtLink to="/">
                 <span class="inline-block -translate-y-0.5">
