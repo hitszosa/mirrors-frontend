@@ -7,6 +7,7 @@ export default defineNuxtConfig({
         'nuxt-icon',
         'dayjs-nuxt',
     ],
+    ssr: false,
     colorMode: {
         classSuffix: '',
     },
