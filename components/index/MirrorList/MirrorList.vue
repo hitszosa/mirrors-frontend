@@ -1,12 +1,5 @@
 <template>
-    <div class="flex flex-col">
-        <div>
-            <h1>镜像列表</h1>
-        </div>
-        <div>
-            <NDataTable :bordered="false" :columns="columns" :data="rowData" />
-        </div>
-    </div>
+    <NDataTable :bordered="false" :columns="columns" :data="rowData" class="text-base" />
 </template>
 
 <script setup lang="ts">
