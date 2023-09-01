@@ -14,7 +14,7 @@
         >
             <BaseSectionHeading>
                 <template v-slot:icon>
-                    <Icon name="icon-park-outline:dropbox"></Icon>
+                    <Icon name="icon-park-outline:record-disc"></Icon>
                 </template>
                 Get LiveCD
             </BaseSectionHeading>
