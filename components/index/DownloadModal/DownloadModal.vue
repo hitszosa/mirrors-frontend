@@ -13,7 +13,7 @@
                 </UButton>
             </div>
         </template>
-        <div class="flex flex-row space-x-6">
+        <div v-if="collections.length > 0" class="flex flex-row space-x-6">
             <BaseRadioSelection :items="collections" :index="collectionIndex" @update:index="onCollectionUpdate" />
             <ul class="grow list-disc p-1 pl-4 text-lg space-y-1">
                 <li v-for="resource in currentCollection" :key="resource.name">
@@ -22,6 +22,10 @@
                     </a>
                 </li>
             </ul>
+        </div>
+        <div v-else class="flex flex-row space-x-6">
+            <USkeleton class="h-[28em] w-40" />
+            <USkeleton class="h-[28em] grow" />
         </div>
     </UCard>
 </template>
