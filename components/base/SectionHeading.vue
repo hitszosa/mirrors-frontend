@@ -1,5 +1,5 @@
 <template>
-    <h2 class="text-2xl font-medium space-x-1.5">
+    <h2 class="font-medium space-x-1.5" :class="styleClass">
         <span class="inline-block -translate-y-0.5">
             <slot name="icon"></slot>
         </span>
@@ -11,3 +11,17 @@
         </span>
     </h2>
 </template>
+
+<script setup lang="ts">
+export interface Props {
+    compact?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+    compact: false
+})
+
+const styleClass = computed(() => {
+    return props.compact ? "text-xl" : "text-2xl"
+})
+</script>

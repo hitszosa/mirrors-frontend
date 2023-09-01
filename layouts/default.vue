@@ -1,7 +1,7 @@
 <template>
     <div class="h-screen text-slate-800">
         <Navbar title-name="HITSZ OSA Mirrors" class="fixed top-0 left-0 right-0">
-            <template v-slot:logo>
+            <template #logo>
                 <Icon size="3em" name="uil:github" />
             </template>
         </Navbar>

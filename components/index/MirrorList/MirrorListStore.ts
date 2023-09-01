@@ -9,9 +9,8 @@ type RowData = {
 }
 
 export const useMirrorListStore = defineStore('mirror-list', () => {
-    const rows = ref<RowData[]>([])
-    const rawData = ref(null)
-    const createData = async function () {
+    const rowData = ref<RowData[]>([])
+    const createData = async () => {
         const tunasync = await fetch('/api/getMirrorListData')
         const data = await tunasync.json()
         rawData.value = data
