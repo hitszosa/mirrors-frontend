@@ -8,6 +8,10 @@ type RowData = {
     status: string
 }
 
+const getMirrorListData = async () => {
+    return await fetch('http://10.249.12.85/jobs')
+}
+
 export const useMirrorListStore = defineStore('mirror-list', () => {
     const rows = ref<RowData[]>([])
     const rawData = ref(null)

@@ -213,7 +213,7 @@ const mockResourceCollection: ResourceCollection = {
     Dummy91: [],
 }
 
-export const fetchResourceCollection = async () => {
+export const fetchMockResourceCollection = async () => {
     await new Promise((r) => setTimeout(r, 500))
     return mockResourceCollection
 }
