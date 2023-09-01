@@ -1,7 +1,11 @@
 $accent_blue: rgb(96 165 250);
 $dark_background: rgb(17, 24, 39);
 .markdown-body {
-    background-color: $dark_background;
+    @media (prefers-color-scheme: dark) {
+        & {
+            background-color: $dark_background;
+        }
+    }
     ul {
         list-style-type: circle;
     }
