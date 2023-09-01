@@ -1,8 +1,21 @@
 <template>
-    <div class="flex flex-row space-x-6 w-full max-w-screen-lg">
-        <IndexMirrorList class="grow" />
-        <div class="w-96 bg-slate-100">
-            Under construction.
-        </div>
+    <div class="flex flex-row space-x-12 w-full max-w-screen-xl">
+        <section class="flex flex-col space-y-6 grow">
+            <BaseSectionHeading>
+                <template v-slot:icon>
+                    <Icon name="icon-park-outline:dropbox"></Icon>
+                </template>
+                Index of Mirrors
+            </BaseSectionHeading>
+            <IndexMirrorList />
+        </section>
+        <section class="flex flex-col space-y-6 w-[32em] bg-slate-50 rounded-xl p-7">
+            <BaseSectionHeading>
+                <template v-slot:icon>
+                    <Icon name="icon-park-outline:dropbox"></Icon>
+                </template>
+                Get LiveCD
+            </BaseSectionHeading>
+        </section>
     </div>
 </template>
