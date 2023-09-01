@@ -23,7 +23,7 @@ const getTagType = (status: string) => {
         case 'success':
             return 'primary'
         case 'syncing':
-            return 'sky'
+            return 'blue'
         case 'failed':
             return 'red'
     }
