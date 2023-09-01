@@ -6,7 +6,23 @@
             </template>
             Recent News
         </BaseSectionHeading>
-        <p>本站近期新闻。</p>
+        <ContentList path="/news" v-slot="{ list }">
+            <div>
+                <ul class="list-disc list-inside pl-2">
+                    <li v-for="article in list" :key="article._path">
+                        {{ article.title }}
+                    </li>
+                </ul>
+            </div>
+        </ContentList>
+        <UButton
+            color="white"
+            variant="solid"
+            block
+            class="transition delay-50"
+        >
+            Read More
+        </UButton>
     </section>
 </template>
 
