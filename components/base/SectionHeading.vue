@@ -1,5 +1,5 @@
 <template>
-    <h2 class="text-2xl font-medium space-x-1">
+    <h2 class="text-2xl font-medium space-x-1.5">
         <span class="inline-block -translate-y-0.5">
             <slot name="icon"></slot>
         </span>
