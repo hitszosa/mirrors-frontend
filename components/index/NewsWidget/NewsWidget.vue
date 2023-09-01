@@ -8,14 +8,8 @@
         </BaseSectionHeading>
         <ContentList path="/news" v-slot="{ list }">
             <div>
-                <ul class="list-disc list-inside pl-2">
-                    <li v-for="article in list" :key="article._path">
-                        <a
-                            class="transition delay-50 after:transition-all relative inline-block z-10 after:block after:absolute after:rounded-md after:bg-blue-200 after:w-0 after:h-0 after:-right-0 after:bottom-1 after:-z-10 hocus:after:w-full hocus:after:h-1 hocus:after:right-0 hover:cursor-pointer"
-                        >
-                            {{ article.title }}</a
-                        >
-                    </li>
+                <ul class="list-none list-inside px-2">
+                    <IndexNewsWidgetItem :list="list" />
                 </ul>
             </div>
         </ContentList>
@@ -29,5 +23,3 @@
         </UButton>
     </section>
 </template>
-
-<script setup lang="ts"></script>
