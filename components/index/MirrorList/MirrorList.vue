@@ -1,19 +1,15 @@
 <template>
-    <section class="flex flex-col space-y-4 grow">
-        <BaseSectionHeading>
-            <template v-slot:icon>
-                <Icon name="icon-park-outline:dropbox"></Icon>
-            </template>
-            Index of Mirrors
-        </BaseSectionHeading>
-        <UTable :columns="columns" :rows="rows">
-            <template #status-data="{ row }">
-                <UBadge :color="getTagType(row.status)">{{
-                    row.status
-                }}</UBadge>
-            </template>
-        </UTable>
-    </section>
+    <BaseSectionHeading>
+        <template v-slot:icon>
+            <Icon name="icon-park-outline:dropbox"></Icon>
+        </template>
+        Index of Mirrors
+    </BaseSectionHeading>
+    <UTable :columns="columns" :rows="rows">
+        <template #status-data="{ row }">
+            <UBadge :color="getTagType(row.status)">{{ row.status }}</UBadge>
+        </template>
+    </UTable>
 </template>
 
 <script setup lang="ts">
