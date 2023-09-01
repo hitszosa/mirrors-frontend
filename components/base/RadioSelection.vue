@@ -1,0 +1,32 @@
+<template>
+    <ul class="first-letter:flex flex-col h-min list-none bg-gray-100 p-1 rounded-xl">
+        <li v-for="(item, index) in $props.items" :key="item" @click="onSelect(item, index)">
+            <button class="transition delay-50 py-3 px-7 w-full rounded-xl" :class="getButtonStyle(index)">
+                {{ item }}
+            </button>
+        </li>
+    </ul>
+</template>
+
+<script setup lang="ts">
+const props = defineProps<{
+    items: string[],
+    index: number
+}>()
+const emit = defineEmits<{
+    'update:index': [item: string, index: number]
+}>()
+
+const getButtonStyle = (index: number) => {
+    return index === props.index ? 'bg-white drop-shadow-sm' : ''
+}
+const emitUpdate = () => {
+    emit('update:index', props.items[0], 0)
+}
+
+const onSelect = (item: string, index: number) => {
+    emit('update:index', item, index)
+}
+
+emitUpdate()
+</script>

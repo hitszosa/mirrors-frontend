@@ -13,27 +13,37 @@
                 </UButton>
             </div>
         </template>
-        <UTabs :items="tabs" class="w-full">
-        </UTabs>
-        <template #footer>
-            <!-- Content -->
-        </template>
+        <div class="flex flex-row space-x-6">
+            <BaseRadioSelection :items="collections" :index="collectionIndex" @update:index="onCollectionUpdate" />
+            <ul class="grow list-disc p-1 pl-4 text-lg space-y-1">
+                <li v-for="resource in currentCollection" :key="resource.name">
+                    <a :href="resource.link" target="_blank" class="text-blue-500">
+                        {{ resource.name }}
+                    </a>
+                </li>
+            </ul>
+        </div>
     </UCard>
 </template>
 
 <script setup lang="ts">
-import { mockResourceDirectories } from './mockResourceDirectories';
+import { useDownloadStore } from './DownloadStore'
+import { storeToRefs } from 'pinia'
+
+const store = useDownloadStore()
+const { resourceCollection } = storeToRefs(store)
 
 defineEmits<{
     close: []
 }>()
 
-const resourceDirectory = ref(mockResourceDirectories)
-console.log(resourceDirectory.value.target)
-const tabs = computed(() => {
-    const categories = resourceDirectory.value.keys
-    return categories.array.forEach(p => {
-        label: p
-    });
-})
+const collectionIndex = ref(0)
+const currentCollection = ref(Object.values(resourceCollection.value)[0])
+
+const collections = computed(() => Object.keys(resourceCollection.value))
+
+const onCollectionUpdate = (collection: string, index: number) => {
+    collectionIndex.value = index
+    currentCollection.value = resourceCollection.value[collection]
+}
 </script>
