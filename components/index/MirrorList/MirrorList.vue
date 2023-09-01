@@ -5,7 +5,7 @@
         </template>
         Index of Mirrors
     </BaseSectionHeading>
-    <UTable :columns="columns" :rows="rows">
+    <UTable :columns="columns" :rows="rows" :loading="loading">
         <template #status-data="{ row }">
             <UBadge :color="getTagType(row.status)">{{ row.status }}</UBadge>
         </template>
@@ -16,7 +16,7 @@
 import { useMirrorListStore } from './MirrorListStore'
 import { storeToRefs } from 'pinia'
 const store = useMirrorListStore()
-const { rows } = storeToRefs(store)
+const { rows, loading } = storeToRefs(store)
 
 const getTagType = (status: string) => {
     switch (status) {

@@ -11,6 +11,7 @@ type RowData = {
 export const useMirrorListStore = defineStore('mirror-list', () => {
     const rows = ref<RowData[]>([])
     const rawData = ref(null)
+    const loading = ref(true)
     const createData = async () => {
         const tunasync = await fetch('/api/getMirrorListData')
         const data = await tunasync.json()
@@ -27,12 +28,14 @@ export const useMirrorListStore = defineStore('mirror-list', () => {
                     status: item.status,
                 }
             })
+        loading.value = false
     }
     onMounted(async () => {
         await createData()
     })
     return {
         rows,
+        loading,
         rawData,
     }
 })
