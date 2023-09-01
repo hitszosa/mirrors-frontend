@@ -9,11 +9,13 @@ type RowData = {
 }
 
 export const useMirrorListStore = defineStore('mirror-list', () => {
-    const rowData = ref<RowData[]>([])
+    const rows = ref<RowData[]>([])
+    const rawData = ref(null)
     const createData = async function () {
         const tunasync = await fetch('/api/getMirrorListData')
         const data = await tunasync.json()
-        rowData.value = data
+        rawData.value = data
+        rows.value = data
             .sort((a, b) => a.name.localeCompare(b.name))
             .map((item, idx) => {
                 return {
@@ -30,6 +32,7 @@ export const useMirrorListStore = defineStore('mirror-list', () => {
         await createData()
     })
     return {
-        rowData,
+        rows,
+        rawData,
     }
 })
