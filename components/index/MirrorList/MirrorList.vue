@@ -1,80 +1,41 @@
 <template>
-    <NDataTable :bordered="false" :columns="columns" :data="rowData" class="text-base" />
+    <UTable :columns="columns" :rows="rowData">
+        <template #status-data="{ row }">
+            <UBadge :color="getTagType(row.status)">{{ row.status }}</UBadge>
+        </template>
+    </UTable>
 </template>
 
-<style lang="scss">
-.n-data-table-base-table {
-    min-height: 24em;
-    position: relative;
-}
-
-.n-data-table-empty {
-    display: inline-block;
-    position: absolute;
-    top: 8em;
-    padding: 0 !important;
-    width: fill;
-}
-</style>
-
 <script setup lang="ts">
-// TODO: Replace Naive UI with a stable framework
-import { h } from 'vue'
-import type { DataTableColumns } from 'naive-ui'
-import { NTag, NDataTable } from 'naive-ui'
 import { useMirrorListStore } from './MirrorListStore'
 import { storeToRefs } from 'pinia'
 const store = useMirrorListStore()
 const { rowData } = storeToRefs(store)
 
-type RowData = {
-    key: number
-    name: string
-    lastUpdate: string
-    status: string
-}
-
 const getTagType = (status: string) => {
     switch (status) {
         case 'success':
-            return 'success'
+            return 'primary'
         case 'syncing':
-            return 'info'
+            return 'sky'
         case 'failed':
-            return 'error'
+            return 'red'
     }
 }
 
-const createColumns = function (): DataTableColumns<RowData> {
+const createColumns = function () {
     return [
         {
-            title: 'Name',
-            minWidth: 200,
             key: 'name',
+            label: 'Name',
         },
         {
-            title: 'Last Update',
-            minWidth: 200,
             key: 'lastUpdate',
+            label: 'Last Update',
         },
         {
-            title: 'Status',
             key: 'status',
-            render(row) {
-                const status = row.status
-                return h(
-                    NTag,
-                    {
-                        style: {
-                            marginRight: '6px',
-                        },
-                        type: getTagType(status),
-                    },
-                    {
-                        default: () => status,
-                    },
-                )
-            },
+            label: 'Status',
         },
     ]
 }

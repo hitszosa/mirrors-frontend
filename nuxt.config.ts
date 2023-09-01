@@ -6,6 +6,7 @@ export default defineNuxtConfig({
         '@nuxt/content',
         'nuxt-icon',
         'dayjs-nuxt',
+        '@nuxthq/ui',
     ],
     ssr: true,
     colorMode: {

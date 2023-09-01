@@ -1,8 +1,15 @@
 import { defineStore } from 'pinia'
 import * as dayjs from 'dayjs'
 
+type RowData = {
+    id: number
+    name: string
+    lastUpdate: string
+    status: string
+}
+
 export const useMirrorListStore = defineStore('mirror-list', () => {
-    const rowData = ref([])
+    const rowData = ref<RowData[]>([])
     const createData = async function () {
         const tunasync = await fetch('/api/getMirrorListData')
         const data = await tunasync.json()
@@ -10,7 +17,7 @@ export const useMirrorListStore = defineStore('mirror-list', () => {
             .sort((a, b) => a.name.localeCompare(b.name))
             .map((item, idx) => {
                 return {
-                    key: idx,
+                    id: idx,
                     name: item.name,
                     lastUpdate: dayjs
                         .unix(item['last_update_ts'])
