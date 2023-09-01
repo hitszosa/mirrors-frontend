@@ -8,7 +8,8 @@ export type Resource = {
 export type ResourceCollection = Record<string, Resource[]>
 
 const fetchResourceCollection = async () => {
-    return await fetch('http://10.249.12.85/static/isoLinks2.json')
+    const res = await fetch('http://10.249.12.85/static/isoLinks2.json')
+    return await res.json()
 }
 
 export const useDownloadStore = defineStore('resource-collection', () => {
