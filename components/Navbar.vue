@@ -1,14 +1,21 @@
 <template>
     <header
-        class="flex flex-row items-center px-10 h-16 z-50 w-full drop-shadow-sm backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-black/70">
-        <div class="grow justify-start translate-y-0.5">
+        class="flex flex-row items-center px-10 h-16 z-50 w-full drop-shadow-sm backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-black/70"
+    >
+        <div class="grow justify-start">
             <NuxtLink to="/">
-                <span class="inline-block -translate-y-0.5">
-                    <slot name="logo">
-                    </slot>
-                </span>
-                <span class="px-1.5"></span>
-                <span class="text-xl font-medium text-slate-800 dark:text-slate-200">{{ $props.titleName }}</span>
+                <div class="flex items-center">
+                    <div
+                        class="inline-block flex flex-row items-center justify-center"
+                    >
+                        <slot name="logo"> </slot>
+                    </div>
+                    <span class="px-1.5"></span>
+                    <span
+                        class="text-xl font-medium text-slate-800 dark:text-slate-200"
+                        >{{ $props.titleName }}</span
+                    >
+                </div>
             </NuxtLink>
         </div>
         <nav class="justify-end font-medium text-base">
