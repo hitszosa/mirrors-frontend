@@ -5,9 +5,15 @@
         </template>
         Index of Mirrors
     </BaseSectionHeading>
-    <UTable :columns="columns" :rows="rows" :loading="loading">
+    <UTable :columns="columns" :rows="rows" :loading="loading"
+        :ui="{ td: { size: 'text-base' }, th: { size: 'text-base' } }">
         <template #status-data="{ row }">
             <UBadge :color="getTagType(row.status)">{{ row.status }}</UBadge>
+        </template>
+        <template #files-data="{ row }">
+            <NuxtLink :to="row.files" target="_blank" class="text-lg">
+                <Icon name="icon-park-outline:folder-open" />
+            </NuxtLink>
         </template>
     </UTable>
 </template>
@@ -34,6 +40,10 @@ const createColumns = function () {
         {
             key: 'name',
             label: 'Name',
+        },
+        {
+            key: 'files',
+            label: 'Files',
         },
         {
             key: 'lastUpdate',

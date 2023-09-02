@@ -4,6 +4,7 @@ import * as dayjs from 'dayjs'
 type RowData = {
     id: number
     name: string
+    files: string
     lastUpdate: string
     status: string
 }
@@ -26,6 +27,10 @@ export const useMirrorListStore = defineStore('mirror-list', () => {
                 return {
                     id: idx,
                     name: item.name,
+                    files: (item.upstream as string).replace(
+                        /[a-z0-9\-]+:\/\/([a-z0-9@\-\_\.]+)/i,
+                        '',
+                    ),
                     lastUpdate: dayjs
                         .unix(item['last_update_ts'])
                         .format('YYYY-MM-DD HH:mm'),
