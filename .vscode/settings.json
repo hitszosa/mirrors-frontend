@@ -1,9 +1,18 @@
 {
   "editor.formatOnSave": true,
   "prettier.enable": false,
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "files.autoSave": "onFocusChange",
   "[vue]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-  }
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.format.enable": true,
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "vue",
+    "html",
+    "markdown"
+  ]
 }
