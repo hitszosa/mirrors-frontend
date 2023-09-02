@@ -9,7 +9,7 @@
         <p>
             在此处下载本站镜像的 Linux 发行版 LiveCD 和开源软件。
         </p>
-        <UButton color="white" variant="solid" block @click="onToggleModal" class="transition delay-50">
+        <UButton color="white" variant="solid" block @click="onToggleModal" class="transition ">
             Get LiveCD & Software
         </UButton>
         <UModal v-model="isOpen"

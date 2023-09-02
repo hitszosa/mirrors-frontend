@@ -13,12 +13,7 @@
                 </ul>
             </div>
         </ContentList>
-        <UButton
-            color="white"
-            variant="solid"
-            block
-            class="transition delay-50"
-        >
+        <UButton color="white" variant="solid" block class="transition ">
             Read More
         </UButton>
     </section>

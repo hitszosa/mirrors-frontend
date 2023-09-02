@@ -5,7 +5,7 @@
                 <Icon name="icon-park-outline:align-text-left" />
             </div>
             <a
-                class="truncate transition delay-50 relative inline-block z-10 hocus:underline hocus:underline-offset-4 hover:cursor-pointer">
+                class="truncate transition relative inline-block z-10 hocus:underline hocus:underline-offset-4 hover:cursor-pointer">
                 {{ article.title }}
             </a>
         </div>

@@ -4,7 +4,7 @@
         <div class="grow justify-start">
             <NuxtLink to="/">
                 <div class="flex items-center">
-                    <div class="inline-block flex flex-row items-center justify-center">
+                    <div class="flex flex-row items-center justify-center">
                         <slot name="logo"> </slot>
                     </div>
                     <span class="px-1.5"></span>

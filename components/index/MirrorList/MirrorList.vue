@@ -11,7 +11,7 @@
             <UBadge :color="getTagType(row.status)">{{ row.status }}</UBadge>
         </template>
         <template #files-data="{ row }">
-            <NuxtLink v-if="row.files" :to="row.files" target="_blank" class="text-lg">
+            <NuxtLink v-if="row.files" :to="row.files" target="_blank" class="transition text-lg hocus:text-blue-400">
                 <Icon name="icon-park-outline:folder-open" />
             </NuxtLink>
         </template>
