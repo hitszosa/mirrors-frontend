@@ -2,5 +2,8 @@
   "editor.formatOnSave": true,
   "prettier.enable": false,
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "onFocusChange",
+  "[vue]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
 }
