@@ -9,3 +9,9 @@
         </section>
     </div>
 </template>
+
+<script setup lang="ts">
+useHead({
+    title: 'HITSZ OSA Mirrors',
+})
+</script>
