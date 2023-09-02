@@ -1,5 +1,8 @@
 <template>
-  <h2 class="font-medium space-x-1.5" :class="styleClass">
+  <h2
+    class="font-medium space-x-1.5"
+    :class="styleClass"
+  >
     <span class="inline-block -translate-y-0.5">
       <slot name="icon" />
     </span>
