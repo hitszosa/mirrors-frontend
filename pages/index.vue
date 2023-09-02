@@ -1,17 +1,17 @@
 <template>
-    <div class="flex flex-row space-x-12 w-full max-w-screen-xl">
-        <section class="flex flex-col space-y-4 grow">
-            <IndexMirrorList />
-        </section>
-        <section class="flex flex-col p-7 space-y-10 w-[26em] h-min bg-slate-50 dark:bg-gray-800 rounded-xl">
-            <IndexDownloadWidget />
-            <IndexNewsWidget />
-        </section>
-    </div>
+  <div class="flex flex-row space-x-12 w-full max-w-screen-xl">
+    <section class="flex flex-col space-y-4 grow">
+      <IndexMirrorList />
+    </section>
+    <section class="flex flex-col p-7 space-y-10 w-[26em] h-min bg-slate-50 dark:bg-gray-800 rounded-xl">
+      <IndexDownloadWidget />
+      <IndexNewsWidget />
+    </section>
+  </div>
 </template>
 
 <script setup lang="ts">
 useHead({
-    title: 'HITSZ OSA Mirrors',
+  title: 'HITSZ OSA Mirrors',
 })
 </script>

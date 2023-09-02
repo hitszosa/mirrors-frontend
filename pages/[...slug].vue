@@ -1,7 +1,8 @@
 <template>
-    <article class="max-w-screen-xl markdown-body"> <!-- TODO: Add dark:prose-invert -->
-        <ContentDoc />
-    </article>
+  <article class="max-w-screen-xl markdown-body">
+    <!-- TODO: Add dark:prose-invert -->
+    <ContentDoc />
+  </article>
 </template>
 
 <script setup lang="ts">
