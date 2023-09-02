@@ -7,6 +7,7 @@ export default defineNuxtConfig({
         'nuxt-icon',
         'dayjs-nuxt',
         '@nuxthq/ui',
+        '@nuxtjs/eslint-module'
     ],
     ssr: true,
     colorMode: {

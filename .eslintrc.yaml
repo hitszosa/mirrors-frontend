@@ -1,0 +1,35 @@
+---
+root: true
+extends:
+  - eslint:recommended
+  - plugin:vue/vue3-recommended
+rules:
+  comma-dangle:
+    - error
+    - only-multiline
+  operator-linebreak:
+    - error
+    - before
+  semi:
+    - error
+    - never
+  indent:
+    - error
+    - 2
+  quotes:
+    - error
+    - single
+  no-multi-spaces:
+    - error
+  no-multiple-empty-lines:
+    - error
+  keyword-spacing:
+    - error
+  arrow-spacing:
+    - error
+  object-curly-spacing:
+    - error
+    - always
+  space-in-parens:
+    - error
+    - never
