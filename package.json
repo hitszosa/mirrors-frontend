@@ -7,9 +7,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "format": "eslint --ext .vue,.js,.ts,.html --ignore-path .gitignore --fix .",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "format": "eslint --ext .vue,.js,.ts,.html --ignore-path .gitignore --fix ."
   },
   "devDependencies": {
     "@nuxt/content": "^2.8.1",
