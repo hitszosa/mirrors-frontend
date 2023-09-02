@@ -1,5 +1,5 @@
 <template>
-    <ul class="first-letter:flex flex-col h-min list-none bg-gray-100 dark:bg-gray-800 p-1 rounded-xl">
+    <ul class="first-letter:flex flex-col h-min list-none bg-gray-100 dark:bg-gray-800 p-1 rounded-xl whitespace-nowrap">
         <li v-for="(item, index) in $props.items" :key="item" @click="onSelect(item, index)">
             <button class="transition delay-50 py-3 px-7 w-full rounded-xl" :class="getButtonStyle(index)">
                 {{ item }}

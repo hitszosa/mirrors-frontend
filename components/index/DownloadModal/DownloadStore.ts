@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { fetchMockResourceCollection } from './mockResourceCollection'
+import { fetchMockResourceCollection } from './MockResourceCollection'
 
 export type Resource = {
     name: string

@@ -196,21 +196,6 @@ const mockResourceCollection: ResourceCollection = {
     Dummy1: [],
     Dummy2: [],
     Dummy3: [],
-    Dummy4: [],
-    Dummy5: [],
-    Dummy6: [],
-    Dummy7: [],
-    Dummy8: [],
-    Dummy9: [],
-    Dummy11: [],
-    Dummy21: [],
-    Dummy31: [],
-    Dummy41: [],
-    Dummy51: [],
-    Dummy61: [],
-    Dummy71: [],
-    Dummy81: [],
-    Dummy91: [],
 }
 
 export const fetchMockResourceCollection = async () => {

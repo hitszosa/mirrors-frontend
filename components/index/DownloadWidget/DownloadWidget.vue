@@ -12,8 +12,8 @@
         <UButton color="white" variant="solid" block @click="onToggleModal" class="transition delay-50">
             Get LiveCD & Software
         </UButton>
-        <UModal v-model="isOpen" class="w-full"
-            :ui="{ base: 'overflow-auto relative text-left rtl:text-right w-full flex flex-col', width: 'sm:max-w-2xl' }">
+        <UModal v-model="isOpen"
+            :ui="{ base: 'relative text-left rtl:text-right w-full flex flex-col', width: 'sm:max-w-2xl', height: 'h-[calc(100vh-4em)]' }">
             <IndexDownloadModal @close="onCloseModal" />
         </UModal>
     </section>
