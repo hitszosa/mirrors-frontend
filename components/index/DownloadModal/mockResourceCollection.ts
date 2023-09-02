@@ -199,6 +199,6 @@ const mockResourceCollection: ResourceCollection = {
 }
 
 export const fetchMockResourceCollection = async () => {
-  await new Promise(r => setTimeout(r, 500))
+  await new Promise(resolve => setTimeout(resolve, 500))
   return mockResourceCollection
 }

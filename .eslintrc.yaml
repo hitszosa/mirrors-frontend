@@ -36,3 +36,5 @@ rules:
   space-in-parens:
     - error
     - never
+  no-undef:
+    - off
