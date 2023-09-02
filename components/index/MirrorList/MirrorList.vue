@@ -6,7 +6,7 @@
         Index of Mirrors
     </BaseSectionHeading>
     <UTable :columns="columns" :rows="rows" :loading="loading"
-        :ui="{ td: { size: 'text-base', padding: 'px-3 py-2', }, th: { size: 'text-base', padding: 'px-3 py-2.5', } }">
+        :ui="{ td: { size: 'text-base', padding: 'px-3 py-2.5', }, th: { size: 'text-base', padding: 'px-3 py-3', } }">
         <template #status-data="{ row }">
             <UBadge :color="getTagType(row.status)">{{ row.status }}</UBadge>
         </template>
