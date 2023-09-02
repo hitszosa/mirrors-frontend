@@ -6,7 +6,7 @@
           <template #icon>
             <Icon name="icon-park-outline:record-disc" />
           </template>
-          下载 LiveCD 和软件
+          Get LiveCD & Software
         </BaseSectionHeading>
         <UButton :ui="{ rounded: 'rounded-full' }" color="white" variant="ghost" size="sm" @click="$emit('close')">
           <Icon name="icon-park-outline:close" />
