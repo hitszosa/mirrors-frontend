@@ -12,7 +12,7 @@
     :ui="{
       td: { size: 'text-base', padding: 'px-3 py-2.5' },
       th: { size: 'text-base', padding: 'px-3 py-3' },
-      tr: { base: 'hover:bg-slate-50 dark:hover:bg-slate-800/50' },
+      tr: { base: 'transition hocus:bg-slate-50 dark:hocus:bg-slate-800/50' },
     }"
   >
     <template #status-data="{ row }">
