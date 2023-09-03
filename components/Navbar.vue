@@ -26,7 +26,7 @@
           </NavButton>
         </li>
         <li>
-          <NavButton link="/">
+          <NavButton link="/news">
             News
           </NavButton>
         </li>

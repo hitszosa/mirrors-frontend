@@ -1,0 +1,3 @@
+<template>
+  <NewsListItem />
+</template>
