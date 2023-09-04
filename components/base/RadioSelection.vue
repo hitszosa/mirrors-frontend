@@ -25,7 +25,7 @@ const emit = defineEmits<{
 }>()
 
 const getButtonStyle = (idx: number) => {
-  return idx === props.index ? 'bg-white dark:bg-gray-900 drop-shadow-sm' : ''
+  return idx === props.index ? 'bg-white dark:bg-gray-900 shadow-sm' : ''
 }
 const emitUpdate = () => {
   emit('update:index', props.items[0], 0)
