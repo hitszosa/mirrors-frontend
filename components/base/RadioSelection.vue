@@ -1,5 +1,5 @@
 <template>
-  <ul class="first-letter:flex flex-col h-min list-none bg-gray-100 dark:bg-gray-800 p-1 rounded-xl whitespace-nowrap">
+  <ul class="flex flex-col h-min list-none bg-gray-100 dark:bg-gray-800 p-1 rounded-xl whitespace-nowrap">
     <li
       v-for="(item, idx) in $props.items"
       :key="item"
