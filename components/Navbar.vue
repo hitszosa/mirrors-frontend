@@ -21,12 +21,12 @@
           </NavButton>
         </li>
         <li>
-          <NavButton link="/">
+          <NavButton link="/docs">
             Docs
           </NavButton>
         </li>
         <li>
-          <NavButton link="/">
+          <NavButton link="/news">
             News
           </NavButton>
         </li>
