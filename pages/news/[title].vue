@@ -1,3 +1,3 @@
 <template>
-  <p>{{ $route.params.title }}</p>
+  <p>{{ $route.fullPath }}</p>
 </template>
