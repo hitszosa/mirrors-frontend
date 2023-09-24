@@ -1,7 +1,12 @@
 <template>
   <article class="max-w-screen-xl markdown-body">
     <!-- TODO: Add dark:prose-invert -->
-    <ContentDoc />
+    <ContentDoc>
+      <template #not-found>
+        <h2>页面尚未实现，可以到下面的链接进行贡献</h2>
+        <a href="https://github.com/hitszosa/mirrors-frontend">Mirror Repository</a> on Github
+      </template>
+    </ContentDoc>
   </article>
 </template>
 
