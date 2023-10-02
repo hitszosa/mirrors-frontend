@@ -1,9 +1,12 @@
 <template>
-  <div class="flex justify-center relative w-[320px]">
+  <li class="flex justify-center relative w-[320px]">
     <article
       class="flex flex-col space-y-2 p-4 w-full border-t-[0.1em] border-slate-400 dark:border-slate-600"
     >
-      <NuxtLink :to="digest._path" class="hocus:underline hocus:underline-offset-4 hocus:text-blue-400 dark:hocus:text-blue-300">
+      <NuxtLink
+        :to="digest._path"
+        class="transition max-w-min hocus:text-blue-400 dark:hocus:text-blue-300"
+      >
         <h2
           class="text-xl font-medium truncate"
         >
@@ -11,8 +14,7 @@
         </h2>
       </NuxtLink>
       <p>{{ digest.description }}</p>
-      <div class="h-1" />
-      <div class="flex justify-between text-slate-400 text-sm">
+      <div class="flex justify-between pt-1 text-slate-400 text-sm">
         <div>
           {{ dateString }}
         </div>
@@ -31,7 +33,7 @@
         </div>
       </div>
     </article>
-  </div>
+  </li>
 </template>
 
 <script setup lang="ts">

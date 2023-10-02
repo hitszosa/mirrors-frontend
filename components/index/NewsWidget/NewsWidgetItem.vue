@@ -1,18 +1,19 @@
 <template>
-  <li v-for="article in $props.list" :key="article._path" class="mb-2 flex justify-between items-center">
+  <li class="mb-2 flex justify-between items-center">
     <div class="min-w-0 flex items-center">
       <div class="pr-4 flex items-center justify-center">
         <Icon name="icon-park-outline:align-text-left" />
       </div>
-      <a
+      <NuxtLink
+        :to="digest._path"
         class="truncate transition relative inline-block z-10 hocus:underline hocus:underline-offset-4 hover:cursor-pointer"
       >
-        {{ article.title }}
-      </a>
+        {{ digest.title }}
+      </NuxtLink>
     </div>
     <div class="shrink-0">
       <span class="inline-block">
-        {{ dayjs.unix(article.update).fromNow() }}
+        {{ dayjs.utc(digest.date).fromNow() }}
       </span>
     </div>
   </li>
@@ -20,11 +21,8 @@
 
 <script setup lang="ts">
 import dayjs from 'dayjs'
+import { ArticleDigest } from '~/components/news/ArticleDigest'
 defineProps<{
-    list: {
-        title: string
-        update: number
-        _path: string
-    }[]
+    digest: ArticleDigest
 }>()
 </script>

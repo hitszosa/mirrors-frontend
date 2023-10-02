@@ -6,23 +6,34 @@
       </template>
       Recent News
     </BaseSectionHeading>
-    <ContentList
-      v-slot="{ list }"
-      path="/news"
+    <ul
+      v-for="digest in digests"
+      :key="digest._path"
+      class="list-none list-inside px-2"
     >
-      <div>
-        <ul class="list-none list-inside px-2">
-          <IndexNewsWidgetItem :list="list" />
-        </ul>
-      </div>
-    </ContentList>
-    <UButton
-      color="white"
-      variant="solid"
-      block
-      class="transition "
-    >
-      Read More
-    </UButton>
+      <IndexNewsWidgetItem :digest="digest" />
+    </ul>
+    <NuxtLink to="/news">
+      <UButton
+        color="white"
+        variant="solid"
+        block
+        class="transition"
+      >
+        Read More
+      </UButton>
+    </NuxtLink>
   </section>
 </template>
+
+<script setup lang="ts">
+import { ArticleDigest } from '~/components/news/ArticleDigest'
+
+const rawData = await useAsyncData(
+  'news',
+  () => queryContent('news')
+    .only(['title', '_path', 'description', 'date', 'tags'])
+    .find()
+)
+const digests = (rawData.data.value ?? []) as ArticleDigest[]
+</script>
