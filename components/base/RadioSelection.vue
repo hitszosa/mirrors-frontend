@@ -1,5 +1,5 @@
 <template>
-  <ul class="first-letter:flex flex-col h-min list-none bg-gray-100 dark:bg-gray-800 p-1 rounded-xl whitespace-nowrap">
+  <ul class="flex flex-col h-min list-none bg-gray-100 dark:bg-gray-800 p-1 rounded-xl whitespace-nowrap">
     <li
       v-for="(item, idx) in $props.items"
       :key="item"
@@ -25,7 +25,7 @@ const emit = defineEmits<{
 }>()
 
 const getButtonStyle = (idx: number) => {
-  return idx === props.index ? 'bg-white dark:bg-gray-900 drop-shadow-sm' : ''
+  return idx === props.index ? 'bg-white dark:bg-gray-900 shadow-sm' : ''
 }
 const emitUpdate = () => {
   emit('update:index', props.items[0], 0)

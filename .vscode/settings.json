@@ -14,5 +14,8 @@
     "vue",
     "html",
     "markdown"
-  ]
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
 }
