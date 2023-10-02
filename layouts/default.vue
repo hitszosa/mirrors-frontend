@@ -7,12 +7,11 @@
       <template #logo>
         <img
           src="~/assets/images/logo.svg"
-          class="w-11 h-11"
         >
       </template>
     </Navbar>
-    <div class="flex flex-col justify-between pt-16 min-h-screen bg-inherit">
-      <main class="flex justify-center p-12">
+    <div class="flex flex-col justify-between pt-12 min-h-screen bg-inherit">
+      <main class="flex justify-around p-12">
         <slot />
       </main>
       <Footer class="mt-6" />

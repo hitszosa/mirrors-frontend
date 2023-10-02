@@ -9,7 +9,7 @@
     <ul
       v-for="digest in digests"
       :key="digest._path"
-      class="list-none list-inside px-2"
+      class="list-none list-inside"
     >
       <IndexNewsWidgetItem :digest="digest" />
     </ul>
