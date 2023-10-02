@@ -10,8 +10,8 @@
     :rows="rows"
     :loading="loading"
     :ui="{
-      td: { size: 'text-base', padding: 'px-3 py-2.5' },
-      th: { size: 'text-base', padding: 'px-3 py-3' },
+      td: { color: 'text-slate-800 dark:text-slate-200', size: 'text-base', padding: 'px-3 py-2.5' },
+      th: { color: 'text-slate-800 dark:text-slate-200', size: 'text-base', padding: 'px-3 py-3' },
       tr: { base: 'transition hocus:bg-slate-50 dark:hocus:bg-slate-800/50' },
     }"
   >

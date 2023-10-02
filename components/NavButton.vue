@@ -25,7 +25,7 @@ defineProps<{
 
 const getButtonStyle = (isActive: boolean) => {
   return isActive
-    ? 'text-blue-400 dark:text-blue-300 after:w-full after:h-2 after:bg-slate-100'
+    ? 'text-blue-400 dark:text-blue-300 after:w-full after:h-2 after:bg-blue-400/20 dark:after:bg-blue-300/20'
     : 'text-slate-500 dark:text-slate-400 after:bg-blue-400/20 dark:after:bg-blue-300/20 after:w-0 after:h-0'
 }
 </script>

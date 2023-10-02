@@ -1,5 +1,5 @@
 <template>
-  <article class="max-w-screen-xl markdown-body">
+  <article class="max-w-screen-lg markdown-body">
     <!-- TODO: Add dark:prose-invert -->
     <ContentDoc>
       <template #not-found>
