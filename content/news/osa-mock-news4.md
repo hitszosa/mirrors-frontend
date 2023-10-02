@@ -1,6 +1,6 @@
 ---
 title: 超长title测试Lorem ipsum dolor sit amet consectetur adipisicing elit.
-date: 2023-10-02
+date: 2013-10-02
 ---
 
 # HITSZ OSA 成立啦
