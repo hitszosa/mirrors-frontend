@@ -1,5 +1,3 @@
 <template>
-  <main class="max-w-screen-lg">
-    <NewsList />
-  </main>
+  <NewsList />
 </template>
