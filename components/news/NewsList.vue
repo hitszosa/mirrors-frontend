@@ -5,7 +5,6 @@
       :key="digest._path"
     >
       <NewsListItem
-        class="grow-0"
         :digest="digest"
       />
     </li>
