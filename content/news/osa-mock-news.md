@@ -1,7 +1,10 @@
 ---
 title: HITSZ OSA 成立啦
-update: 1693558942
+date: 2023-10-02
 description: 这是一个经过修改的基于 Xfce4 的 Debian 11 系统。本修改版系统的诞生离不开整个开源社区，如有空闲请给下面提到的 Repo 们点个星星或捐赠其作者/维护者。
+tags: 
+    - 公告
+    - Debian
 ---
 
 # HITSZ OSA Customized Debian 设计原则与变更日志

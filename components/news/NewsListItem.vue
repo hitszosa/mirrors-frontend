@@ -1,22 +1,50 @@
 <template>
-  <div class="flex justify-center">
-    <div class="w-[48px] h-[48px] z-2 bg-slate-200 absolute -left-16 rounded-full -translate-x-1/2 flex justify-center items-center flex-nowrap">
-      <!-- <div class="flex justify-center content-center w-full h-full"> -->
-      <Icon name="icon-park-outline:quote" />
-      <!-- </div> -->
+  <NuxtLink :to="digest._path" class="flex justify-center relative">
+    <div
+      class="border-[0.1em] border-slate-800 rounded-full
+      flex flex-row items-center justify-center absolute
+      -left-10 -top-5 z-10 w-10 h-10 text-lg"
+    >
+      <Icon name="icon-park-outline:newspaper-folding" />
     </div>
-    <article class="flex flex-col p-7 w-full h-min bg-slate-50 dark:bg-gray-800 rounded-xl">
-      <div>Title: {{ data.title }}</div>
-      <div>Description: {{ data.description }}</div>
+    <article
+      class="flex flex-col space-y-2 p-4 w-full border-t-[0.1em] border-slate-800"
+    >
+      <h2
+        class="text-xl font-medium"
+      >
+        {{ digest.title }}
+      </h2>
+      <p>{{ digest.description }}</p>
+      <div class="h-1" />
+      <div class="flex justify-between text-slate-400 text-sm">
+        <div>
+          {{ dateString }}
+        </div>
+        <div>
+          <ul
+            class="flex space-x-4"
+          >
+            <li
+              v-for="tag in $props.digest.tags"
+              :key="tag"
+              class="flex shrink items-center space-x-1"
+            >
+              <Icon name="icon-park-outline:tag-one" /><span>{{ tag }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </article>
-  </div>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
-import { ParsedContent } from '@nuxt/content/dist/runtime/types'
+import { ArticleDigest } from './ArticleDigest'
 
-defineProps<{
-  data:ParsedContent
+const props = defineProps<{
+  digest: ArticleDigest
 }>()
-
+const date = new Date(props.digest.date)
+const dateString = `${date.getFullYear()} 年 ${date.getMonth()} 月 ${date.getDay()} 日`
 </script>

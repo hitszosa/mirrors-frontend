@@ -1,7 +1,26 @@
 <template>
-  <ContentList v-slot="{ list }" :path="`/news`">
-    <div class="relative before:content-[''] before:absolute before:bg-slate-600 before:h-full before:z-1 before:w-[2px] before:-left-16">
-      <NewsListItem v-for="article in list" :key="article._path" :data="article" />
-    </div>
-  </ContentList>
+  <ul
+    class="space-y-16"
+  >
+    <li
+      v-for="digest in digests"
+      :key="digest._path"
+    >
+      <NewsListItem
+        :digest="digest"
+      />
+    </li>
+  </ul>
 </template>
+
+<script setup lang="ts">
+import { ArticleDigest } from './ArticleDigest'
+
+const rawData = await useAsyncData(
+  'news',
+  () => queryContent('news')
+    .only(['title', '_path', 'description', 'date', 'tags'])
+    .find()
+)
+const digests = (rawData.data.value ?? []) as ArticleDigest[]
+</script>
