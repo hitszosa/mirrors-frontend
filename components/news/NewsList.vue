@@ -1,12 +1,11 @@
 <template>
-  <ul
-    class="space-y-16"
-  >
+  <ul class="container-xl w-3/4 mx-auto flex flex-wrap gap-x-8 gap-y-4">
     <li
       v-for="digest in digests"
       :key="digest._path"
     >
       <NewsListItem
+        class="grow-0"
         :digest="digest"
       />
     </li>

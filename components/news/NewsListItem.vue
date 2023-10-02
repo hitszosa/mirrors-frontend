@@ -1,18 +1,11 @@
 <template>
-  <div class="flex justify-center relative">
-    <div
-      class="border-[0.1em] text-slate-400 border-slate-400 dark:text-slate-600 dark:border-slate-600 rounded-full
-      flex flex-row items-center justify-center absolute
-      -left-10 -top-5 z-10 w-10 h-10 text-lg"
-    >
-      <Icon name="icon-park-outline:newspaper-folding" />
-    </div>
+  <div class="flex justify-center relative w-[320px]">
     <article
       class="flex flex-col space-y-2 p-4 w-full border-t-[0.1em] border-slate-400 dark:border-slate-600"
     >
       <NuxtLink :to="digest._path" class="hocus:underline hocus:underline-offset-4 hocus:text-blue-400 dark:hocus:text-blue-300">
         <h2
-          class="text-xl font-medium"
+          class="text-xl font-medium truncate"
         >
           {{ digest.title }}
         </h2>
