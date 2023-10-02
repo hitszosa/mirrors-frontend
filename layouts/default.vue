@@ -11,7 +11,7 @@
         >
       </template>
     </Navbar>
-    <div class="flex flex-col justify-between pt-16 min-h-screen bg-inherit w-screen">
+    <div class="flex flex-col justify-between pt-16 min-h-screen bg-inherit">
       <main class="flex justify-center p-12">
         <slot />
       </main>
