@@ -1,6 +1,6 @@
 <template>
   <ul
-    class="container-xl justify-start w-full flex flex-wrap gap-x-8 gap-y-6"
+    class="justify-start flex flex-wrap gap-x-8 gap-y-6"
   >
     <NewsListItem
       v-for="digest in digests"

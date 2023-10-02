@@ -1,5 +1,5 @@
 <template>
-  <li class="flex justify-center relative w-[320px]">
+  <li class="flex justify-center relative w-[20em]">
     <article
       class="flex flex-col space-y-2 p-4 w-full border-t-[0.1em] border-slate-400 dark:border-slate-600"
     >
