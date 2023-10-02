@@ -10,7 +10,7 @@ type RowData = {
 }
 
 const getMirrorListData = async () => {
-  return await fetch('http://10.249.12.85/jobs')
+  return await fetch('/tunasync_status.json')
 }
 
 export const useMirrorListStore = defineStore('mirror-list', () => {
@@ -18,7 +18,7 @@ export const useMirrorListStore = defineStore('mirror-list', () => {
   const rawData = ref(null)
   const loading = ref(true)
   const createData = async () => {
-    const tunasync = await fetch('/api/getMirrorListData')
+    const tunasync = await getMirrorListData()
     const data = await tunasync.json()
     rawData.value = data
     rows.value = data
