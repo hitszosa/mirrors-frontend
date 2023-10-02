@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="digest._path" class="flex justify-center relative">
+  <div class="flex justify-center relative">
     <div
       class="border-[0.1em] border-slate-800 rounded-full
       flex flex-row items-center justify-center absolute
@@ -10,11 +10,13 @@
     <article
       class="flex flex-col space-y-2 p-4 w-full border-t-[0.1em] border-slate-800"
     >
-      <h2
-        class="text-xl font-medium"
-      >
-        {{ digest.title }}
-      </h2>
+      <NuxtLink :to="digest._path" class="hocus:underline hocus:underline-offset-4 hocus:text-blue-400 dark:hocus:text-blue-300">
+        <h2
+          class="text-xl font-medium"
+        >
+          {{ digest.title }}
+        </h2>
+      </NuxtLink>
       <p>{{ digest.description }}</p>
       <div class="h-1" />
       <div class="flex justify-between text-slate-400 text-sm">
@@ -36,7 +38,7 @@
         </div>
       </div>
     </article>
-  </NuxtLink>
+  </div>
 </template>
 
 <script setup lang="ts">
