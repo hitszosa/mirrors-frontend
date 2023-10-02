@@ -1,5 +1,5 @@
 <template>
-  <main class="w-1/2 max-w-screen-xl">
+  <main class="max-w-screen-lg">
     <NewsList />
   </main>
 </template>
