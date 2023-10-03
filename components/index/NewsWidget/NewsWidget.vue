@@ -6,12 +6,12 @@
       </template>
       Recent News
     </BaseSectionHeading>
-    <ul
-      v-for="digest in digests"
-      :key="digest._path"
-      class="list-none list-inside"
-    >
-      <IndexNewsWidgetItem :digest="digest" />
+    <ul class="space-y-2 list-none list-inside">
+      <IndexNewsWidgetItem
+        v-for="digest in digests"
+        :key="digest._path"
+        :digest="digest"
+      />
     </ul>
     <NuxtLink to="/news">
       <UButton

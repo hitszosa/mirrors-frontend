@@ -1,5 +1,5 @@
 <template>
-  <li class="mb-2 flex justify-between items-center">
+  <li class="flex justify-between items-center">
     <div class="min-w-0 flex items-center">
       <div class="pr-2 flex items-center justify-center">
         <Icon name="icon-park-outline:align-text-left" />
