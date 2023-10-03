@@ -1,6 +1,5 @@
 <template>
-  <article class="max-w-screen-lg markdown-body">
-    <!-- TODO: Add dark:prose-invert -->
+  <article class="flex flex-col w-full max-w-screen-lg markdown-body">
     <ContentDoc>
       <template #not-found>
         <h2>页面尚未实现，可以到下面的链接进行贡献</h2>

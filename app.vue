@@ -7,7 +7,16 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute()
+useRoute()
+useHead({
+  title: 'HITSZ OSA Mirrors',
+  meta: [
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1',
+    }
+  ],
+})
 </script>
 
 <style lang="scss">
