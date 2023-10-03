@@ -1,8 +1,8 @@
 <template>
-  <div class="text-slate-800 dark:text-slate-200">
+  <div class="flex flex-col text-slate-800 dark:text-slate-200">
     <Navbar
       title-name="HITSZ OSA Mirrors"
-      class="fixed top-0 left-0 right-0"
+      class="fixed top-0 left-0"
     >
       <template #logo>
         <img
@@ -10,8 +10,8 @@
         >
       </template>
     </Navbar>
-    <div class="flex flex-col justify-between pt-12 min-h-screen bg-inherit">
-      <main class="flex justify-around p-12">
+    <div class="flex flex-col justify-between pt-12 px-12 min-h-screen min-w-fit bg-inherit">
+      <main class="flex justify-around px-auto py-12">
         <slot />
       </main>
       <Footer class="mt-6" />

@@ -1,6 +1,6 @@
 <template>
   <header
-    class="whitespace-nowrap flex flex-row items-center space-x-12 px-10 h-16 z-50 w-full shadow-sm backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-gray-900/70"
+    class="whitespace-nowrap flex items-center space-x-12 px-10 h-16 z-50 w-full shadow-sm backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-gray-900/70"
   >
     <div class="grow justify-start">
       <NuxtLink to="/">
