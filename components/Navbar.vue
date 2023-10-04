@@ -25,6 +25,11 @@
           </NavButton>
         </li>
         <li>
+          <NavButton link="https://mirrors-help.osa.moe/">
+            Help
+          </NavButton>
+        </li>
+        <li>
           <NavButton link="/news">
             News
           </NavButton>
