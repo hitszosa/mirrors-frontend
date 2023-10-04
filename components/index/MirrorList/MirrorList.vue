@@ -15,6 +15,26 @@
       tr: { base: 'transition hocus:bg-slate-50 dark:hocus:bg-slate-800/50' },
     }"
   >
+    <template #name-data="{ row }">
+      <a
+        class="group flex gap-1 items-center cursor-pointer transition hocus:text-blue-400 dark:hocus:text-blue-300"
+        href="/"
+        target="_blank"
+      >
+        <span>
+          {{ row.name }}
+        </span>
+        <span
+          class="text-sm
+          transition
+          text-slate-400
+          group-hover:text-blue-400 group-focus:text-blue-400
+          dark:group-hover:text-blue-300  dark:group-focus:text-blue-300"
+        >
+          <Icon name="icon-park-outline:help" />
+        </span>
+      </a>
+    </template>
     <template #status-data="{ row }">
       <UBadge :color="getTagType(row.status)">
         {{ row.status }}
