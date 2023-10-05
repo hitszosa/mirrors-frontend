@@ -17,8 +17,9 @@
   >
     <template #name-data="{ row }">
       <a
-        class="group flex gap-1 items-center cursor-pointer transition hocus:text-blue-400 dark:hocus:text-blue-300"
-        href="/"
+        v-if="isShowHelp(row.name)"
+        class="group flex gap-1 items-center cursor-pointer transition hocus:text-blue-400"
+        :href="getHelpUrl(row.name)"
         target="_blank"
       >
         <span>
@@ -29,11 +30,14 @@
           transition
           text-slate-400
           group-hover:text-blue-400 group-focus:text-blue-400
-          dark:group-hover:text-blue-300  dark:group-focus:text-blue-300"
+          dark:group-hover:text-blue-400  dark:group-focus:text-blue-400"
         >
           <Icon name="icon-park-outline:help" />
         </span>
       </a>
+      <span v-else>
+        {{ row.name }}
+      </span>
     </template>
     <template #status-data="{ row }">
       <UBadge :color="getTagType(row.status)">
@@ -56,8 +60,12 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { useMirrorListStore } from './MirrorListStore'
-const store = useMirrorListStore()
-const { rows, loading } = storeToRefs(store)
+import { useHelpListStore } from './HelpListStore'
+
+const { rows, loading } = storeToRefs(useMirrorListStore())
+const { helpList } = storeToRefs(useHelpListStore())
+
+const helpSet = computed(() => new Set(helpList.value))
 
 const getTagType = (status: string) => {
   switch (status) {
@@ -91,4 +99,12 @@ const createColumns = () => {
   ]
 }
 const columns = ref(createColumns())
+
+const isShowHelp = (mirror: string) => {
+  return helpSet.value.has(mirror)
+}
+
+const getHelpUrl = (mirror: string) => {
+  return `https://mirrors-help.osa.moe/${mirror}`
+}
 </script>
