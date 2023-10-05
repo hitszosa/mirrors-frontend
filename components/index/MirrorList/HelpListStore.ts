@@ -9,7 +9,7 @@ const fetchHelpList = async () => {
 export const useHelpListStore = defineStore('help-list', () => {
   const helpList = ref<string[]>([])
   const createData = async () => {
-    helpList.value = await fetchMockHelpList()
+    helpList.value = await fetchHelpList()
   }
   onMounted(async () => {
     await createData()
