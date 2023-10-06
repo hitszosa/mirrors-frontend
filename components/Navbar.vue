@@ -19,11 +19,6 @@
           </NavButton>
         </li>
         <li>
-          <NavButton link="/docs">
-            Docs
-          </NavButton>
-        </li>
-        <li>
           <NavButton link="https://mirrors-help.osa.moe/" :is-external-link="true">
             Help
           </NavButton>
