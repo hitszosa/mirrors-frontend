@@ -7,7 +7,9 @@
         <div class="flex items-center justify-center mr-3 content-stretch h-10 w-10">
           <slot name="logo" />
         </div>
-        <span class="text-xl font-medium text-slate-800 dark:text-slate-200">{{ $props.titleName }}</span>
+        <span class="text-xl font-medium text-slate-800 dark:text-slate-200">
+          {{ $props.titleName }}
+        </span>
       </div>
     </NuxtLink>
     <div class="grow" />

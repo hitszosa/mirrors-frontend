@@ -21,8 +21,8 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-    link: string
-    isExternalLink?: boolean
+  link: string
+  isExternalLink?: boolean
 }>()
 
 const getButtonStyle = (isActive: boolean) => {
