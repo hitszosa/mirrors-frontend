@@ -1,63 +1,60 @@
-# Nuxt 3 Minimal Starter
+# mirrors-frontend
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Introduction
 
-## Setup
+This project is a state-of-the-art website frontend for HITSZ OSA Mirrors.
 
-Make sure to install the dependencies:
+![showcase](./docs/assets/showcase.png)
 
-```bash
-# npm
-npm install
+## Usage
 
-# pnpm
-pnpm install
+### Prerequisites
 
-# yarn
-yarn install
-```
+Make sure you have these develop tools:
 
-## Development Server
+- [Yarn](https://yarnpkg.com/)（an Node.js package manager)
+- Node.js
+- Visual Studio Code (recommended)
 
-Start the development server on `http://localhost:3000`:
+Then execute `yarn install`
 
-```bash
-# npm
-npm run dev
+Now you are ready to go!
 
-# pnpm
-pnpm run dev
+### Develop
 
-# yarn
-yarn dev
-```
+Use `yarn dev` to serve the website under development on your local network. It supports hot module replacement.
 
-## Production
+Use `yarn format` to format the whole project before every commit, unless you are using other formatting tool which supports ESLint.
 
-Build the application for production:
+### Build and Deploy
 
-```bash
-# npm
-npm run build
+Please follow these steps:
 
-# pnpm
-pnpm run build
+1. Make sure `main` branch is up to date
+2. Switch to `prod` branch
+3. Execute `git rebase main`. Occasionally you need to resolve conflicts
+4. (Optional) Make production-only changes and commit
+5. Execute `yarn generate`
+6. Deploy the files and directories under `.output/public` to the server
+7. Check if the deployed website works as expected
+8. Don't forget to push changes to GitHub
 
-# yarn
-yarn build
-```
+## Where to start
 
-Locally preview production build:
+Here are some resources that might help you learn how to develop this project:
 
-```bash
-# npm
-npm run preview
+- Vue 3 Guide: <https://vuejs.org/guide/introduction.html>
+- Vue 3 Composition API Reference: <https://vuejs.org/api>
+- Nuxt 3 Docs: <https://nuxt.com/docs>
+- Nuxt Content Docs: <https://content.nuxt.com/get-started/installation>
+- Tailwind CSS Docs: <https://tailwindcss.com/docs/installation>
+- Nuxt UI Docs: <https://ui.nuxt.com/getting-started>
+- Pinia Guide: <https://pinia.vuejs.org/core-concepts>
 
-# pnpm
-pnpm run preview
+We use IconPark Outline as the primary icon library. You can find the icons at:
 
-# yarn
-yarn preview
-```
+- Icônes: <https://icones.js.org/collection/icon-park-outline>
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Coding conventions
+
+Please refer to [coding-conventions.md](./docs/coding-conventions.md>).
