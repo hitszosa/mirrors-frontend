@@ -57,4 +57,4 @@ We use IconPark Outline as the primary icon library. You can find the icons at:
 
 ## Coding conventions
 
-Please refer to [coding-conventions.md](./docs/coding-conventions.md>).
+Please refer to [coding-conventions.md](./docs/coding-conventions.md).
