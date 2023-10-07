@@ -12,13 +12,13 @@
     :ui="{
       td: { color: 'text-slate-800 dark:text-slate-200', size: 'text-base', padding: 'px-3 py-2.5' },
       th: { color: 'text-slate-800 dark:text-slate-200', size: 'text-base', padding: 'px-3 py-3' },
-      tr: { base: 'transition hocus:bg-slate-50 dark:hocus:bg-slate-800/50' },
+      tr: { base: 'transition-colors hocus:bg-slate-50 dark:hocus:bg-slate-800/50' },
     }"
   >
     <template #name-data="{ row }">
       <a
         v-if="isShowHelp(row.name)"
-        class="group flex gap-1 items-center cursor-pointer transition hocus:text-blue-400"
+        class="group flex gap-1 items-center cursor-pointer transition-colors hocus:text-blue-400"
         :href="getHelpUrl(row.name)"
         target="_blank"
       >
@@ -49,7 +49,7 @@
         v-if="row.files"
         :to="row.files"
         target="_blank"
-        class="transition text-lg hocus:text-blue-400"
+        class="transition-colors text-lg hocus:text-blue-400"
       >
         <Icon name="icon-park-outline:folder-open" />
       </NuxtLink>

@@ -18,7 +18,7 @@
         color="white"
         variant="solid"
         block
-        class="transition h-9 mt-4"
+        class="transition-colors h-9 mt-4"
       >
         Read More
       </UButton>

@@ -5,7 +5,7 @@
     >
       <NuxtLink
         :to="digest._path"
-        class="transition max-w-min hocus:text-blue-400 dark:hocus:text-blue-300"
+        class="transition-colors max-w-min hocus:text-blue-400 dark:hocus:text-blue-300"
       >
         <h2
           class="text-xl font-medium truncate"

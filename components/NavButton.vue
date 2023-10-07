@@ -7,7 +7,7 @@
       <a
         :href="$props.link"
         :target="target"
-        class="transition after:transition-all relative inline-block
+        class="transition-colors after:transition-all relative inline-block
         hocus:text-blue-400 dark:hocus:text-blue-300
         after:block after:absolute after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:rounded-full after:-z-10
         hocus:after:w-full hocus:after:h-2 hocus:after:bg-slate-100"
