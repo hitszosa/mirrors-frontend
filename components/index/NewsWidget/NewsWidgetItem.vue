@@ -6,7 +6,7 @@
       </div>
       <NuxtLink
         :to="digest._path"
-        class="truncate transition relative inline-block z-10 hocus:underline hocus:underline-offset-4 hover:cursor-pointer"
+        class="truncate transition-colors relative inline-block z-10 decoration-dotted underline-offset-4 hocus:underline hover:cursor-pointer"
       >
         {{ digest.title }}
       </NuxtLink>

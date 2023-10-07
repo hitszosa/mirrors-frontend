@@ -13,7 +13,7 @@
       color="white"
       variant="solid"
       block
-      class="transition h-9"
+      class="transition-colors h-9"
       @click="onToggleModal"
     >
       Get LiveCD & Software
