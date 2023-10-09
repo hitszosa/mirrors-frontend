@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.8.1",
-    "@nuxt/devtools": "^1.0.0",
+    "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
@@ -36,11 +36,13 @@
     "vue-eslint-parser": "^9.3.1"
   },
   "dependencies": {
+    "@iconify/json": "^2.2.126",
     "@nuxthq/ui": "^2.7.0",
     "@pinia/nuxt": "^0.4.11",
     "dayjs": "^1.11.9",
     "github-markdown-css": "^5.2.0",
-    "pinia": "^2.1.6"
+    "pinia": "^2.1.6",
+    "vue3-keypress": "^4.0.1"
   },
   "type": "module"
 }

@@ -7,20 +7,15 @@
       Index of Mirrors
     </BaseSectionHeading>
     <UInput
+      ref="search"
       v-model="mirrorFilter"
-      placeholder="Search for mirrors..."
-      class="w-8"
+      placeholder="Press '/' key to search for mirrors..."
     />
     <UTable
       :columns="columns"
       :rows="filteredRows"
       :sort="{ column: 'name', direction: 'asc' }"
       :loading="loading"
-      :ui="{
-        td: { color: 'text-slate-800 dark:text-slate-200', size: 'text-base', padding: 'px-3 py-2.5' },
-        th: { color: 'text-slate-800 dark:text-slate-200', size: 'text-base', padding: 'px-3 py-3' },
-        tr: { base: 'transition-colors hocus:bg-slate-50 dark:hocus:bg-slate-800/50' },
-      }"
     >
       <template #name-data="{ row }">
         <a
@@ -67,6 +62,7 @@
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
+import { useKeypress } from 'vue3-keypress'
 import { useMirrorListStore } from './MirrorListStore'
 import { useHelpListStore } from './HelpListStore'
 
@@ -78,11 +74,13 @@ const helpSet = computed(() => new Set(helpList.value))
 const getTagType = (status: string) => {
   switch (status) {
   case 'success':
-    return 'primary'
+    return 'green'
   case 'syncing':
     return 'blue'
   case 'failed':
     return 'red'
+  default:
+    return 'gray'
   }
 }
 
@@ -130,4 +128,19 @@ const isNameMatched = (mirror: string, filter: string) => {
 const getHelpUrl = (mirror: string) => {
   return `https://mirrors-help.osa.moe/${mirror}`
 }
+
+const triggerSearchFocus = () => {
+  (document.querySelector('input.form-input') as HTMLInputElement).focus()
+}
+
+useKeypress({
+  keyEvent: 'keyup',
+  keyBinds: [
+    {
+      keyCode: '/',
+      success: triggerSearchFocus,
+      preventDefault: true,
+    },
+  ],
+})
 </script>

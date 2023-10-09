@@ -20,7 +20,6 @@
     </UButton>
     <UModal
       v-model="isOpen"
-      :ui="{ base: 'relative text-left rtl:text-right w-full flex flex-col', width: 'sm:max-w-2xl', height: 'h-[calc(100vh-4em)]' }"
     >
       <IndexDownloadModal @close="onCloseModal" />
     </UModal>
