@@ -1,9 +1,6 @@
 export default defineAppConfig({
   ui: {
     primary: 'sky',
-    button: {
-
-    },
     table: {
       td: { color: 'text-slate-800 dark:text-slate-200', size: 'text-base', padding: 'px-3 py-2.5' },
       th: {
