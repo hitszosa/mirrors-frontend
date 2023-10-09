@@ -14,6 +14,7 @@
     <UTable
       :columns="columns"
       :rows="filteredRows"
+      :sort="{ column: 'name', direction: 'asc' }"
       :loading="loading"
       :ui="{
         td: { color: 'text-slate-800 dark:text-slate-200', size: 'text-base', padding: 'px-3 py-2.5' },
@@ -90,6 +91,7 @@ const createColumns = () => {
     {
       key: 'name',
       label: 'Name',
+      sortable: true,
     },
     {
       key: 'files',
@@ -98,10 +100,12 @@ const createColumns = () => {
     {
       key: 'lastUpdate',
       label: 'Last Update',
+      sortable: true,
     },
     {
       key: 'status',
       label: 'Status',
+      sortable: true,
     },
   ]
 }
