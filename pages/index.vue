@@ -4,7 +4,7 @@
       <IndexMirrorList />
     </div>
     <div
-      class="flex flex-col p-7 space-y-10 min-w-[20em] w-[30vw] h-min bg-slate-50 dark:bg-gray-800 rounded-xl"
+      class="flex flex-col p-7 space-y-10 min-w-[20em] max-w-[30em] w-[30vw] h-min bg-slate-50 dark:bg-gray-800 rounded-xl"
     >
       <IndexDownloadWidget />
       <IndexNewsWidget />
