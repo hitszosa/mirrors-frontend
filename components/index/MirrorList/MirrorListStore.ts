@@ -27,10 +27,7 @@ export const useMirrorListStore = defineStore('mirror-list', () => {
         return {
           id: idx,
           name: item.name,
-          files: (item.upstream as string).replace(
-            /[a-z0-9-]+:\/\/([a-z0-9@\-_.]+)/i,
-            '',
-          ),
+          files: `/${item.name}/`,
           lastUpdate: dayjs
             .unix(item.last_update_ts)
             .format('YYYY-MM-DD HH:mm'),
