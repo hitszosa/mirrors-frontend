@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { ArticleDigest } from '~/components/news/ArticleDigest'
+import { type ArticleDigest } from '~/components/news/ArticleDigest'
 
 const rawData = await useAsyncData(
   'news',
