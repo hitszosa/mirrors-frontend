@@ -22,7 +22,7 @@
 <script setup lang="ts">
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
-import { ArticleDigest } from '~/components/news/ArticleDigest'
+import { type ArticleDigest } from '~/components/news/ArticleDigest'
 
 dayjs.extend(relativeTime)
 defineProps<{

@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { ArticleDigest } from './ArticleDigest'
+import { type ArticleDigest } from './ArticleDigest'
 
 const rawData = await useAsyncData(
   'news',
