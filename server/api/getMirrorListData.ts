@@ -5,7 +5,8 @@ export default defineEventHandler(async () => {
     )
     const data = tunasync.json()
     return data
-  } catch (e) {
+  }
+  catch (e) {
     throw createError({
       statusCode: 500,
       statusMessage: 'Can\'t get mirrorlist data!',

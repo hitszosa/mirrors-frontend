@@ -2,11 +2,11 @@ import { defineStore } from 'pinia'
 import * as dayjs from 'dayjs'
 
 type RowData = {
-    id: number
-    name: string
-    files: string
-    lastUpdate: string
-    status: string
+  id: number
+  name: string
+  files: string
+  lastUpdate: string
+  status: string
 }
 
 const getMirrorListData = async () => {

@@ -4,7 +4,7 @@
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "files.autoSave": "onFocusChange",
   "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "eslint.format.enable": true,
   "eslint.codeActionsOnSave.mode": "problems",
@@ -15,6 +15,7 @@
     "html",
     "markdown"
   ],
+  "eslint.experimental.useFlatConfig": true,
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   }

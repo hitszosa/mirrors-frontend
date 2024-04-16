@@ -73,14 +73,14 @@ const helpSet = computed(() => new Set(helpList.value))
 
 const getTagType = (status: string) => {
   switch (status) {
-  case 'success':
-    return 'green'
-  case 'syncing':
-    return 'blue'
-  case 'failed':
-    return 'red'
-  default:
-    return 'gray'
+    case 'success':
+      return 'green'
+    case 'syncing':
+      return 'blue'
+    case 'failed':
+      return 'red'
+    default:
+      return 'gray'
   }
 }
 
