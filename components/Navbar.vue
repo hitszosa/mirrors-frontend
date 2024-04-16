@@ -82,8 +82,10 @@ enum ThemeState {
 
 const colorMode = useColorMode()
 const themes = [ThemeState.System, ThemeState.Light, ThemeState.Dark]
-const themeIndex = ref(0)
+const themeIndex = ref(themes.indexOf(colorMode.preference as ThemeState))
 const theme = computed(() => themes[themeIndex.value])
+
+console.log(themeIndex.value, theme.value)
 
 watch(theme, () => {
   colorMode.preference = theme.value
