@@ -16,8 +16,8 @@
       </div>
     </NuxtLink>
     <div class="grow" />
-    <nav class="justify-end font-medium text-base">
-      <ul class="flex flex-row list-none space-x-8">
+    <nav class=" flex flex-row space-x-7 justify-end font-medium text-base items-center">
+      <ul class="flex flex-row list-none space-x-7">
         <li>
           <NavButton link="/">
             Home
@@ -42,6 +42,29 @@
           </NavButton>
         </li>
       </ul>
+      <button
+        class="flex items-center justify-center w-4 text-lg text-slate-500 dark:text-slate-400 animate-dripple"
+        @click="onNextTheme"
+      >
+        <BaseSlidingTransition>
+          <Icon
+            v-show="theme === ThemeState.System"
+            name="icon-park-outline:dark-mode"
+          />
+        </BaseSlidingTransition>
+        <BaseSlidingTransition>
+          <Icon
+            v-show="theme === ThemeState.Light"
+            name="icon-park-outline:sun-one"
+          />
+        </BaseSlidingTransition>
+        <BaseSlidingTransition>
+          <Icon
+            v-show="theme === ThemeState.Dark"
+            name="icon-park-outline:moon"
+          />
+        </BaseSlidingTransition>
+      </button>
     </nav>
   </header>
 </template>
@@ -50,4 +73,23 @@
 defineProps<{
   titleName: string
 }>()
+
+enum ThemeState {
+  System = 'system',
+  Light = 'light',
+  Dark = 'dark',
+}
+
+const colorMode = useColorMode()
+const themes = [ThemeState.System, ThemeState.Light, ThemeState.Dark]
+const themeIndex = ref(0)
+const theme = computed(() => themes[themeIndex.value])
+
+watch(theme, () => {
+  colorMode.preference = theme.value
+})
+
+const onNextTheme = () => {
+  themeIndex.value = (themeIndex.value + 1) % themes.length
+}
 </script>
