@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/eslint',
   ],
-  ssr: true,
+  ssr: false,
   colorMode: {
     classSuffix: '',
   },
