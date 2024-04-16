@@ -14,9 +14,6 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   devtools: { enabled: true },
-  eslint: {
-    checker: true,
-  },
   css: ['@/assets/css/main.css'],
   postcss: {
     plugins: {
