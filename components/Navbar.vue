@@ -44,7 +44,7 @@
       </ul>
       <button
         name="Change theme"
-        class="flex items-center justify-center w-4 text-lg text-slate-500 dark:text-slate-400 animate-dripple"
+        class="relative -translate-y-2 w-4 text-lg text-slate-500 dark:text-slate-400 animate-dripple"
         @click="onNextTheme"
       >
         <BaseSlidingTransition>
