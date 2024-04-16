@@ -2,8 +2,8 @@ import { defineStore } from 'pinia'
 import { fetchMockResourceCollection } from './mockResourceCollection'
 
 export type Resource = {
-    name: string
-    link: string
+  name: string
+  link: string
 }
 export type ResourceCollection = Record<string, Resource[]>
 

@@ -7,12 +7,16 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'dayjs-nuxt',
     '@nuxt/ui',
+    '@nuxt/eslint',
   ],
   ssr: true,
   colorMode: {
     classSuffix: '',
   },
   devtools: { enabled: true },
+  eslint: {
+    checker: true,
+  },
   css: ['@/assets/css/main.css'],
   postcss: {
     plugins: {
@@ -22,5 +26,5 @@ export default defineNuxtConfig({
   },
   ui: {
     icons: 'all',
-  }
+  },
 })

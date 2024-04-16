@@ -19,11 +19,11 @@
 
 <script setup lang="ts">
 export interface Props {
-    compact?: boolean
+  compact?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  compact: false
+  compact: false,
 })
 
 const styleClass = computed(() => {

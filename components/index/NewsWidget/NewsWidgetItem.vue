@@ -26,6 +26,6 @@ import { type ArticleDigest } from '~/components/news/ArticleDigest'
 
 dayjs.extend(relativeTime)
 defineProps<{
-    digest: ArticleDigest
+  digest: ArticleDigest
 }>()
 </script>

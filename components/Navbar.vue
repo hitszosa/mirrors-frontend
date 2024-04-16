@@ -2,7 +2,10 @@
   <header
     class="whitespace-nowrap flex items-center space-x-12 px-10 h-16 z-50 w-full shadow-sm backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-gray-900/70"
   >
-    <NuxtLink class="justify-start" to="/">
+    <NuxtLink
+      class="justify-start"
+      to="/"
+    >
       <div class="flex items-center">
         <div class="flex items-center justify-center mr-3 content-stretch h-10 w-10">
           <slot name="logo" />
@@ -21,7 +24,10 @@
           </NavButton>
         </li>
         <li>
-          <NavButton link="https://mirrors-help.osa.moe/" :is-external-link="true">
+          <NavButton
+            link="https://mirrors-help.osa.moe/"
+            :is-external-link="true"
+          >
             Help
           </NavButton>
         </li>
@@ -42,6 +48,6 @@
 
 <script setup lang="ts">
 defineProps<{
-    titleName: string
+  titleName: string
 }>()
 </script>

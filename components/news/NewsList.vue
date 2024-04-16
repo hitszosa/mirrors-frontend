@@ -19,7 +19,7 @@ const rawData = await useAsyncData(
   () => queryContent('news')
     .only(['title', '_path', 'description', 'date', 'tags'])
     .sort({ date: -1 })
-    .find()
+    .find(),
 )
 const digests = (rawData.data.value ?? []) as ArticleDigest[]
 </script>

@@ -1,4 +1,4 @@
-import { ResourceCollection } from './DownloadStore'
+import type { ResourceCollection } from './DownloadStore'
 
 const mockResourceCollection: ResourceCollection = {
   Fedora: [
