@@ -43,6 +43,7 @@
         </li>
       </ul>
       <button
+        name="Change theme"
         class="flex items-center justify-center w-4 text-lg text-slate-500 dark:text-slate-400 animate-dripple"
         @click="onNextTheme"
       >
