@@ -16,7 +16,7 @@
       </div>
     </NuxtLink>
     <div class="grow" />
-    <nav class=" flex flex-row space-x-7 justify-end font-medium text-base items-center">
+    <nav class="flex flex-row space-x-7 justify-end font-medium text-base items-center">
       <ul class="flex flex-row list-none space-x-7">
         <li>
           <NavButton link="/">
@@ -44,24 +44,23 @@
       </ul>
       <button
         name="Change theme"
-        class="relative -translate-y-2 w-4 text-lg text-slate-500 dark:text-slate-400 animate-dripple"
+        class="flex items-center text-lg text-slate-500 dark:text-slate-400 animate-dripple"
         @click="onNextTheme"
       >
         <BaseSlidingTransition>
           <Icon
-            v-show="theme === ThemeState.System"
+            v-if="theme === ThemeState.System"
+            class="absolute"
             name="icon-park-outline:dark-mode"
           />
-        </BaseSlidingTransition>
-        <BaseSlidingTransition>
           <Icon
-            v-show="theme === ThemeState.Light"
+            v-else-if="theme === ThemeState.Light"
+            class="absolute"
             name="icon-park-outline:sun-one"
           />
-        </BaseSlidingTransition>
-        <BaseSlidingTransition>
           <Icon
-            v-show="theme === ThemeState.Dark"
+            v-else-if="theme === ThemeState.Dark"
+            class="absolute"
             name="icon-park-outline:moon"
           />
         </BaseSlidingTransition>
