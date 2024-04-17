@@ -4,6 +4,8 @@
 
 This project is a state-of-the-art website frontend for HITSZ OSA Mirrors.
 
+Current and planned features are listed here: [features-and-roadmap.md](./docs/features-and-roadmap.md).
+
 ![showcase](./docs/assets/showcase.png)
 
 ## Usage

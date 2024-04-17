@@ -1,0 +1,24 @@
+# Features and roadmap
+
+- Meta
+  - Dark mode
+    - [x] Color theme
+    - [x] Preference switch
+  - [x] Responsive design
+  - [x] Elegant navbar
+  - [x] Markdown prose and styling
+  - [x] ESLint
+- Home page
+  - Mirrors index
+    - [x] Entry listing
+    - [x] MirrorZ Help reference
+    - [x] Search filter
+    - [x] List sorting
+  - [x] Resource download
+  - [x] Recent news
+- News page
+  - [x] News listing
+  - [ ] Pagination
+- About page
+  - [x] Basic content
+  - [ ] Meaningful content
