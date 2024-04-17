@@ -11,8 +11,8 @@
       </template>
     </Navbar>
     <div
-      class="flex flex-col justify-between px-12 min-h-screen min-w-fit bg-inherit
-      pt-24 md:pt-12"
+      class="flex flex-col justify-between min-h-screen bg-inherit
+      pt-20 px-6 md:pt-12 md:px-12"
     >
       <main class="flex justify-around px-auto py-12">
         <slot />

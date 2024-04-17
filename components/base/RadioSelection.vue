@@ -6,7 +6,7 @@
       @click="onSelect(item, idx)"
     >
       <button
-        class="transition-colors py-3 px-7 w-full rounded-xl"
+        class="transition-colors p-3 w-full rounded-xl"
         :class="getButtonStyle(idx)"
       >
         {{ item }}

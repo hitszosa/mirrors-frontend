@@ -26,7 +26,7 @@ export default defineAppConfig({
     },
     modal: {
       base: 'relative text-left rtl:text-right w-full flex flex-col',
-      width: 'sm:max-w-2xl',
+      width: 'md:max-w-2xl',
       height: 'h-[calc(100vh-4em)]',
     },
   },
