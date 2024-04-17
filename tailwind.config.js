@@ -10,21 +10,6 @@ module.exports = {
     './plugins/**/*.{js,ts}',
     './nuxt.config.{js,ts}',
   ],
-  theme: {
-    extend: {
-      keyframes: {
-        dripple: {
-          '50%': {
-            transform: 'scale(0.5)',
-            opacity: '50%',
-          },
-        },
-      },
-      animation: {
-        dripple: 'dripple 200ms ease-in-out',
-      },
-    },
-  },
   darkMode: 'class',
   plugins: [
     plugin(function ({ addVariant }) {
