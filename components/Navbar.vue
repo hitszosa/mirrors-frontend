@@ -1,13 +1,18 @@
 <template>
   <header
-    class="whitespace-nowrap flex items-center space-x-12 px-10 h-16 z-50 w-full shadow-sm backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-gray-900/70"
+    class="whitespace-nowrap flex items-center px-10 z-50 w-screen shadow-sm
+    backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-gray-900/70 overflow-x-scroll
+    flex-col h-28 justify-evenly md:flex-row md:py-0 md:h-16 md:justify-between md:space-x-12"
   >
     <NuxtLink
       class="justify-start"
       to="/"
     >
       <div class="flex items-center">
-        <div class="flex items-center justify-center mr-3 content-stretch h-10 w-10">
+        <div
+          class="flex items-center justify-center mr-3 content-stretch
+          h-8 w-8 md:h-10 md:w-10"
+        >
           <slot name="logo" />
         </div>
         <span class="text-xl font-medium text-slate-800 dark:text-slate-200">
@@ -15,7 +20,6 @@
         </span>
       </div>
     </NuxtLink>
-    <div class="grow" />
     <nav class="flex flex-row space-x-7 justify-end font-medium text-base items-center">
       <ul class="flex flex-row list-none space-x-7">
         <li>
@@ -44,7 +48,8 @@
       </ul>
       <button
         name="Change theme"
-        class="transition-colors flex items-center w-4 h-4 text-lg text-slate-500 dark:text-slate-400  hocus:text-blue-400 dark:hocus:text-blue-300"
+        class="transition-colors flex items-center w-4 h-4 text-lg text-slate-500 dark:text-slate-400
+        hocus:text-blue-400 dark:hocus:text-blue-300"
         @click="onNextTheme"
       >
         <BaseSlidingTransition>
