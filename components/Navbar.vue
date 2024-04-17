@@ -44,7 +44,7 @@
       </ul>
       <button
         name="Change theme"
-        class="flex items-center text-lg text-slate-500 dark:text-slate-400 animate-dripple"
+        class="transition-colors flex items-center w-4 h-4 text-lg text-slate-500 dark:text-slate-400  hocus:text-blue-400 dark:hocus:text-blue-300"
         @click="onNextTheme"
       >
         <BaseSlidingTransition>
@@ -84,8 +84,6 @@ const colorMode = useColorMode()
 const themes = [ThemeState.System, ThemeState.Light, ThemeState.Dark]
 const themeIndex = ref(themes.indexOf(colorMode.preference as ThemeState))
 const theme = computed(() => themes[themeIndex.value])
-
-console.log(themeIndex.value, theme.value)
 
 watch(theme, () => {
   colorMode.preference = theme.value
