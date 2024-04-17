@@ -1,12 +1,12 @@
 <template>
   <ul
-    class="justify-start flex flex-wrap gap-x-8 gap-y-6"
+    class="flex flex-wrap
+    gap-y-2 md:justify-start md:gap-x-8 md:gap-y-4"
   >
     <NewsListItem
       v-for="digest in digests"
       :key="digest._path"
       :digest="digest"
-      class="grow-0"
     />
   </ul>
 </template>
