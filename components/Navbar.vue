@@ -1,7 +1,7 @@
 <template>
   <header
     class="whitespace-nowrap flex items-center px-10 z-50 w-screen shadow-sm
-    backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-gray-900/70 overflow-x-scroll
+    backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-gray-900/70
     flex-col h-28 justify-evenly md:flex-row md:py-0 md:h-16 md:justify-between md:space-x-12"
   >
     <NuxtLink
