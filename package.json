@@ -41,7 +41,6 @@
     "@nuxt/ui": "^2.13.0",
     "@pinia/nuxt": "^0.4.11",
     "dayjs": "^1.11.9",
-    "github-markdown-css": "^5.2.0",
     "pinia": "^2.1.6",
     "vue3-keypress": "^4.0.1"
   },
