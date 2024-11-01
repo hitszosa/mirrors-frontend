@@ -52,7 +52,7 @@ export default {
             'ol, ul': {
               marginTop: '0.25em',
               marginBottom: '0.25em',
-              paddingInlineStart: '0.25em',
+              paddingInlineStart: '1.25em',
             },
             'li': {
               marginTop: '0.25em',
