@@ -3,7 +3,7 @@
     class="flex flex-nowrap font-medium space-x-1.5"
     :class="styleClass"
   >
-    <span class="inline-block -translate-y-0.5">
+    <span class="inline-block translate-y-[3px]">
       <slot name="icon" />
     </span>
     <span

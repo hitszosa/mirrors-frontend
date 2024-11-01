@@ -1,5 +1,5 @@
 <template>
-  <article class="flex flex-col w-full max-w-screen-lg markdown-body">
+  <article class="flex flex-col w-full max-w-screen-lg prose dark:prose-invert prose-slate">
     <ContentDoc>
       <template #not-found>
         <h2>404 Not Found</h2>
@@ -26,6 +26,4 @@
 </template>
 
 <script setup lang="ts">
-import 'github-markdown-css'
-import '~/assets/css/markdown-extended.scss'
 </script>

@@ -9,19 +9,24 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/eslint',
   ],
+
   ssr: true,
+
   colorMode: {
     classSuffix: '',
   },
+
   devtools: { enabled: true },
   css: ['@/assets/css/main.css'],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-  ui: {
-    icons: 'all',
-  },
+
+  ui: {},
+
+  compatibilityDate: '2024-11-01',
 })
