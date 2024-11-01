@@ -40,9 +40,6 @@ export default {
             'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a': {
               textDecoration: 'none',
             },
-            'pre': {
-              backgroundColor: 'var(--tw-prose-pre-bg) !important',
-            },
             'code': {
               fontWeight: 400,
             },
@@ -84,9 +81,7 @@ export default {
           },
         },
         slate: {
-          css: {
-            '--tw-prose-pre-bg': colors.slate[50],
-          },
+          css: {},
         },
       },
     },
