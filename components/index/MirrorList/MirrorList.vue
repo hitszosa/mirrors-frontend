@@ -27,15 +27,14 @@
           <span>
             {{ row.name }}
           </span>
-          <span
+          <Icon
             class="text-sm
-          transition
-          text-slate-400
-          group-hover:text-blue-400 group-focus:text-blue-400
-          dark:group-hover:text-blue-400  dark:group-focus:text-blue-400"
-          >
-            <Icon name="icon-park-outline:help" />
-          </span>
+            transition
+            text-slate-400
+            group-hover:text-blue-400 group-focus:text-blue-400
+            dark:group-hover:text-blue-400  dark:group-focus:text-blue-400"
+            name="icon-park-outline:help"
+          />
         </a>
         <span v-else>
           {{ row.name }}
