@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="h-full min-h-screen pt-14">
+    <div class="h-full min-h-screen pt-[120px] lg:pt-14">
       <MiscAprilFools2025 />
     </div>
     <div class="flex flex-col text-slate-800 dark:text-slate-200 w-full">
