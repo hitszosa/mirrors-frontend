@@ -186,27 +186,55 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'AprilFools2025',
-  data() {
-    return {
-      currentLang: 'zh',
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+
+type SupportedLanguage = 'zh' | 'en'
+
+const detectPreferredLanguage = (): SupportedLanguage => {
+  const route = useRoute()
+  if (route.query.lang) {
+    const queryLang = route.query.lang as string
+    if (queryLang === 'zh' || queryLang === 'en') {
+      return queryLang
     }
-  },
-  mounted() {
-    // 设置初始页面标题
-    document.title = this.currentLang === 'zh'
-      ? '网站已关闭 - GDPR 合规问题'
-      : 'Site Disabled - GDPR Compliance'
-  },
-  methods: {
-    switchLang(lang) {
-      this.currentLang = lang
-      document.title = lang === 'zh'
-        ? '网站已关闭 - GDPR 合规问题'
-        : 'Site Disabled - GDPR Compliance'
-    },
-  },
+  }
+  if (typeof navigator !== 'undefined') {
+    const browserLang = navigator.language.toLowerCase()
+    if (browserLang.startsWith('zh')) {
+      return 'zh'
+    }
+    // If the browser language starts with anything other than zh, default to English
+    if (browserLang) {
+      return 'en'
+    }
+  }
+
+  // Default fallback
+  return 'zh'
 }
+
+const currentLang = ref<SupportedLanguage>('zh') // Initial value will be replaced in onMounted
+
+const switchLang = (lang: SupportedLanguage): void => {
+  currentLang.value = lang
+  updateDocumentTitle(lang)
+
+  // Update URL without reloading the page (if using vue-router)
+  const url = new URL(window.location.href)
+  url.searchParams.set('lang', lang)
+  window.history.replaceState({}, '', url.toString())
+}
+
+const updateDocumentTitle = (lang: SupportedLanguage): void => {
+  document.title = lang === 'zh'
+    ? '网站已关闭 - GDPR 合规问题'
+    : 'Site Disabled - GDPR Compliance'
+}
+
+onMounted(() => {
+  currentLang.value = detectPreferredLanguage()
+  updateDocumentTitle(currentLang.value)
+})
 </script>
