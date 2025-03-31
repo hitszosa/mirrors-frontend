@@ -14,6 +14,7 @@
       class="flex flex-col justify-between min-h-screen bg-inherit
       pt-20 px-6 md:pt-12 md:px-12"
     >
+      <MiscAprilFools2025 />
       <main class="flex justify-around px-auto py-12">
         <slot />
       </main>
