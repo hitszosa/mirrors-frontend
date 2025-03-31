@@ -188,18 +188,10 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
 
 type SupportedLanguage = 'zh' | 'en'
 
 const detectPreferredLanguage = (): SupportedLanguage => {
-  const route = useRoute()
-  if (route.query.lang) {
-    const queryLang = route.query.lang as string
-    if (queryLang === 'zh' || queryLang === 'en') {
-      return queryLang
-    }
-  }
   if (typeof navigator !== 'undefined') {
     const browserLang = navigator.language.toLowerCase()
     if (browserLang.startsWith('zh')) {
