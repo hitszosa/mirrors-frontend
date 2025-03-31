@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches: ['*']
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    uses: ./.github/workflows/action-build.yml
+  push-oras:
+    uses: ./.github/workflows/action-push-oras.yml
+    needs: build
