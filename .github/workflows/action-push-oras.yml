@@ -33,7 +33,7 @@ jobs:
           jq -c '{ "$manifest": .labels }' meta.json > annotations.json
           oras push \
             --annotation-file annotations.json \
-            $REGISTRY/$IMAGE_BASENAME:$first_tag ./site/
+            $REGISTRY/$IMAGE_BASENAME:$first_tag ./public/
           for tag in $extra_tags; do
             oras tag $REGISTRY/$IMAGE_BASENAME:$first_tag $tag
           done
