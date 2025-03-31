@@ -2,13 +2,11 @@ name: CI
 
 on:
   push:
-    branches: ["*"]
+    branches: ['*']
   pull_request:
     branches: [main]
 
 jobs:
-  autocorrect:
-    uses: ./.github/workflows/action-autocorrect.yml
   build:
     uses: ./.github/workflows/action-build.yml
   push-oras:
