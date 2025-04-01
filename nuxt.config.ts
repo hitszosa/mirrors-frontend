@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/content',
-    'nuxt-icon',
+    '@nuxt/icon',
     'dayjs-nuxt',
     '@nuxt/ui',
     '@nuxt/eslint',
@@ -12,12 +12,16 @@ export default defineNuxtConfig({
 
   ssr: true,
 
+  devtools: { enabled: true },
+  css: ['@/assets/css/main.css'],
+
   colorMode: {
     classSuffix: '',
   },
 
-  devtools: { enabled: true },
-  css: ['@/assets/css/main.css'],
+  ui: {},
+
+  compatibilityDate: '2024-11-01',
 
   postcss: {
     plugins: {
@@ -25,8 +29,4 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
-  ui: {},
-
-  compatibilityDate: '2024-11-01',
 })
