@@ -12,14 +12,14 @@
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.4.0",
     "@tailwindcss/typography": "^0.5.15",
-    "@typescript-eslint/parser": "^6.5.0",
+    "@typescript-eslint/parser": "^8.29",
     "autoprefixer": "^10.4.15",
     "browserslist": "^4.24.4",
     "dayjs-nuxt": "^1.1.2",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.17.0",
-    "nuxt-eslint-auto-explicit-import": "^0.0.2",
+    "nuxt-eslint-auto-explicit-import": "^0.1.1",
     "postcss": "^8.4.29",
     "prettier": "^3.5",
     "prettier-eslint": "^16.0.1",
@@ -50,5 +50,5 @@
     "vue3-keypress": "^4.0.1"
   },
   "type": "module",
-  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
