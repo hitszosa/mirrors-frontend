@@ -5,7 +5,7 @@
         <Icon name="icon-park-outline:align-text-left" />
       </div>
       <NuxtLink
-        :to="digest._path"
+        :to="digest.path"
         class="truncate transition-colors relative inline-block z-10 decoration-dotted underline-offset-4 hocus:underline hover:cursor-pointer"
       >
         {{ digest.title }}
@@ -22,9 +22,11 @@
 <script setup lang="ts">
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
-import { type ArticleDigest } from '~/components/news/ArticleDigest'
+import utc from 'dayjs/plugin/utc'
+import type { ArticleDigest } from '~/components/news/ArticleDigest'
 
 dayjs.extend(relativeTime)
+dayjs.extend(utc)
 defineProps<{
   digest: ArticleDigest
 }>()

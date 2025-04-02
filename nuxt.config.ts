@@ -4,20 +4,29 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/content',
-    'nuxt-icon',
+    '@nuxt/icon',
     'dayjs-nuxt',
     '@nuxt/ui',
     '@nuxt/eslint',
+    '@nuxtjs/mdc',
   ],
 
   ssr: true,
+
+  devtools: { enabled: true },
+  css: ['@/assets/css/main.css'],
 
   colorMode: {
     classSuffix: '',
   },
 
-  devtools: { enabled: true },
-  css: ['@/assets/css/main.css'],
+  mdc: {
+    highlight: false,
+  },
+
+  ui: {},
+
+  compatibilityDate: '2024-11-01',
 
   postcss: {
     plugins: {
@@ -26,7 +35,9 @@ export default defineNuxtConfig({
     },
   },
 
-  ui: {},
-
-  compatibilityDate: '2024-11-01',
+  icon: {
+    serverBundle: {
+      collections: ['icon-park'],
+    },
+  },
 })
