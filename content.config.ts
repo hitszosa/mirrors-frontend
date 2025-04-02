@@ -12,5 +12,12 @@ export default defineContentConfig({
         description: z.string(),
       }),
     }),
+    fallback: defineCollection({
+      source: '*.md',
+      type: 'page',
+      schema: z.object({
+        title: z.string(),
+      }),
+    }),
   },
 })
