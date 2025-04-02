@@ -10,7 +10,7 @@
       <IndexNewsWidgetItem
         v-for="digest in digests"
         :key="digest.path"
-        :digest="digest"
+        :digest="digest as ArticleDigest"
       />
     </ul>
     <NuxtLink to="/news">

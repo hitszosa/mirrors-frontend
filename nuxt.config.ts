@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     'dayjs-nuxt',
     '@nuxt/ui',
     '@nuxt/eslint',
+    '@nuxtjs/mdc',
   ],
 
   ssr: true,
@@ -17,6 +18,10 @@ export default defineNuxtConfig({
 
   colorMode: {
     classSuffix: '',
+  },
+
+  mdc: {
+    highlight: false,
   },
 
   ui: {},

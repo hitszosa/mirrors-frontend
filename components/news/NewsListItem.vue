@@ -8,7 +8,7 @@
       class="flex flex-col space-y-2 p-4 w-full border-t-[0.1em] border-slate-300 dark:border-slate-600"
     >
       <NuxtLink
-        :to="digest._path"
+        :to="digest.path"
         class="transition-colors max-w-min hocus:text-blue-400 dark:hocus:text-blue-300"
       >
         <h2
@@ -41,7 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import { type ArticleDigest } from './ArticleDigest'
+import type { ArticleDigest } from './ArticleDigest'
 
 const props = defineProps<{
   digest: ArticleDigest

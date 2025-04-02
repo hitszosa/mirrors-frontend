@@ -5,15 +5,13 @@
   >
     <NewsListItem
       v-for="digest in digests"
-      :key="digest._path"
+      :key="digest.path"
       :digest="digest"
     />
   </ul>
 </template>
 
 <script setup lang="ts">
-import type { ArticleDigest } from './ArticleDigest'
-
 const rawData = await useAsyncData(
   'news',
   () => queryCollection('news')

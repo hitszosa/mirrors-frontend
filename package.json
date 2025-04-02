@@ -16,6 +16,7 @@
     "autoprefixer": "^10.4.15",
     "browserslist": "^4.24.4",
     "dayjs-nuxt": "^1.1.2",
+    "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.17.0",
@@ -26,7 +27,6 @@
     "sass": "^1.66.1",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.6.3",
-    "eslint": "^9.0.0",
     "update-browserslist-db": "^1.1.3",
     "vue-eslint-parser": "^9.3.1"
   },
@@ -40,6 +40,7 @@
     "@nuxt/scripts": "^0.11.5",
     "@nuxt/test-utils": "^3.17.2",
     "@nuxt/ui": "^2",
+    "@nuxtjs/mdc": "0.16.1",
     "@pinia/nuxt": "^0.10.1",
     "@unhead/vue": "^2.0.2",
     "dayjs": "^1.11.9",
