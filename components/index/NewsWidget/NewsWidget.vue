@@ -9,7 +9,7 @@
     <ul class="space-y-2 list-none list-inside">
       <IndexNewsWidgetItem
         v-for="digest in digests"
-        :key="digest._path"
+        :key="digest.path"
         :digest="digest"
       />
     </ul>
@@ -27,14 +27,20 @@
 </template>
 
 <script setup lang="ts">
-import { type ArticleDigest } from '~/components/news/ArticleDigest'
+import type { ArticleDigest } from '~/components/news/ArticleDigest'
 
 const rawData = await useAsyncData(
   'news',
-  () => queryContent('news')
-    .only(['title', '_path', 'description', 'date', 'tags'])
-    .sort({ date: -1 })
-    .find(),
+  () => queryCollection('news')
+    .select('title', 'path', 'description', 'date', 'tags')
+    .order('date', 'DESC')
+    .all(),
 )
-const digests = (rawData.data.value ?? []) as ArticleDigest[]
+const digests = computed(() => {
+  const data = rawData.data?.value
+  if (!data) {
+    return []
+  }
+  return data
+})
 </script>

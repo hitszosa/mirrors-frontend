@@ -1,5 +1,5 @@
 export type ArticleDigest = {
-  _path: string
+  path: string
   title: string
   description: string
   date: string

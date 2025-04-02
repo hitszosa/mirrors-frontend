@@ -12,14 +12,20 @@
 </template>
 
 <script setup lang="ts">
-import { type ArticleDigest } from './ArticleDigest'
+import type { ArticleDigest } from './ArticleDigest'
 
 const rawData = await useAsyncData(
   'news',
-  () => queryContent('news')
-    .only(['title', '_path', 'description', 'date', 'tags'])
-    .sort({ date: -1 })
-    .find(),
+  () => queryCollection('news')
+    .select('title', 'path', 'description', 'date', 'tags')
+    .order('date', 'DESC')
+    .all(),
 )
-const digests = (rawData.data.value ?? []) as ArticleDigest[]
+const digests = computed(() => {
+  const data = rawData.data?.value
+  if (!data) {
+    return []
+  }
+  return data
+})
 </script>

@@ -23,16 +23,16 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-11-01',
 
-  icon: {
-    serverBundle: {
-      collections: ['icon-park'],
-    },
-  },
-
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
+    },
+  },
+
+  icon: {
+    serverBundle: {
+      collections: ['icon-park'],
     },
   },
 })
