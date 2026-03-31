@@ -71,6 +71,11 @@
         </BaseSlidingTransition>
       </button>
     </nav>
+    <AgeVerificationModal
+      v-model="showAgeVerification"
+      @confirm="onAgeVerified"
+      @cancel="onAgeVerificationCancelled"
+    />
   </header>
 </template>
 
@@ -94,7 +99,37 @@ watch(theme, () => {
   colorMode.preference = theme.value
 })
 
+const showAgeVerification = ref(false)
+const pendingThemeIndex = ref<number | null>(null)
+
+const isAprilFools = (): boolean => {
+  const now = new Date()
+  return now.getMonth() === 3 && now.getDate() === 1
+}
+
+const wouldSwitchToDark = (nextIndex: number): boolean => {
+  return themes[nextIndex] === ThemeState.Dark
+}
+
 const onNextTheme = () => {
-  themeIndex.value = (themeIndex.value + 1) % themes.length
+  const nextIndex = (themeIndex.value + 1) % themes.length
+  if (isAprilFools() && wouldSwitchToDark(nextIndex)) {
+    pendingThemeIndex.value = nextIndex
+    showAgeVerification.value = true
+  }
+  else {
+    themeIndex.value = nextIndex
+  }
+}
+
+const onAgeVerified = () => {
+  if (pendingThemeIndex.value !== null) {
+    themeIndex.value = pendingThemeIndex.value
+    pendingThemeIndex.value = null
+  }
+}
+
+const onAgeVerificationCancelled = () => {
+  pendingThemeIndex.value = null
 }
 </script>
