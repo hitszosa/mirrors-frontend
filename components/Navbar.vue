@@ -102,18 +102,13 @@ watch(theme, () => {
 const showAgeVerification = ref(false)
 const pendingThemeIndex = ref<number | null>(null)
 
-const isAprilFools = (): boolean => {
-  const now = new Date()
-  return now.getMonth() === 3 && now.getDate() === 1
-}
-
 const wouldSwitchToDark = (nextIndex: number): boolean => {
   return themes[nextIndex] === ThemeState.Dark
 }
 
 const onNextTheme = () => {
   const nextIndex = (themeIndex.value + 1) % themes.length
-  if (isAprilFools() && wouldSwitchToDark(nextIndex)) {
+  if (wouldSwitchToDark(nextIndex)) {
     pendingThemeIndex.value = nextIndex
     showAgeVerification.value = true
   }
