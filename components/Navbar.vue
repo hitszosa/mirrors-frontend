@@ -90,6 +90,7 @@ enum ThemeState {
   Dark = 'dark',
 }
 
+const route = useRoute()
 const colorMode = useColorMode()
 const themes = [ThemeState.System, ThemeState.Light, ThemeState.Dark]
 const themeIndex = ref(themes.indexOf(colorMode.preference as ThemeState))
@@ -115,7 +116,7 @@ const wouldResolveToDark = (nextIndex: number): boolean => {
 }
 
 onMounted(() => {
-  if (colorMode.value === 'dark' && !ageVerified.value) {
+  if (route.path === '/' && colorMode.value === 'dark' && !ageVerified.value) {
     pendingThemeIndex.value = themeIndex.value
     showAgeVerification.value = true
   }
@@ -123,7 +124,7 @@ onMounted(() => {
 
 const onNextTheme = () => {
   const nextIndex = (themeIndex.value + 1) % themes.length
-  if (!ageVerified.value && wouldResolveToDark(nextIndex)) {
+  if (route.path === '/' && !ageVerified.value && wouldResolveToDark(nextIndex)) {
     pendingThemeIndex.value = nextIndex
     showAgeVerification.value = true
   }
