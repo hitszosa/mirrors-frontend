@@ -9,6 +9,8 @@ env:
 
 jobs:
   push-oras:
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
