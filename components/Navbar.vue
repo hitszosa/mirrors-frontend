@@ -101,14 +101,29 @@ watch(theme, () => {
 
 const showAgeVerification = ref(false)
 const pendingThemeIndex = ref<number | null>(null)
+const ageVerified = ref(false)
 
 const wouldSwitchToDark = (nextIndex: number): boolean => {
   return themes[nextIndex] === ThemeState.Dark
 }
 
+const wouldResolveToDark = (nextIndex: number): boolean => {
+  const nextTheme = themes[nextIndex]
+  if (nextTheme === ThemeState.Dark) return true
+  if (nextTheme === ThemeState.System && colorMode.value === 'dark') return true
+  return false
+}
+
+onMounted(() => {
+  if (colorMode.value === 'dark' && !ageVerified.value) {
+    pendingThemeIndex.value = themeIndex.value
+    showAgeVerification.value = true
+  }
+})
+
 const onNextTheme = () => {
   const nextIndex = (themeIndex.value + 1) % themes.length
-  if (wouldSwitchToDark(nextIndex)) {
+  if (!ageVerified.value && wouldResolveToDark(nextIndex)) {
     pendingThemeIndex.value = nextIndex
     showAgeVerification.value = true
   }
@@ -118,6 +133,7 @@ const onNextTheme = () => {
 }
 
 const onAgeVerified = () => {
+  ageVerified.value = true
   if (pendingThemeIndex.value !== null) {
     themeIndex.value = pendingThemeIndex.value
     pendingThemeIndex.value = null
@@ -125,6 +141,8 @@ const onAgeVerified = () => {
 }
 
 const onAgeVerificationCancelled = () => {
+  // Always switch to light mode when user is under 18
+  themeIndex.value = themes.indexOf(ThemeState.Light)
   pendingThemeIndex.value = null
 }
 </script>

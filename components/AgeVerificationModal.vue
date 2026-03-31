@@ -1,5 +1,5 @@
 <template>
-  <UModal v-model="isOpen">
+  <UModal v-model="isOpen" :ui="{ height: '' }">
     <UCard
       :ui="{
         divide: 'divide-y divide-gray-100 dark:divide-gray-800',
