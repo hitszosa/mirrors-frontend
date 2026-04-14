@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
 import typography from '@tailwindcss/typography'
-import colors from 'tailwindcss/colors'
 import plugin from 'tailwindcss/plugin'
+import colors from 'tailwindcss/colors'
 
 export default {
   content: [
@@ -81,7 +81,10 @@ export default {
           },
         },
         slate: {
-          css: {},
+          css: {
+            '--tw-prose-pre-bg': colors.slate[50],
+            '--tw-prose-invert-pre-bg': colors.slate[800],
+          },
         },
       },
     },

@@ -15,7 +15,7 @@
     "html",
     "markdown"
   ],
-  "eslint.experimental.useFlatConfig": true,
+  "eslint.useFlatConfig": true,
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
