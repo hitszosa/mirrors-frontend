@@ -1073,12 +1073,12 @@
     "@iconify/types" "*"
 
 "@iconify/json@^2.2.126":
-  version "2.2.201"
-  resolved "https://registry.npmjs.org/@iconify/json/-/json-2.2.201.tgz"
-  integrity sha512-5jM9TAa55YSEfx2WX1/GsHL9FSSH1PsA38V3p26SDmnOSmfb3V7r5yBgO8oIFkXdFQFk59MgESEOziapNtTGkw==
+  version "2.2.467"
+  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.2.467.tgz#bc6642f2e0fe9b9463c0c61b19a2a834c75fbf67"
+  integrity sha512-vjw27l6Sp6OJnCSNAhE6PGCZFYNSp68j1xK+hws0T5mptSEez0EjmmJBQLUk4yM5nhA9G5H5mW3EF2/yRfk74Q==
   dependencies:
     "@iconify/types" "*"
-    pathe "^1.1.2"
+    pathe "^2.0.3"
 
 "@iconify/types@*", "@iconify/types@^2.0.0":
   version "2.0.0"
