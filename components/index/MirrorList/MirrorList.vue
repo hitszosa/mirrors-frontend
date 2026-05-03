@@ -6,12 +6,12 @@
       </template>
       Index of Mirrors
     </BaseSectionHeading>
-    <UInput
+    <AppInput
       ref="search"
       v-model="mirrorFilter"
       placeholder="Press '/' key to search for mirrors..."
     />
-    <UTable
+    <AppTable
       :columns="columns"
       :rows="filteredRows"
       :sort="{ column: 'name', direction: 'asc' }"
@@ -41,9 +41,9 @@
         </span>
       </template>
       <template #status-data="{ row }">
-        <UBadge :color="getTagType(row.status)">
+        <AppBadge :color="getTagType(row.status)">
           {{ row.status }}
-        </UBadge>
+        </AppBadge>
       </template>
       <template #files-data="{ row }">
         <NuxtLink
@@ -55,13 +55,16 @@
           <Icon name="icon-park-outline:folder-open" />
         </NuxtLink>
       </template>
-    </UTable>
+    </AppTable>
   </section>
 </template>
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { useKeypress } from 'vue3-keypress'
+import AppBadge from '~/components/ui/AppBadge.vue'
+import AppInput from '~/components/ui/AppInput.vue'
+import AppTable from '~/components/ui/AppTable.vue'
 import { useMirrorListStore } from './MirrorListStore'
 import { useHelpListStore } from './HelpListStore'
 

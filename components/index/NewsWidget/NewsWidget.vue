@@ -14,20 +14,21 @@
       />
     </ul>
     <NuxtLink to="/news">
-      <UButton
+      <AppButton
         color="white"
         variant="solid"
         block
         class="transition-colors h-9 mt-4"
       >
         Read More
-      </UButton>
+      </AppButton>
     </NuxtLink>
   </section>
 </template>
 
 <script setup lang="ts">
 import { type ArticleDigest } from '~/components/news/ArticleDigest'
+import AppButton from '~/components/ui/AppButton.vue'
 
 const rawData = await useAsyncData(
   'news',

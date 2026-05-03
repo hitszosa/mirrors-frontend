@@ -1,7 +1,7 @@
 <template>
-  <UCard
+  <AppCard
     :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800', base: 'h-full overflow-auto' }"
-    text-slate-800
+    class="text-slate-800 dark:text-slate-100"
   >
     <template #header>
       <div class="flex flex-row justify-between">
@@ -11,7 +11,7 @@
           </template>
           Get LiveCD & Software
         </BaseSectionHeading>
-        <UButton
+        <AppButton
           :ui="{ rounded: 'rounded-full' }"
           color="white"
           variant="ghost"
@@ -19,7 +19,7 @@
           @click="$emit('close')"
         >
           <Icon name="icon-park-outline:close" />
-        </UButton>
+        </AppButton>
       </div>
     </template>
     <div
@@ -50,14 +50,17 @@
       v-else
       class="flex flex-row space-x-6"
     >
-      <USkeleton class="h-[32em] w-40" />
-      <USkeleton class="h-[32em] grow" />
+      <AppSkeleton class="h-[32em] w-40" />
+      <AppSkeleton class="h-[32em] grow" />
     </div>
-  </UCard>
+  </AppCard>
 </template>
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
+import AppButton from '~/components/ui/AppButton.vue'
+import AppCard from '~/components/ui/AppCard.vue'
+import AppSkeleton from '~/components/ui/AppSkeleton.vue'
 import { useDownloadStore } from './DownloadStore'
 
 const store = useDownloadStore()
