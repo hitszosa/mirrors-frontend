@@ -22,38 +22,23 @@
     </a>
     <nav class="flex flex-row space-x-7 justify-end font-medium text-base items-center">
       <ul class="flex flex-row list-none space-x-7">
-        <li>
-          <NavButton
-            link="/"
-            :active="isLinkActive('/')"
+        <li
+          v-for="item in navItems"
+          :key="item.link"
+        >
+          <a
+            :href="item.link"
+            :target="item.isExternalLink ? '_blank' : undefined"
+            :rel="item.isExternalLink ? 'noreferrer' : undefined"
+            :aria-current="isLinkActive(item.link) ? 'page' : undefined"
+            class="transition-colors after:transition-all relative inline-block
+            hocus:text-blue-400 dark:hocus:text-blue-300
+            after:block after:absolute after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:rounded-full after:-z-10
+            hocus:after:w-full hocus:after:h-2 hocus:after:bg-slate-100"
+            :class="getNavLinkClass(isLinkActive(item.link))"
           >
-            Home
-          </NavButton>
-        </li>
-        <li>
-          <NavButton
-            link="https://mirrors-help.osa.moe/"
-            :is-external-link="true"
-            :active="false"
-          >
-            Help
-          </NavButton>
-        </li>
-        <li>
-          <NavButton
-            link="/news"
-            :active="isLinkActive('/news')"
-          >
-            News
-          </NavButton>
-        </li>
-        <li>
-          <NavButton
-            link="/about"
-            :active="isLinkActive('/about')"
-          >
-            About
-          </NavButton>
+            {{ item.label }}
+          </a>
         </li>
       </ul>
       <button
@@ -62,33 +47,27 @@
         hocus:text-blue-400 dark:hocus:text-blue-300"
         @click="onNextTheme"
       >
-        <BaseSlidingTransition>
-          <Icon
-            v-if="theme === ThemeState.System"
+        <Transition
+          mode="out-in"
+          enter-active-class="transition-all duration-300 ease-out"
+          enter-from-class="opacity-0 translate-y-2"
+          leave-active-class="transition-all duration-300 ease-out"
+          leave-to-class="opacity-0 -translate-y-2"
+        >
+          <IconifyIcon
+            :key="currentThemeIcon"
+            :icon="currentThemeIcon"
             class="absolute"
-            name="icon-park-outline:dark-mode"
           />
-          <Icon
-            v-else-if="theme === ThemeState.Light"
-            class="absolute"
-            name="icon-park-outline:sun-one"
-          />
-          <Icon
-            v-else-if="theme === ThemeState.Dark"
-            class="absolute"
-            name="icon-park-outline:moon"
-          />
-        </BaseSlidingTransition>
+        </Transition>
       </button>
     </nav>
   </header>
 </template>
 
 <script setup lang="ts">
+import { Icon as IconifyIcon } from '@iconify/vue'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import BaseSlidingTransition from '~/components/base/SlidingTransition.vue'
-import Icon from '~/components/Icon.vue'
-import NavButton from '~/components/NavButton.vue'
 
 const props = defineProps<{
   titleName: string
@@ -103,9 +82,25 @@ enum ThemeState {
 
 const STORAGE_KEY = 'nuxt-color-mode'
 const themes = [ThemeState.System, ThemeState.Light, ThemeState.Dark]
+const navItems = [
+  { label: 'Home', link: '/' },
+  { label: 'Help', link: 'https://mirrors-help.osa.moe/', isExternalLink: true },
+  { label: 'News', link: '/news' },
+  { label: 'About', link: '/about' },
+]
 const fallbackCurrentPath = ref<string | null>(null)
 const theme = ref<ThemeState>(ThemeState.System)
 const normalizedCurrentPath = computed(() => normalizePath(props.currentPath ?? fallbackCurrentPath.value))
+const currentThemeIcon = computed(() => {
+  switch (theme.value) {
+    case ThemeState.Light:
+      return 'icon-park-outline:sun-one'
+    case ThemeState.Dark:
+      return 'icon-park-outline:moon'
+    default:
+      return 'icon-park-outline:dark-mode'
+  }
+})
 
 let mediaQuery: MediaQueryList | null = null
 
@@ -162,6 +157,12 @@ const isLinkActive = (link: string) => {
   }
 
   return currentPath === normalizedLink
+}
+
+const getNavLinkClass = (isActive: boolean) => {
+  return isActive
+    ? 'text-blue-400 dark:text-blue-300 after:w-full after:h-2 after:bg-blue-400/20 dark:after:bg-blue-300/20'
+    : 'text-slate-500 dark:text-slate-400 after:bg-blue-400/20 dark:after:bg-blue-300/20 after:w-0 after:h-0'
 }
 
 watch(theme, () => {

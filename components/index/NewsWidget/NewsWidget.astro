@@ -1,6 +1,6 @@
 ---
-import BaseSectionHeading from '../../base/SectionHeading.vue'
-import Icon from '../../Icon.vue'
+import SectionHeading from '../../base/SectionHeading.astro'
+import Icon from '../../Icon.astro'
 import type { ArticleDigest } from '../../news/ArticleDigest'
 import NewsWidgetItem from './NewsWidgetItem.astro'
 
@@ -12,10 +12,10 @@ const { digests } = Astro.props
 ---
 
 <section class="space-y-4">
-  <BaseSectionHeading>
+  <SectionHeading>
     <Icon slot="icon" name="icon-park-outline:newspaper-folding" />
     Recent News
-  </BaseSectionHeading>
+  </SectionHeading>
   <ul class="space-y-2 list-none list-inside">
     {digests.map((digest) => <NewsWidgetItem digest={digest} />)}
   </ul>
