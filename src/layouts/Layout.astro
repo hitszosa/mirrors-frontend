@@ -1,0 +1,44 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  title?: string
+}
+
+const { title = 'HITSZ OSA Mirrors' } = Astro.props
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="dark:bg-gray-900">
+    <div class="dark:bg-gray-900">
+      <div class="flex flex-col text-slate-800 dark:text-slate-200 w-screen">
+        <nav class="fixed top-0 left-0 z-50 w-full bg-white/90 shadow-sm backdrop-blur dark:bg-gray-900/90">
+          <div class="mx-auto flex h-20 items-center justify-between px-6 md:h-12 md:px-12">
+            <a class="flex items-center gap-3 font-semibold" href="/" aria-label="HITSZ OSA Mirrors">
+              <img class="h-9 w-9 md:h-8 md:w-8" src="/images/logo.svg" alt="" />
+              <span>HITSZ OSA Mirrors</span>
+            </a>
+            <div class="hidden items-center gap-6 text-sm md:flex">
+              <a class="transition-colors hocus:text-blue-600 dark:hocus:text-blue-300" href="/">镜像列表</a>
+              <a class="transition-colors hocus:text-blue-600 dark:hocus:text-blue-300" href="https://mirrors-help.osa.moe/">使用帮助</a>
+            </div>
+          </div>
+        </nav>
+        <div class="flex flex-col justify-between min-h-screen bg-inherit pt-20 px-6 md:pt-12 md:px-12">
+          <main class="flex justify-around px-auto py-12">
+            <slot />
+          </main>
+          <footer class="mt-6 py-8 text-center text-sm text-slate-500 dark:text-slate-400">
+            本站由哈尔滨工业大学（深圳）开源技术协会运营
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
