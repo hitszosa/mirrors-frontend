@@ -150,7 +150,18 @@ const applyTheme = (value: ThemeState) => {
 }
 
 const isLinkActive = (link: string) => {
-  return normalizedCurrentPath.value !== null && normalizedCurrentPath.value === normalizePath(link)
+  const currentPath = normalizedCurrentPath.value
+  const normalizedLink = normalizePath(link)
+
+  if (currentPath === null || normalizedLink === null) {
+    return false
+  }
+
+  if (normalizedLink === '/news') {
+    return currentPath === normalizedLink || currentPath.startsWith(`${normalizedLink}/`)
+  }
+
+  return currentPath === normalizedLink
 }
 
 watch(theme, () => {
