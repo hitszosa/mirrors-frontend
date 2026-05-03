@@ -25,6 +25,3 @@ logs
 .env
 .env.*
 !.env.example
-
-# Legacy Storybook output
-storybook-static

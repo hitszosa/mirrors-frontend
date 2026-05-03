@@ -4,7 +4,6 @@
   "scripts": {
     "build": "astro build",
     "dev": "astro dev",
-    "generate": "astro build",
     "preview": "astro preview",
     "check": "astro check",
     "format": "eslint --fix \"*.{js,mjs,cjs,ts}\" \"components/**/*.{ts,vue}\" \"scripts/**/*.{js,mjs,cjs,ts}\" \"src/**/*.{ts,vue}\"",
