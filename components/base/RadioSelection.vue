@@ -16,6 +16,8 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
+
 const props = defineProps<{
   items: string[]
   index: number
@@ -27,7 +29,12 @@ const emit = defineEmits<{
 const getButtonStyle = (idx: number) => {
   return idx === props.index ? 'bg-white dark:bg-gray-900 shadow-sm' : ''
 }
+
 const emitUpdate = () => {
+  if (props.items.length === 0) {
+    return
+  }
+
   emit('update:index', props.items[0], 0)
 }
 
@@ -35,5 +42,7 @@ const onSelect = (item: string, index: number) => {
   emit('update:index', item, index)
 }
 
-emitUpdate()
+onMounted(() => {
+  emitUpdate()
+})
 </script>
