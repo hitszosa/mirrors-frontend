@@ -1,11 +1,14 @@
 ---
 import '../styles/global.css'
+import Footer from '../../components/Footer.vue'
+import Navbar from '../../components/Navbar.vue'
 
 interface Props {
   title?: string
 }
 
 const { title = 'HITSZ OSA Mirrors' } = Astro.props
+const currentPath = Astro.url.pathname
 const themeInitScript = `(function(){const key='nuxt-color-mode';const stored=localStorage.getItem(key);const theme=stored==='light'||stored==='dark'||stored==='system'?stored:'system';const prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;const isDark=theme==='dark'||(theme==='system'&&prefersDark);document.documentElement.classList.toggle('dark',isDark);document.documentElement.style.colorScheme=isDark?'dark':'light'})()`
 ---
 
@@ -20,25 +23,16 @@ const themeInitScript = `(function(){const key='nuxt-color-mode';const stored=lo
   <body class="dark:bg-gray-900">
     <div class="dark:bg-gray-900">
       <div class="flex w-full flex-col text-slate-800 dark:text-slate-200">
-        <nav class="fixed top-0 left-0 z-50 w-full bg-white/90 shadow-sm backdrop-blur dark:bg-gray-900/90">
-          <div class="mx-auto flex h-20 items-center justify-between px-6 md:h-12 md:px-12">
-            <a class="flex items-center gap-3 font-semibold" href="/" aria-label="HITSZ OSA Mirrors">
-              <img class="h-9 w-9 md:h-8 md:w-8" src="/images/logo.svg" alt="" />
-              <span>HITSZ OSA Mirrors</span>
-            </a>
-            <div class="hidden items-center gap-6 text-sm md:flex">
-              <a class="transition-colors hocus:text-blue-600 dark:hocus:text-blue-300" href="/">镜像列表</a>
-              <a class="transition-colors hocus:text-blue-600 dark:hocus:text-blue-300" href="https://mirrors-help.osa.moe/">使用帮助</a>
-            </div>
-          </div>
-        </nav>
-        <div class="flex flex-col justify-between min-h-screen bg-inherit pt-20 px-6 md:pt-12 md:px-12">
+        <div class="fixed top-0 left-0 z-50 w-full">
+          <Navbar client:load titleName="HITSZ OSA Mirrors" currentPath={currentPath}>
+            <img slot="logo" class="h-full w-full" src="/images/logo.svg" alt="" />
+          </Navbar>
+        </div>
+        <div class="flex flex-col justify-between min-h-screen bg-inherit pt-28 px-6 md:pt-16 md:px-12">
           <main class="mx-auto flex w-full justify-around py-12">
             <slot />
           </main>
-          <footer class="mt-6 py-8 text-center text-sm text-slate-500 dark:text-slate-400">
-            本站由哈尔滨工业大学（深圳）开源技术协会运营
-          </footer>
+          <Footer />
         </div>
       </div>
     </div>
