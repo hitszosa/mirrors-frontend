@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, getCurrentInstance } from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps<{
   active?: boolean
@@ -24,19 +24,9 @@ const props = defineProps<{
   isExternalLink?: boolean
 }>()
 
-const appContext = getCurrentInstance()?.appContext
-
 const linkComponent = computed(() => {
   if (props.isExternalLink) {
     return 'a'
-  }
-
-  if (appContext?.components.RouterLink) {
-    return 'RouterLink'
-  }
-
-  if (appContext?.components.NuxtLink) {
-    return 'NuxtLink'
   }
 
   return 'a'
