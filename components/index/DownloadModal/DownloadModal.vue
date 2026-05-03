@@ -1,5 +1,5 @@
 <template>
-  <section class="h-full overflow-auto rounded-2xl bg-white text-slate-800 shadow-xl ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700">
+  <section class="flex flex-col h-full overflow-hidden rounded-2xl bg-white text-slate-800 shadow-xl ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700">
     <header class="p-6">
       <div class="flex flex-row justify-between">
         <h2 class="flex flex-nowrap space-x-1.5 text-xl font-medium">
@@ -23,17 +23,17 @@
         </button>
       </div>
     </header>
-    <div class="border-t border-slate-200 p-6 dark:border-slate-800">
+    <div class="min-h-0 grow h-full border-t border-slate-200 p-6 dark:border-slate-800">
       <div
         v-if="collections.length > 0"
-        class="flex flex-row space-x-6 max-h-full"
+        class="flex flex-row min-h-0 h-full space-x-6"
       >
         <BaseRadioSelection
           :items="collections"
           :index="collectionIndex"
           @update:index="onCollectionUpdate"
         />
-        <ul class="grow list-disc p-1 pl-6 text-lg space-y-1 max-h-full overflow-scroll">
+        <ul class="grow h-full min-h-0 overflow-y-auto list-disc p-1 pl-6 text-lg space-y-1">
           <li
             v-for="resource in currentCollection"
             :key="resource.name"
