@@ -1,4 +1,4 @@
-# Nuxt dev/build outputs
+# Generated build outputs
 .output
 .data
 .nuxt
@@ -26,6 +26,5 @@ logs
 .env.*
 !.env.example
 
-# Nuxt
-.nuxt-storybook
+# Legacy Storybook output
 storybook-static

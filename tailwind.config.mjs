@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
 import typography from '@tailwindcss/typography'
-import colors from 'tailwindcss/colors'
 import plugin from 'tailwindcss/plugin'
 
 export default {

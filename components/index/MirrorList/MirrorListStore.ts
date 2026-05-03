@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 import { onMounted, ref } from 'vue'
 
 type RowData = {
