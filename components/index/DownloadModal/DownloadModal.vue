@@ -9,7 +9,7 @@
           <template #icon>
             <Icon name="icon-park-outline:record-disc" />
           </template>
-          Get LiveCD & Software
+          <span id="download-modal-title">Get LiveCD & Software</span>
         </BaseSectionHeading>
         <AppButton
           :ui="{ rounded: 'rounded-full' }"

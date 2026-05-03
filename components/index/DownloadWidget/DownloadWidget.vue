@@ -20,6 +20,7 @@
     </AppButton>
     <AppModal
       v-model="isOpen"
+      aria-labelledby="download-modal-title"
     >
       <IndexDownloadModal @close="onCloseModal" />
     </AppModal>
