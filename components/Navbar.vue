@@ -4,9 +4,9 @@
     backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-gray-900/70
     flex-col h-28 justify-evenly md:flex-row md:py-0 md:h-16 md:justify-between md:space-x-12"
   >
-    <NuxtLink
+    <a
       class="justify-start"
-      to="/"
+      href="/"
     >
       <div class="flex items-center">
         <div
@@ -19,11 +19,14 @@
           {{ $props.titleName }}
         </span>
       </div>
-    </NuxtLink>
+    </a>
     <nav class="flex flex-row space-x-7 justify-end font-medium text-base items-center">
       <ul class="flex flex-row list-none space-x-7">
         <li>
-          <NavButton link="/">
+          <NavButton
+            link="/"
+            :active="isLinkActive('/')"
+          >
             Home
           </NavButton>
         </li>
@@ -31,17 +34,24 @@
           <NavButton
             link="https://mirrors-help.osa.moe/"
             :is-external-link="true"
+            :active="false"
           >
             Help
           </NavButton>
         </li>
         <li>
-          <NavButton link="/news">
+          <NavButton
+            link="/news"
+            :active="isLinkActive('/news')"
+          >
             News
           </NavButton>
         </li>
         <li>
-          <NavButton link="/about">
+          <NavButton
+            link="/about"
+            :active="isLinkActive('/about')"
+          >
             About
           </NavButton>
         </li>
@@ -75,6 +85,11 @@
 </template>
 
 <script setup lang="ts">
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import BaseSlidingTransition from '~/components/base/SlidingTransition.vue'
+import Icon from '~/components/Icon.vue'
+import NavButton from '~/components/NavButton.vue'
+
 defineProps<{
   titleName: string
 }>()
@@ -85,16 +100,78 @@ enum ThemeState {
   Dark = 'dark',
 }
 
-const colorMode = useColorMode()
+const STORAGE_KEY = 'nuxt-color-mode'
 const themes = [ThemeState.System, ThemeState.Light, ThemeState.Dark]
-const themeIndex = ref(themes.indexOf(colorMode.preference as ThemeState))
-const theme = computed(() => themes[themeIndex.value])
+const currentPath = ref('')
+const theme = ref<ThemeState>(ThemeState.System)
+const normalizedCurrentPath = computed(() => normalizePath(currentPath.value))
+
+let mediaQuery: MediaQueryList | null = null
+
+const onSystemThemeChange = () => {
+  if (theme.value === ThemeState.System) {
+    applyTheme(theme.value)
+  }
+}
+
+const normalizePath = (path: string) => {
+  if (!path || path === '/') {
+    return '/'
+  }
+
+  return path.endsWith('/') ? path.slice(0, -1) : path
+}
+
+const getStoredTheme = () => {
+  if (typeof window === 'undefined') {
+    return ThemeState.System
+  }
+
+  const storedTheme = window.localStorage.getItem(STORAGE_KEY)
+  return themes.includes(storedTheme as ThemeState)
+    ? storedTheme as ThemeState
+    : ThemeState.System
+}
+
+const applyTheme = (value: ThemeState) => {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  const isDark = value === ThemeState.Dark || (value === ThemeState.System && prefersDark)
+  document.documentElement.classList.toggle('dark', isDark)
+  document.documentElement.style.colorScheme = isDark ? 'dark' : 'light'
+}
+
+const isLinkActive = (link: string) => {
+  return normalizedCurrentPath.value === normalizePath(link)
+}
 
 watch(theme, () => {
-  colorMode.preference = theme.value
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  window.localStorage.setItem(STORAGE_KEY, theme.value)
+  applyTheme(theme.value)
 })
 
 const onNextTheme = () => {
-  themeIndex.value = (themeIndex.value + 1) % themes.length
+  const themeIndex = themes.indexOf(theme.value)
+  theme.value = themes[(themeIndex + 1) % themes.length]
 }
+
+onMounted(() => {
+  currentPath.value = window.location.pathname
+  theme.value = getStoredTheme()
+  applyTheme(theme.value)
+
+  mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+  mediaQuery.addEventListener('change', onSystemThemeChange)
+})
+
+onBeforeUnmount(() => {
+  mediaQuery?.removeEventListener('change', onSystemThemeChange)
+})
 </script>

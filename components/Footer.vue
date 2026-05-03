@@ -23,3 +23,7 @@
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+import FooterLink from '~/components/FooterLink.vue'
+</script>
