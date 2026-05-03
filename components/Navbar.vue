@@ -102,7 +102,7 @@ enum ThemeState {
 
 const STORAGE_KEY = 'nuxt-color-mode'
 const themes = [ThemeState.System, ThemeState.Light, ThemeState.Dark]
-const currentPath = ref('')
+const currentPath = ref<string | null>(null)
 const theme = ref<ThemeState>(ThemeState.System)
 const normalizedCurrentPath = computed(() => normalizePath(currentPath.value))
 
@@ -114,7 +114,11 @@ const onSystemThemeChange = () => {
   }
 }
 
-const normalizePath = (path: string) => {
+const normalizePath = (path: string | null) => {
+  if (path === null) {
+    return null
+  }
+
   if (!path || path === '/') {
     return '/'
   }
@@ -145,7 +149,7 @@ const applyTheme = (value: ThemeState) => {
 }
 
 const isLinkActive = (link: string) => {
-  return normalizedCurrentPath.value === normalizePath(link)
+  return normalizedCurrentPath.value !== null && normalizedCurrentPath.value === normalizePath(link)
 }
 
 watch(theme, () => {
