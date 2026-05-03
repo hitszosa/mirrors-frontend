@@ -6,6 +6,8 @@
 .cache
 .astro
 dist
+public/tunasync_status.json
+public/static/res_link.json
 
 # Node dependencies
 node_modules

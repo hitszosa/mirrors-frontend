@@ -7,7 +7,9 @@
     "generate": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "format": "eslint --fix ."
+    "format": "eslint --fix .",
+    "fixtures:sync": "node scripts/sync-fixtures.mjs",
+    "fixtures:clean": "node scripts/clean-fixtures.mjs"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",

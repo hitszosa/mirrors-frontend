@@ -1,0 +1,1772 @@
+{
+  "Ubuntu": [
+    {
+      "name": "26.04 (amd64, Server)",
+      "link": "/ubuntu-releases/resolute/ubuntu-26.04-live-server-amd64.iso"
+    },
+    {
+      "name": "26.04 (amd64, Desktop LiveDVD)",
+      "link": "/ubuntu-releases/resolute/ubuntu-26.04-desktop-amd64.iso"
+    },
+    {
+      "name": "25.10 (amd64, Server)",
+      "link": "/ubuntu-releases/questing/ubuntu-25.10-live-server-amd64.iso"
+    },
+    {
+      "name": "25.10 (amd64, Desktop LiveDVD)",
+      "link": "/ubuntu-releases/questing/ubuntu-25.10-desktop-amd64.iso"
+    },
+    {
+      "name": "24.04.4 (amd64, Server)",
+      "link": "/ubuntu-releases/noble/ubuntu-24.04.4-live-server-amd64.iso"
+    },
+    {
+      "name": "24.04.4 (amd64, Desktop LiveDVD)",
+      "link": "/ubuntu-releases/noble/ubuntu-24.04.4-desktop-amd64.iso"
+    },
+    {
+      "name": "24.04.3 (amd64, Server)",
+      "link": "/ubuntu-releases/noble/ubuntu-24.04.3-live-server-amd64.iso"
+    },
+    {
+      "name": "24.04.3 (amd64, Desktop LiveDVD)",
+      "link": "/ubuntu-releases/noble/ubuntu-24.04.3-desktop-amd64.iso"
+    },
+    {
+      "name": "16.04.7 (amd64, Server)",
+      "link": "/ubuntu-releases/xenial/ubuntu-16.04.7-server-amd64.iso"
+    },
+    {
+      "name": "16.04.6 (i386, Server)",
+      "link": "/ubuntu-releases/xenial/ubuntu-16.04.6-server-i386.iso"
+    },
+    {
+      "name": "14.04.6 (amd64, Server)",
+      "link": "/ubuntu-releases/trusty/ubuntu-14.04.6-server-amd64.iso"
+    },
+    {
+      "name": "14.04.6 (i386, Server)",
+      "link": "/ubuntu-releases/trusty/ubuntu-14.04.6-server-i386.iso"
+    }
+  ],
+  "Debian": [
+    {
+      "name": "13.4.0 (amd64, Network installer)",
+      "link": "/debian-cd/current/amd64/iso-cd/debian-13.4.0-amd64-netinst.iso"
+    },
+    {
+      "name": "13.4.0 (amd64, Live CD with xfce)",
+      "link": "/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.4.0-amd64-xfce.iso"
+    },
+    {
+      "name": "13.4.0 (amd64, Live CD with standard)",
+      "link": "/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.4.0-amd64-standard.iso"
+    },
+    {
+      "name": "13.4.0 (amd64, Live CD with mate)",
+      "link": "/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.4.0-amd64-mate.iso"
+    },
+    {
+      "name": "13.4.0 (amd64, Live CD with lxqt)",
+      "link": "/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.4.0-amd64-lxqt.iso"
+    },
+    {
+      "name": "13.4.0 (amd64, Live CD with lxde)",
+      "link": "/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.4.0-amd64-lxde.iso"
+    },
+    {
+      "name": "13.4.0 (amd64, Live CD with kde)",
+      "link": "/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.4.0-amd64-kde.iso"
+    },
+    {
+      "name": "13.4.0 (amd64, Live CD with gnome)",
+      "link": "/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.4.0-amd64-gnome.iso"
+    },
+    {
+      "name": "13.4.0 (amd64, Live CD with cinnamon)",
+      "link": "/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.4.0-amd64-cinnamon.iso"
+    },
+    {
+      "name": "13.4.0 (amd64, DVD installer (Part 1))",
+      "link": "/debian-cd/current/amd64/iso-dvd/debian-13.4.0-amd64-DVD-1.iso"
+    }
+  ],
+  "Arch Linux": [
+    {
+      "name": "2026.05.01 (x86_64, CLI-only)",
+      "link": "/archlinux/iso/latest/archlinux-2026.05.01-x86_64.iso"
+    }
+  ],
+  "Fedora": [
+    {
+      "name": "43 (x86_64, Silverblue ostree)",
+      "link": "/fedora/releases/43/Silverblue/x86_64/iso/Fedora-Silverblue-ostree-x86_64-43-1.6.iso"
+    },
+    {
+      "name": "43 (x86_64, Server netinst)",
+      "link": "/fedora/releases/43/Server/x86_64/iso/Fedora-Server-netinst-x86_64-43-1.6.iso"
+    },
+    {
+      "name": "43 (x86_64, Server dvd)",
+      "link": "/fedora/releases/43/Server/x86_64/iso/Fedora-Server-dvd-x86_64-43-1.6.iso"
+    },
+    {
+      "name": "43 (x86_64, Live CD with Sway)",
+      "link": "/fedora/releases/43/Spins/x86_64/iso/Fedora-Sway-Live-x86_64-43-1.6.iso"
+    },
+    {
+      "name": "43 (x86_64, Live CD with MATE_Compiz)",
+      "link": "/fedora/releases/43/Spins/x86_64/iso/Fedora-MATE_Compiz-Live-x86_64-43-1.6.iso"
+    },
+    {
+      "name": "43 (x86_64, Live CD with LXDE)",
+      "link": "/fedora/releases/43/Spins/x86_64/iso/Fedora-LXDE-Live-x86_64-43-1.6.iso"
+    },
+    {
+      "name": "43 (x86_64, Live CD with Cinnamon)",
+      "link": "/fedora/releases/43/Spins/x86_64/iso/Fedora-Cinnamon-Live-x86_64-43-1.6.iso"
+    },
+    {
+      "name": "43 (x86_64, Everything netinst)",
+      "link": "/fedora/releases/43/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-43-1.6.iso"
+    },
+    {
+      "name": "43 (aarch64, Silverblue ostree)",
+      "link": "/fedora/releases/43/Silverblue/aarch64/iso/Fedora-Silverblue-ostree-aarch64-43-1.6.iso"
+    },
+    {
+      "name": "43 (aarch64, Server netinst)",
+      "link": "/fedora/releases/43/Server/aarch64/iso/Fedora-Server-netinst-aarch64-43-1.6.iso"
+    },
+    {
+      "name": "43 (aarch64, Server dvd)",
+      "link": "/fedora/releases/43/Server/aarch64/iso/Fedora-Server-dvd-aarch64-43-1.6.iso"
+    },
+    {
+      "name": "43 (aarch64, Everything netinst)",
+      "link": "/fedora/releases/43/Everything/aarch64/iso/Fedora-Everything-netinst-aarch64-43-1.6.iso"
+    },
+    {
+      "name": "42 (x86_64, Silverblue ostree)",
+      "link": "/fedora/releases/42/Silverblue/x86_64/iso/Fedora-Silverblue-ostree-x86_64-42-1.1.iso"
+    },
+    {
+      "name": "42 (x86_64, Server netinst)",
+      "link": "/fedora/releases/42/Server/x86_64/iso/Fedora-Server-netinst-x86_64-42-1.1.iso"
+    },
+    {
+      "name": "42 (x86_64, Server dvd)",
+      "link": "/fedora/releases/42/Server/x86_64/iso/Fedora-Server-dvd-x86_64-42-1.1.iso"
+    },
+    {
+      "name": "42 (x86_64, Live CD with i3)",
+      "link": "/fedora/releases/42/Spins/x86_64/iso/Fedora-i3-Live-x86_64-42-1.1.iso"
+    },
+    {
+      "name": "42 (x86_64, Live CD with Sway)",
+      "link": "/fedora/releases/42/Spins/x86_64/iso/Fedora-Sway-Live-x86_64-42-1.1.iso"
+    },
+    {
+      "name": "42 (x86_64, Live CD with MATE_Compiz)",
+      "link": "/fedora/releases/42/Spins/x86_64/iso/Fedora-MATE_Compiz-Live-x86_64-42-1.1.iso"
+    },
+    {
+      "name": "42 (x86_64, Live CD with LXDE)",
+      "link": "/fedora/releases/42/Spins/x86_64/iso/Fedora-LXDE-Live-x86_64-42-1.1.iso"
+    },
+    {
+      "name": "42 (x86_64, Live CD with Cinnamon)",
+      "link": "/fedora/releases/42/Spins/x86_64/iso/Fedora-Cinnamon-Live-x86_64-42-1.1.iso"
+    },
+    {
+      "name": "42 (x86_64, Everything netinst)",
+      "link": "/fedora/releases/42/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-42-1.1.iso"
+    },
+    {
+      "name": "42 (aarch64, Silverblue ostree)",
+      "link": "/fedora/releases/42/Silverblue/aarch64/iso/Fedora-Silverblue-ostree-aarch64-42-1.1.iso"
+    },
+    {
+      "name": "42 (aarch64, Server netinst)",
+      "link": "/fedora/releases/42/Server/aarch64/iso/Fedora-Server-netinst-aarch64-42-1.1.iso"
+    },
+    {
+      "name": "42 (aarch64, Server dvd)",
+      "link": "/fedora/releases/42/Server/aarch64/iso/Fedora-Server-dvd-aarch64-42-1.1.iso"
+    },
+    {
+      "name": "42 (aarch64, Live CD with i3)",
+      "link": "/fedora/releases/42/Spins/aarch64/iso/Fedora-i3-Live-aarch64-42-1.1.iso"
+    },
+    {
+      "name": "42 (aarch64, Everything netinst)",
+      "link": "/fedora/releases/42/Everything/aarch64/iso/Fedora-Everything-netinst-aarch64-42-1.1.iso"
+    }
+  ],
+  "Proxmox": [
+    {
+      "name": "Proxmox Virtual Environment 9.1-1 (x86_64, iso)",
+      "link": "/proxmox/iso/proxmox-ve_9.1-1.iso"
+    },
+    {
+      "name": "Proxmox Virtual Environment 9.0-1 (x86_64, iso)",
+      "link": "/proxmox/iso/proxmox-ve_9.0-1.iso"
+    },
+    {
+      "name": "Proxmox Virtual Environment 8.4-1 (x86_64, iso)",
+      "link": "/proxmox/iso/proxmox-ve_8.4-1.iso"
+    },
+    {
+      "name": "Proxmox Mail Gateway 9.0-1 (x86_64, iso)",
+      "link": "/proxmox/iso/proxmox-mail-gateway_9.0-1.iso"
+    },
+    {
+      "name": "Proxmox Mail Gateway 8.2-1 (x86_64, iso)",
+      "link": "/proxmox/iso/proxmox-mail-gateway_8.2-1.iso"
+    },
+    {
+      "name": "Proxmox Mail Gateway 7.3-1 (x86_64, iso)",
+      "link": "/proxmox/iso/proxmox-mailgateway_7.3-1.iso"
+    },
+    {
+      "name": "Proxmox Backup Server 4.1-1 (x86_64, iso)",
+      "link": "/proxmox/iso/proxmox-backup-server_4.1-1.iso"
+    },
+    {
+      "name": "Proxmox Backup Server 4.0-1 (x86_64, iso)",
+      "link": "/proxmox/iso/proxmox-backup-server_4.0-1.iso"
+    },
+    {
+      "name": "Proxmox Backup Server 3.4-1 (x86_64, iso)",
+      "link": "/proxmox/iso/proxmox-backup-server_3.4-1.iso"
+    }
+  ],
+  "Docker": [
+    {
+      "name": "29.4.1 (Windows)",
+      "link": "/docker-ce/win/static/stable/x86_64/docker-29.4.1.zip"
+    },
+    {
+      "name": "29.4.1 (macOS)",
+      "link": "/docker-ce/mac/static/stable/x86_64/docker-29.4.1.tgz"
+    }
+  ],
+  "LibreOffice": [
+    {
+      "name": "26.2.3 (win, x86_64)",
+      "link": "/libreoffice/libreoffice/stable/26.2.3/win/x86_64/LibreOffice_26.2.3_Win_x86-64.msi"
+    },
+    {
+      "name": "26.2.3 (win, x86)",
+      "link": "/libreoffice/libreoffice/stable/26.2.3/win/x86/LibreOffice_26.2.3_Win_x86.msi"
+    },
+    {
+      "name": "26.2.3 (mac, x86_64)",
+      "link": "/libreoffice/libreoffice/stable/26.2.3/mac/x86_64/LibreOffice_26.2.3_MacOS_x86-64.dmg"
+    },
+    {
+      "name": "26.2.3 (rpm, x86_64)",
+      "link": "/libreoffice/libreoffice/stable/26.2.3/rpm/x86_64/LibreOffice_26.2.3_Linux_x86-64_rpm.tar.gz"
+    },
+    {
+      "name": "26.2.3 (deb, x86_64)",
+      "link": "/libreoffice/libreoffice/stable/26.2.3/deb/x86_64/LibreOffice_26.2.3_Linux_x86-64_deb.tar.gz"
+    },
+    {
+      "name": "26.2.2 (win, x86_64)",
+      "link": "/libreoffice/libreoffice/stable/26.2.2/win/x86_64/LibreOffice_26.2.2_Win_x86-64.msi"
+    },
+    {
+      "name": "26.2.2 (win, x86)",
+      "link": "/libreoffice/libreoffice/stable/26.2.2/win/x86/LibreOffice_26.2.2_Win_x86.msi"
+    },
+    {
+      "name": "26.2.2 (mac, x86_64)",
+      "link": "/libreoffice/libreoffice/stable/26.2.2/mac/x86_64/LibreOffice_26.2.2_MacOS_x86-64.dmg"
+    },
+    {
+      "name": "26.2.2 (rpm, x86_64)",
+      "link": "/libreoffice/libreoffice/stable/26.2.2/rpm/x86_64/LibreOffice_26.2.2_Linux_x86-64_rpm.tar.gz"
+    },
+    {
+      "name": "26.2.2 (deb, x86_64)",
+      "link": "/libreoffice/libreoffice/stable/26.2.2/deb/x86_64/LibreOffice_26.2.2_Linux_x86-64_deb.tar.gz"
+    }
+  ],
+  "MSYS2": [
+    {
+      "name": "latest (Windows, x86_64)",
+      "link": "/msys2/distrib/msys2-x86_64-latest.exe"
+    }
+  ],
+  "R": [
+    {
+      "name": "devel (Windows, unstable)",
+      "link": "/CRAN/bin/windows/base/R-devel-win.exe"
+    },
+    {
+      "name": "4.6.0patched (Windows, unstable)",
+      "link": "/CRAN/bin/windows/base/R-4.6.0patched-win.exe"
+    },
+    {
+      "name": "4.6.0 (Windows)",
+      "link": "/CRAN/bin/windows/base/R-4.6.0-win.exe"
+    },
+    {
+      "name": "4.6.0 (macOS >= 11, x86_64)",
+      "link": "/CRAN/bin/macosx/big-sur-x86_64/base/R-4.6.0-x86_64.pkg"
+    },
+    {
+      "name": "4.5.3 (macOS >= 11, arm64)",
+      "link": "/CRAN/bin/macosx/big-sur-arm64/base/R-4.5.3-arm64.pkg"
+    },
+    {
+      "name": "4.2.3 (macOS >= 10.13)",
+      "link": "/CRAN/bin/macosx/base/R-4.2.3.pkg"
+    }
+  ],
+  "TeX 排版系统": [
+    {
+      "name": "TeX Live 2026 (Windows & Linux)",
+      "link": "/CTAN/systems/texlive/Images/texlive2026-20260301.iso"
+    },
+    {
+      "name": "TeXstudio 4.9.3 (win-portable-qt6, zip)",
+      "link": "/github-release/texstudio-org/texstudio/LatestRelease/texstudio-4.9.3-win-portable-qt6.zip"
+    },
+    {
+      "name": "TeXstudio 4.9.3 (win-arm-portable-qt6, zip)",
+      "link": "/github-release/texstudio-org/texstudio/LatestRelease/texstudio-4.9.3-win-arm-portable-qt6.zip"
+    },
+    {
+      "name": "TeXstudio 4.9.3 (win-qt6-signed, exe)",
+      "link": "/github-release/texstudio-org/texstudio/LatestRelease/texstudio-4.9.3-win-qt6-signed.exe"
+    },
+    {
+      "name": "TeXstudio 4.9.3 (win-arm-qt6-signed, exe)",
+      "link": "/github-release/texstudio-org/texstudio/LatestRelease/texstudio-4.9.3-win-arm-qt6-signed.exe"
+    },
+    {
+      "name": "TeXstudio 4.9.3 (x86_64, AppImage)",
+      "link": "/github-release/texstudio-org/texstudio/LatestRelease/texstudio-4.9.3-x86_64.AppImage"
+    },
+    {
+      "name": "TeXstudio 4.9.3 (osx-m1, zip)",
+      "link": "/github-release/texstudio-org/texstudio/LatestRelease/texstudio-4.9.3-osx-m1.zip"
+    },
+    {
+      "name": "TeXstudio 4.9.3 (osx, zip)",
+      "link": "/github-release/texstudio-org/texstudio/LatestRelease/texstudio-4.9.3-osx.zip"
+    },
+    {
+      "name": "MikTeX 25.12 (Windows, x64)",
+      "link": "/CTAN/systems/win32/miktex/setup/windows-x64/basic-miktex-25.12-x64.exe"
+    },
+    {
+      "name": "MikTeX 22.1 (macOS, x86_64)",
+      "link": "/CTAN/systems/win32/miktex/setup/darwin-x86_64/miktex-22.1-darwin-x86_64.dmg"
+    },
+    {
+      "name": "MacTeX 20260324 (macOS)",
+      "link": "/CTAN/systems/mac/mactex/mactex-20260324.pkg"
+    }
+  ],
+  "VirtualBox": [
+    {
+      "name": "7.2.8 (Windows hosts)",
+      "link": "/virtualbox/7.2.8/VirtualBox-7.2.8-173730-Win.exe"
+    },
+    {
+      "name": "7.2.8 (macOS / Intel hosts)",
+      "link": "/virtualbox/7.2.8/VirtualBox-7.2.8-173730-OSX.dmg"
+    },
+    {
+      "name": "7.2.8 (macOS / Apple Silicon hosts)",
+      "link": "/virtualbox/7.2.8/VirtualBox-7.2.8-173730-macOSArm64.dmg"
+    },
+    {
+      "name": "7.2.8 (Guest Additions, iso)",
+      "link": "/virtualbox/7.2.8/VBoxGuestAdditions_7.2.8.iso"
+    },
+    {
+      "name": "7.2.8 (SDK)",
+      "link": "/virtualbox/7.2.8/VirtualBoxSDK-7.2.8-173730.zip"
+    }
+  ],
+  "Wireshark": [
+    {
+      "name": "latest (x64, msi)",
+      "link": "/wireshark/win64/Wireshark-latest-x64.msi"
+    },
+    {
+      "name": "latest (x64, exe, PortableApps)",
+      "link": "/wireshark/win64/WiresharkPortable64_latest.paf.exe"
+    },
+    {
+      "name": "latest (arm64, exe)",
+      "link": "/wireshark/win64/Wireshark-latest-arm64.exe"
+    },
+    {
+      "name": "latest (x64, exe)",
+      "link": "/wireshark/win64/Wireshark-latest-x64.exe"
+    },
+    {
+      "name": "latest (Intel 64, dmg)",
+      "link": "/wireshark/osx/Wireshark Latest Intel 64.dmg"
+    },
+    {
+      "name": "latest (Arm 64, dmg)",
+      "link": "/wireshark/osx/Wireshark Latest Arm 64.dmg"
+    },
+    {
+      "name": "Stratoshark 0.9.3 (arm64, exe)",
+      "link": "/wireshark/win64/Stratoshark-0.9.3-arm64.exe"
+    },
+    {
+      "name": "Stratoshark 0.9.3 (x64, exe)",
+      "link": "/wireshark/win64/Stratoshark-0.9.3-x64.exe"
+    }
+  ],
+  "Git": [
+    {
+      "name": "PortableGit 2.54.0 (64-bit, 7z.exe)",
+      "link": "/github-release/git-for-windows/git/LatestRelease/PortableGit-2.54.0-64-bit.7z.exe"
+    },
+    {
+      "name": "MinGit 2.54.0 (64-bit, zip)",
+      "link": "/github-release/git-for-windows/git/LatestRelease/MinGit-2.54.0-64-bit.zip"
+    },
+    {
+      "name": "MinGit 2.54.0 (32-bit, zip)",
+      "link": "/github-release/git-for-windows/git/LatestRelease/MinGit-2.54.0-32-bit.zip"
+    },
+    {
+      "name": "MinGit 2.54.0 (32-bit-busybox, zip)",
+      "link": "/github-release/git-for-windows/git/LatestRelease/MinGit-2.54.0-busybox-32-bit.zip"
+    },
+    {
+      "name": "MinGit 2.54.0 (64-bit-busybox, zip)",
+      "link": "/github-release/git-for-windows/git/LatestRelease/MinGit-2.54.0-busybox-64-bit.zip"
+    },
+    {
+      "name": "Git 2.54.0 (64-bit, tar.bz2)",
+      "link": "/github-release/git-for-windows/git/LatestRelease/Git-2.54.0-64-bit.tar.bz2"
+    },
+    {
+      "name": "Git 2.54.0 (64-bit, exe)",
+      "link": "/github-release/git-for-windows/git/LatestRelease/Git-2.54.0-64-bit.exe"
+    }
+  ],
+  "NanaZip": [
+    {
+      "name": "6.0 Update 6 (6.0.1701.0)",
+      "link": "/github-release/M2Team/NanaZip/NanaZip 6.0 Update 6 (6.0.1701.0)/NanaZip_6.0.1701.0.msixbundle"
+    },
+    {
+      "name": "6.0 Update 5 (6.0.1698.0)",
+      "link": "/github-release/M2Team/NanaZip/NanaZip 6.0 Update 5 (6.0.1698.0)/NanaZip_6.0.1698.0.msixbundle"
+    },
+    {
+      "name": "6.0 Update 3 (6.0.1691.0)",
+      "link": "/github-release/M2Team/NanaZip/NanaZip 6.0 Update 3 (6.0.1691.0)/NanaZip_6.0.1691.0.msixbundle"
+    }
+  ],
+  "Ventoy": [
+    {
+      "name": "1.1.12 (linux, tar.gz)",
+      "link": "/github-release/ventoy/Ventoy/LatestRelease/ventoy-1.1.12-linux.tar.gz"
+    },
+    {
+      "name": "1.1.12 (windows, zip)",
+      "link": "/github-release/ventoy/Ventoy/LatestRelease/ventoy-1.1.12-windows.zip"
+    },
+    {
+      "name": "1.1.12 (livecd, iso)",
+      "link": "/github-release/ventoy/Ventoy/LatestRelease/ventoy-1.1.12-livecd.iso"
+    }
+  ],
+  "cmder": [
+    {
+      "name": "cmder mini (zip)",
+      "link": "/github-release/cmderdev/cmder/LatestRelease/cmder_mini.zip"
+    },
+    {
+      "name": "cmder  (zip)",
+      "link": "/github-release/cmderdev/cmder/LatestRelease/cmder.zip"
+    },
+    {
+      "name": "cmder  (7z)",
+      "link": "/github-release/cmderdev/cmder/LatestRelease/cmder.7z"
+    }
+  ],
+  "DBeaver CE": [
+    {
+      "name": "dbeaver-ce 26.0.3 (linux-x86_64)",
+      "link": "/github-release/dbeaver/dbeaver/LatestRelease/dbeaver-ce-26.0.3-linux-x86_64.rpm"
+    },
+    {
+      "name": "dbeaver-ce 26.0.3 (linux-x86_64)",
+      "link": "/github-release/dbeaver/dbeaver/LatestRelease/dbeaver-ce-26.0.3-linux-x86_64.tar.gz"
+    },
+    {
+      "name": "dbeaver-ce 26.0.3 (linux-aarch64)",
+      "link": "/github-release/dbeaver/dbeaver/LatestRelease/dbeaver-ce-26.0.3-linux-aarch64.rpm"
+    },
+    {
+      "name": "dbeaver-ce 26.0.3 (linux-aarch64)",
+      "link": "/github-release/dbeaver/dbeaver/LatestRelease/dbeaver-ce-26.0.3-linux-aarch64.tar.gz"
+    },
+    {
+      "name": "dbeaver-ce 26.0.3 (windows-x86_64)",
+      "link": "/github-release/dbeaver/dbeaver/LatestRelease/dbeaver-ce-26.0.3-windows-x86_64.zip"
+    },
+    {
+      "name": "dbeaver-ce 26.0.3 (windows-aarch64)",
+      "link": "/github-release/dbeaver/dbeaver/LatestRelease/dbeaver-ce-26.0.3-windows-aarch64.zip"
+    },
+    {
+      "name": "dbeaver-ce 26.0.3 (macos-x86_64)",
+      "link": "/github-release/dbeaver/dbeaver/LatestRelease/dbeaver-ce-26.0.3-macos-x86_64.dmg"
+    },
+    {
+      "name": "dbeaver-ce 26.0.3 (macos-aarch64)",
+      "link": "/github-release/dbeaver/dbeaver/LatestRelease/dbeaver-ce-26.0.3-macos-aarch64.dmg"
+    }
+  ],
+  "RustDesk": [
+    {
+      "name": "1.4.6-0 (x86_64, rpm)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-0.x86_64.rpm"
+    },
+    {
+      "name": "1.4.6-0 (x86_64-suse, rpm)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-0.x86_64-suse.rpm"
+    },
+    {
+      "name": "1.4.6-0 (x86_64, pkg.tar.zst)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-0-x86_64.pkg.tar.zst"
+    },
+    {
+      "name": "1.4.6-0 (aarch64-suse, rpm)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-0.aarch64-suse.rpm"
+    },
+    {
+      "name": "1.4.6-0 (aarch64, rpm)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-0.aarch64.rpm"
+    },
+    {
+      "name": "1.4.6 (x86_64, flatpak)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-x86_64.flatpak"
+    },
+    {
+      "name": "1.4.6 (x86_64, exe)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-x86_64.exe"
+    },
+    {
+      "name": "1.4.6 (x86_64, dmg)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-x86_64.dmg"
+    },
+    {
+      "name": "1.4.6 (x86_64, deb)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-x86_64.deb"
+    },
+    {
+      "name": "1.4.6 (x86_64, AppImage)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-x86_64.AppImage"
+    },
+    {
+      "name": "1.4.6 (aarch64, flatpak)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-aarch64.flatpak"
+    },
+    {
+      "name": "1.4.6 (aarch64, dmg)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-aarch64.dmg"
+    },
+    {
+      "name": "1.4.6 (aarch64, deb)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-aarch64.deb"
+    },
+    {
+      "name": "1.4.6 (aarch64, AppImage)",
+      "link": "/github-release/rustdesk/rustdesk/LatestRelease/rustdesk-1.4.6-aarch64.AppImage"
+    }
+  ],
+  "FreeCAD": [
+    {
+      "name": "FreeCAD 1.1.1 (Linux, x86_64-py311.AppImage)",
+      "link": "/github-release/FreeCAD/FreeCAD/LatestRelease/FreeCAD_1.1.1-Linux-x86_64-py311.AppImage"
+    },
+    {
+      "name": "FreeCAD 1.1.1 (Linux, x86_64-py311.AppImage)",
+      "link": "/github-release/FreeCAD/FreeCAD/FreeCAD 1.1.1/FreeCAD_1.1.1-Linux-x86_64-py311.AppImage"
+    },
+    {
+      "name": "FreeCAD 1.1.1 (Linux, aarch64-py311.AppImage)",
+      "link": "/github-release/FreeCAD/FreeCAD/LatestRelease/FreeCAD_1.1.1-Linux-aarch64-py311.AppImage"
+    },
+    {
+      "name": "FreeCAD 1.1.1 (Linux, aarch64-py311.AppImage)",
+      "link": "/github-release/FreeCAD/FreeCAD/FreeCAD 1.1.1/FreeCAD_1.1.1-Linux-aarch64-py311.AppImage"
+    },
+    {
+      "name": "FreeCAD 1.1.1 (macOS, x86_64-py311.dmg)",
+      "link": "/github-release/FreeCAD/FreeCAD/LatestRelease/FreeCAD_1.1.1-macOS-x86_64-py311.dmg"
+    },
+    {
+      "name": "FreeCAD 1.1.1 (macOS, x86_64-py311.dmg)",
+      "link": "/github-release/FreeCAD/FreeCAD/FreeCAD 1.1.1/FreeCAD_1.1.1-macOS-x86_64-py311.dmg"
+    },
+    {
+      "name": "FreeCAD 1.1.1 (macOS, arm64-py311.dmg)",
+      "link": "/github-release/FreeCAD/FreeCAD/LatestRelease/FreeCAD_1.1.1-macOS-arm64-py311.dmg"
+    },
+    {
+      "name": "FreeCAD 1.1.1 (macOS, arm64-py311.dmg)",
+      "link": "/github-release/FreeCAD/FreeCAD/FreeCAD 1.1.1/FreeCAD_1.1.1-macOS-arm64-py311.dmg"
+    },
+    {
+      "name": "FreeCAD 1.1.0 (Linux, x86_64-py311.AppImage)",
+      "link": "/github-release/FreeCAD/FreeCAD/FreeCAD 1.1/FreeCAD_1.1.0-Linux-x86_64-py311.AppImage"
+    },
+    {
+      "name": "FreeCAD 1.1.0 (Linux, aarch64-py311.AppImage)",
+      "link": "/github-release/FreeCAD/FreeCAD/FreeCAD 1.1/FreeCAD_1.1.0-Linux-aarch64-py311.AppImage"
+    },
+    {
+      "name": "FreeCAD 1.1.0 (macOS, x86_64-py311.dmg)",
+      "link": "/github-release/FreeCAD/FreeCAD/FreeCAD 1.1/FreeCAD_1.1.0-macOS-x86_64-py311.dmg"
+    },
+    {
+      "name": "FreeCAD 1.1.0 (macOS, arm64-py311.dmg)",
+      "link": "/github-release/FreeCAD/FreeCAD/FreeCAD 1.1/FreeCAD_1.1.0-macOS-arm64-py311.dmg"
+    },
+    {
+      "name": "FreeCAD 1.0.2-conda (Linux, x86_64-py311.AppImage)",
+      "link": "/github-release/FreeCAD/FreeCAD/FreeCAD 1.0.2/FreeCAD_1.0.2-conda-Linux-x86_64-py311.AppImage"
+    },
+    {
+      "name": "FreeCAD 1.0.2-conda (Linux, aarch64-py311.AppImage)",
+      "link": "/github-release/FreeCAD/FreeCAD/FreeCAD 1.0.2/FreeCAD_1.0.2-conda-Linux-aarch64-py311.AppImage"
+    },
+    {
+      "name": "FreeCAD 1.0.2-conda (macOS, x86_64-py311.dmg)",
+      "link": "/github-release/FreeCAD/FreeCAD/FreeCAD 1.0.2/FreeCAD_1.0.2-conda-macOS-x86_64-py311.dmg"
+    },
+    {
+      "name": "FreeCAD 1.0.2-conda (macOS, arm64-py311.dmg)",
+      "link": "/github-release/FreeCAD/FreeCAD/FreeCAD 1.0.2/FreeCAD_1.0.2-conda-macOS-arm64-py311.dmg"
+    }
+  ],
+  "PowerToys": [
+    {
+      "name": "0.99.1 (arm64, UserSetup)",
+      "link": "/github-release/microsoft/PowerToys/LatestRelease/PowerToysUserSetup-0.99.1-arm64.exe"
+    },
+    {
+      "name": "0.99.1 (x64, UserSetup)",
+      "link": "/github-release/microsoft/PowerToys/LatestRelease/PowerToysUserSetup-0.99.1-x64.exe"
+    },
+    {
+      "name": "0.99.1 (x64, Setup)",
+      "link": "/github-release/microsoft/PowerToys/LatestRelease/PowerToysSetup-0.99.1-x64.exe"
+    },
+    {
+      "name": "0.99.1 (arm64, Setup)",
+      "link": "/github-release/microsoft/PowerToys/LatestRelease/PowerToysSetup-0.99.1-arm64.exe"
+    }
+  ],
+  "rust-analyzer": [
+    {
+      "name": "2026-04-27 (x86_64-unknown-linux-gnu, gz)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-x86_64-unknown-linux-gnu.gz"
+    },
+    {
+      "name": "2026-04-27 (x86_64-unknown-linux-musl, gz)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-x86_64-unknown-linux-musl.gz"
+    },
+    {
+      "name": "2026-04-27 (linux-arm64, vsix)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-linux-arm64.vsix"
+    },
+    {
+      "name": "2026-04-27 (linux-armhf, vsix)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-linux-armhf.vsix"
+    },
+    {
+      "name": "2026-04-27 (linux-x64, vsix)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-linux-x64.vsix"
+    },
+    {
+      "name": "2026-04-27 (arm-unknown-linux-gnueabihf, gz)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-arm-unknown-linux-gnueabihf.gz"
+    },
+    {
+      "name": "2026-04-27 (aarch64-unknown-linux-gnu, gz)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-aarch64-unknown-linux-gnu.gz"
+    },
+    {
+      "name": "2026-04-27 (x86_64-pc-windows-msvc, zip)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-x86_64-pc-windows-msvc.zip"
+    },
+    {
+      "name": "2026-04-27 (x86_64-apple-darwin, gz)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-x86_64-apple-darwin.gz"
+    },
+    {
+      "name": "2026-04-27 (i686-pc-windows-msvc, zip)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-i686-pc-windows-msvc.zip"
+    },
+    {
+      "name": "2026-04-27 (aarch64-pc-windows-msvc, zip)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-aarch64-pc-windows-msvc.zip"
+    },
+    {
+      "name": "2026-04-27 (win32-arm64, vsix)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-win32-arm64.vsix"
+    },
+    {
+      "name": "2026-04-27 (darwin-arm64, vsix)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-darwin-arm64.vsix"
+    },
+    {
+      "name": "2026-04-27 (darwin-x64, vsix)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-darwin-x64.vsix"
+    },
+    {
+      "name": "2026-04-27 (win32-x64, vsix)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-win32-x64.vsix"
+    },
+    {
+      "name": "2026-04-27 (aarch64-apple-darwin, gz)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-aarch64-apple-darwin.gz"
+    },
+    {
+      "name": "2026-04-27 (no-server, vsix)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-no-server.vsix"
+    },
+    {
+      "name": "2026-04-27 (alpine-x64, vsix)",
+      "link": "/github-release/rust-analyzer/rust-analyzer/2026-04-27/rust-analyzer-alpine-x64.vsix"
+    }
+  ],
+  "orchestrator": [
+    {
+      "name": "orchestrator_3.2.6_amd64.deb",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator_3.2.6_amd64.deb"
+    },
+    {
+      "name": "orchestrator-sysv-3.2.6_amd64.deb",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator-sysv-3.2.6_amd64.deb"
+    },
+    {
+      "name": "orchestrator-sysv-3.2.6-1.x86_64.rpm",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator-sysv-3.2.6-1.x86_64.rpm"
+    },
+    {
+      "name": "orchestrator-client_3.2.6_amd64.deb",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator-client_3.2.6_amd64.deb"
+    },
+    {
+      "name": "orchestrator-client-sysv-3.2.6_amd64.deb",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator-client-sysv-3.2.6_amd64.deb"
+    },
+    {
+      "name": "orchestrator-client-sysv-3.2.6-1.x86_64.rpm",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator-client-sysv-3.2.6-1.x86_64.rpm"
+    },
+    {
+      "name": "orchestrator-client-3.2.6-1.x86_64.rpm",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator-client-3.2.6-1.x86_64.rpm"
+    },
+    {
+      "name": "orchestrator-cli_3.2.6_amd64.deb",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator-cli_3.2.6_amd64.deb"
+    },
+    {
+      "name": "orchestrator-cli-sysv-3.2.6_amd64.deb",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator-cli-sysv-3.2.6_amd64.deb"
+    },
+    {
+      "name": "orchestrator-cli-sysv-3.2.6-1.x86_64.rpm",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator-cli-sysv-3.2.6-1.x86_64.rpm"
+    },
+    {
+      "name": "orchestrator-cli-3.2.6-1.x86_64.rpm",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator-cli-3.2.6-1.x86_64.rpm"
+    },
+    {
+      "name": "orchestrator-3.2.6-linux-amd64.tar.gz",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator-3.2.6-linux-amd64.tar.gz"
+    },
+    {
+      "name": "orchestrator-3.2.6-1.x86_64.rpm",
+      "link": "/github-release/openark/orchestrator/LatestRelease/orchestrator-3.2.6-1.x86_64.rpm"
+    }
+  ],
+  "Stellarium": [
+    {
+      "name": "stellarium_user_guide 26.1-1 (pdf)",
+      "link": "/github-release/Stellarium/stellarium/LatestRelease/stellarium_user_guide-26.1-1.pdf"
+    },
+    {
+      "name": "stellarium 26.1 (tar.gz)",
+      "link": "/github-release/Stellarium/stellarium/LatestRelease/stellarium-26.1.tar.gz"
+    },
+    {
+      "name": "stellarium 26.1 (zip)",
+      "link": "/github-release/Stellarium/stellarium/LatestRelease/stellarium-26.1.zip"
+    }
+  ],
+  "Minikube": [
+    {
+      "name": "minikube_v1.38.1_sbom.spdx",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube_v1.38.1_sbom.spdx"
+    },
+    {
+      "name": "minikube_latest_s390x.deb",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube_latest_s390x.deb"
+    },
+    {
+      "name": "minikube_latest_ppc64el.deb",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube_latest_ppc64el.deb"
+    },
+    {
+      "name": "minikube_latest_arm64.deb",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube_latest_arm64.deb"
+    },
+    {
+      "name": "minikube_latest_amd64.deb",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube_latest_amd64.deb"
+    },
+    {
+      "name": "minikube_1.38.1-0_s390x.deb",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube_1.38.1-0_s390x.deb"
+    },
+    {
+      "name": "minikube_1.38.1-0_ppc64el.deb",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube_1.38.1-0_ppc64el.deb"
+    },
+    {
+      "name": "minikube_1.38.1-0_arm64.deb",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube_1.38.1-0_arm64.deb"
+    },
+    {
+      "name": "minikube_1.38.1-0_amd64.deb",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube_1.38.1-0_amd64.deb"
+    },
+    {
+      "name": "minikube-windows-amd64.tar.gz",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-windows-amd64.tar.gz"
+    },
+    {
+      "name": "minikube-windows-amd64.exe",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-windows-amd64.exe"
+    },
+    {
+      "name": "minikube-linux-s390x",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-linux-s390x"
+    },
+    {
+      "name": "minikube-linux-ppc64le",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-linux-ppc64le"
+    },
+    {
+      "name": "minikube-linux-arm64.tar.gz",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-linux-arm64.tar.gz"
+    },
+    {
+      "name": "minikube-linux-arm64",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-linux-arm64"
+    },
+    {
+      "name": "minikube-linux-amd64.tar.gz",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-linux-amd64.tar.gz"
+    },
+    {
+      "name": "minikube-linux-amd64",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-linux-amd64"
+    },
+    {
+      "name": "minikube-latest.x86_64.rpm",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-latest.x86_64.rpm"
+    },
+    {
+      "name": "minikube-latest.s390x.rpm",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-latest.s390x.rpm"
+    },
+    {
+      "name": "minikube-latest.ppc64le.rpm",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-latest.ppc64le.rpm"
+    },
+    {
+      "name": "minikube-latest.aarch64.rpm",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-latest.aarch64.rpm"
+    },
+    {
+      "name": "minikube-installer.exe",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-installer.exe"
+    },
+    {
+      "name": "minikube-darwin-arm64.tar.gz",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-darwin-arm64.tar.gz"
+    },
+    {
+      "name": "minikube-darwin-arm64",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-darwin-arm64"
+    },
+    {
+      "name": "minikube-darwin-amd64.tar.gz",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-darwin-amd64.tar.gz"
+    },
+    {
+      "name": "minikube-darwin-amd64",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-darwin-amd64"
+    },
+    {
+      "name": "minikube-1.38.1-0.x86_64.rpm",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-1.38.1-0.x86_64.rpm"
+    },
+    {
+      "name": "minikube-1.38.1-0.s390x.rpm",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-1.38.1-0.s390x.rpm"
+    },
+    {
+      "name": "minikube-1.38.1-0.ppc64le.rpm",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-1.38.1-0.ppc64le.rpm"
+    },
+    {
+      "name": "minikube-1.38.1-0.aarch64.rpm",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/minikube-1.38.1-0.aarch64.rpm"
+    },
+    {
+      "name": "licenses.tar.gz",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/licenses.tar.gz"
+    },
+    {
+      "name": "kicbase-v0.0.50-s390x.tar",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/kicbase-v0.0.50-s390x.tar"
+    },
+    {
+      "name": "kicbase-v0.0.50-ppc64le.tar",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/kicbase-v0.0.50-ppc64le.tar"
+    },
+    {
+      "name": "kicbase-v0.0.50-arm64.tar",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/kicbase-v0.0.50-arm64.tar"
+    },
+    {
+      "name": "kicbase-v0.0.50-amd64.tar",
+      "link": "/github-release/kubernetes/minikube/LatestRelease/kicbase-v0.0.50-amd64.tar"
+    }
+  ],
+  "VS Codium": [
+    {
+      "name": "1.116.02821 (win32, zip x64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-win32-x64-1.116.02821.zip"
+    },
+    {
+      "name": "1.116.02821 (win32, zip arm64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-win32-arm64-1.116.02821.zip"
+    },
+    {
+      "name": "1.116.02821 (win32, msi x64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-x64-1.116.02821.msi"
+    },
+    {
+      "name": "1.116.02821 (win32, msi-updates-disabled x64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-x64-updates-disabled-1.116.02821.msi"
+    },
+    {
+      "name": "1.116.02821 (win32, exe-UserSetup x64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodiumUserSetup-x64-1.116.02821.exe"
+    },
+    {
+      "name": "1.116.02821 (win32, exe-Setup x64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodiumSetup-x64-1.116.02821.exe"
+    },
+    {
+      "name": "1.116.02821 (win32, exe-UserSetup arm64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodiumUserSetup-arm64-1.116.02821.exe"
+    },
+    {
+      "name": "1.116.02821 (win32, exe-Setup arm64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodiumSetup-arm64-1.116.02821.exe"
+    },
+    {
+      "name": "1.116.02821 (Remote Extension Host, win32 x64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/vscodium-reh-win32-x64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (Remote Extension Host, linux x64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/vscodium-reh-linux-x64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (Remote Extension Host, linux s390x)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/vscodium-reh-linux-s390x-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (Remote Extension Host, linux riscv64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/vscodium-reh-linux-riscv64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (Remote Extension Host, linux ppc64le)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/vscodium-reh-linux-ppc64le-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (Remote Extension Host, linux loong64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/vscodium-reh-linux-loong64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (Remote Extension Host, linux armhf)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/vscodium-reh-linux-armhf-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (Remote Extension Host, linux arm64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/vscodium-reh-linux-arm64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (Remote Extension Host, darwin x64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/vscodium-reh-darwin-x64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (Remote Extension Host, darwin arm64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/vscodium-reh-darwin-arm64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (Remote Extension Host, alpine x64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/vscodium-reh-alpine-x64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (Remote Extension Host, alpine arm64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/vscodium-reh-alpine-arm64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (linux, tar.gz x64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-linux-x64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (linux, tar.gz riscv64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-linux-riscv64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (linux, tar.gz ppc64le)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-linux-ppc64le-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (linux, tar.gz loong64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-linux-loong64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (linux, tar.gz armhf)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-linux-armhf-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (linux, tar.gz arm64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-linux-arm64-1.116.02821.tar.gz"
+    },
+    {
+      "name": "1.116.02821 (linux, rpm x86_64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/codium-1.116.02821-el8.x86_64.rpm"
+    },
+    {
+      "name": "1.116.02821 (linux, rpm ppc64le)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/codium-1.116.02821-el8.ppc64le.rpm"
+    },
+    {
+      "name": "1.116.02821 (linux, rpm armv7hl)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/codium-1.116.02821-el8.armv7hl.rpm"
+    },
+    {
+      "name": "1.116.02821 (linux, rpm aarch64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/codium-1.116.02821-el8.aarch64.rpm"
+    },
+    {
+      "name": "1.116.02821 (linux, deb ppc64el)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/codium_1.116.02821_ppc64el.deb"
+    },
+    {
+      "name": "1.116.02821 (linux, deb armhf)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/codium_1.116.02821_armhf.deb"
+    },
+    {
+      "name": "1.116.02821 (linux, deb arm64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/codium_1.116.02821_arm64.deb"
+    },
+    {
+      "name": "1.116.02821 (linux, deb amd64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/codium_1.116.02821_amd64.deb"
+    },
+    {
+      "name": "1.116.02821 (linux, AppImage.zsync x86_64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-1.116.02821.glibc2.30-x86_64.AppImage.zsync"
+    },
+    {
+      "name": "1.116.02821 (linux, AppImage x86_64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-1.116.02821.glibc2.30-x86_64.AppImage"
+    },
+    {
+      "name": "1.116.02821 (darwin, zip x64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-darwin-x64-1.116.02821.zip"
+    },
+    {
+      "name": "1.116.02821 (darwin, zip arm64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium-darwin-arm64-1.116.02821.zip"
+    },
+    {
+      "name": "1.116.02821 (darwin, dmg x64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium.x64.1.116.02821.dmg"
+    },
+    {
+      "name": "1.116.02821 (darwin, dmg arm64)",
+      "link": "/github-release/VSCodium/vscodium/LatestRelease/VSCodium.arm64.1.116.02821.dmg"
+    }
+  ],
+  "auth-thu": [
+    {
+      "name": "auth-thu v2.3.5 (linux.x86_64)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.linux.x86_64"
+    },
+    {
+      "name": "auth-thu v2.3.5 (linux.ppc64le)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.linux.ppc64le"
+    },
+    {
+      "name": "auth-thu v2.3.5 (linux.armv6)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.linux.armv6"
+    },
+    {
+      "name": "auth-thu v2.3.5 (linux.loong64)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.linux.loong64"
+    },
+    {
+      "name": "auth-thu v2.3.5 (linux.mipsbe)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.linux.mipsbe"
+    },
+    {
+      "name": "auth-thu v2.3.5 (linux.armv5)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.linux.armv5"
+    },
+    {
+      "name": "auth-thu v2.3.5 (linux.mipsle)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.linux.mipsle"
+    },
+    {
+      "name": "auth-thu v2.3.5 (linux.arm)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.linux.arm"
+    },
+    {
+      "name": "auth-thu v2.3.5 (linux.riscv64)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.linux.riscv64"
+    },
+    {
+      "name": "auth-thu v2.3.5 (linux.arm64)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.linux.arm64"
+    },
+    {
+      "name": "auth-thu v2.3.5 (win64.exe)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.win64.exe"
+    },
+    {
+      "name": "auth-thu v2.3.5 (macos.x86_64)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.macos.x86_64"
+    },
+    {
+      "name": "auth-thu v2.3.5 (macos.arm64)",
+      "link": "/github-release/z4yx/GoAuthing/v2.3.5/auth-thu.macos.arm64"
+    }
+  ],
+  "Deno": [
+    {
+      "name": "denort LatestRelease (x86_64-unknown-linux-gnu, zip)",
+      "link": "/github-release/denoland/deno/LatestRelease/denort-x86_64-unknown-linux-gnu.zip"
+    },
+    {
+      "name": "denort LatestRelease (x86_64-unknown-linux-gnu.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/denort-x86_64-unknown-linux-gnu.zip.sha256sum"
+    },
+    {
+      "name": "denort LatestRelease (aarch64-unknown-linux-gnu, zip)",
+      "link": "/github-release/denoland/deno/LatestRelease/denort-aarch64-unknown-linux-gnu.zip"
+    },
+    {
+      "name": "denort LatestRelease (aarch64-unknown-linux-gnu.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/denort-aarch64-unknown-linux-gnu.zip.sha256sum"
+    },
+    {
+      "name": "denort LatestRelease (x86_64-pc-windows-msvc, zip)",
+      "link": "/github-release/denoland/deno/LatestRelease/denort-x86_64-pc-windows-msvc.zip"
+    },
+    {
+      "name": "denort LatestRelease (x86_64-apple-darwin, zip)",
+      "link": "/github-release/denoland/deno/LatestRelease/denort-x86_64-apple-darwin.zip"
+    },
+    {
+      "name": "denort LatestRelease (x86_64-pc-windows-msvc.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/denort-x86_64-pc-windows-msvc.zip.sha256sum"
+    },
+    {
+      "name": "denort LatestRelease (x86_64-apple-darwin.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/denort-x86_64-apple-darwin.zip.sha256sum"
+    },
+    {
+      "name": "denort LatestRelease (aarch64-apple-darwin, zip)",
+      "link": "/github-release/denoland/deno/LatestRelease/denort-aarch64-apple-darwin.zip"
+    },
+    {
+      "name": "denort LatestRelease (aarch64-pc-windows-msvc, zip)",
+      "link": "/github-release/denoland/deno/LatestRelease/denort-aarch64-pc-windows-msvc.zip"
+    },
+    {
+      "name": "denort LatestRelease (aarch64-pc-windows-msvc.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/denort-aarch64-pc-windows-msvc.zip.sha256sum"
+    },
+    {
+      "name": "denort LatestRelease (aarch64-apple-darwin.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/denort-aarch64-apple-darwin.zip.sha256sum"
+    },
+    {
+      "name": "denort v2.7.14 (x86_64-unknown-linux-gnu, zip)",
+      "link": "/github-release/denoland/deno/v2.7.14/denort-x86_64-unknown-linux-gnu.zip"
+    },
+    {
+      "name": "denort v2.7.14 (x86_64-unknown-linux-gnu.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/denort-x86_64-unknown-linux-gnu.zip.sha256sum"
+    },
+    {
+      "name": "denort v2.7.14 (aarch64-unknown-linux-gnu, zip)",
+      "link": "/github-release/denoland/deno/v2.7.14/denort-aarch64-unknown-linux-gnu.zip"
+    },
+    {
+      "name": "denort v2.7.14 (aarch64-unknown-linux-gnu.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/denort-aarch64-unknown-linux-gnu.zip.sha256sum"
+    },
+    {
+      "name": "denort v2.7.14 (x86_64-pc-windows-msvc, zip)",
+      "link": "/github-release/denoland/deno/v2.7.14/denort-x86_64-pc-windows-msvc.zip"
+    },
+    {
+      "name": "denort v2.7.14 (x86_64-apple-darwin, zip)",
+      "link": "/github-release/denoland/deno/v2.7.14/denort-x86_64-apple-darwin.zip"
+    },
+    {
+      "name": "denort v2.7.14 (x86_64-pc-windows-msvc.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/denort-x86_64-pc-windows-msvc.zip.sha256sum"
+    },
+    {
+      "name": "denort v2.7.14 (x86_64-apple-darwin.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/denort-x86_64-apple-darwin.zip.sha256sum"
+    },
+    {
+      "name": "denort v2.7.14 (aarch64-apple-darwin, zip)",
+      "link": "/github-release/denoland/deno/v2.7.14/denort-aarch64-apple-darwin.zip"
+    },
+    {
+      "name": "denort v2.7.14 (aarch64-pc-windows-msvc, zip)",
+      "link": "/github-release/denoland/deno/v2.7.14/denort-aarch64-pc-windows-msvc.zip"
+    },
+    {
+      "name": "denort v2.7.14 (aarch64-pc-windows-msvc.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/denort-aarch64-pc-windows-msvc.zip.sha256sum"
+    },
+    {
+      "name": "denort v2.7.14 (aarch64-apple-darwin.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/denort-aarch64-apple-darwin.zip.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-unknown-linux-gnu, zip)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-unknown-linux-gnu.zip"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-unknown-linux-gnu.from-2.7.13.bsdiff, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-unknown-linux-gnu.from-2.7.13.bsdiff.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-unknown-linux-gnu, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-unknown-linux-gnu.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-unknown-linux-gnu.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-unknown-linux-gnu.zip.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-unknown-linux-gnu.from-2.7.13, bsdiff)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-unknown-linux-gnu.from-2.7.13.bsdiff"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-unknown-linux-gnu, zip)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-unknown-linux-gnu.zip"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-unknown-linux-gnu.from-2.7.13.bsdiff, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-unknown-linux-gnu.from-2.7.13.bsdiff.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-unknown-linux-gnu.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-unknown-linux-gnu.zip.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-unknown-linux-gnu, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-unknown-linux-gnu.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-unknown-linux-gnu.from-2.7.13, bsdiff)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-unknown-linux-gnu.from-2.7.13.bsdiff"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-pc-windows-msvc, zip)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-pc-windows-msvc.zip"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-apple-darwin, zip)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-apple-darwin.zip"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-apple-darwin.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-apple-darwin.zip.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-pc-windows-msvc, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-pc-windows-msvc.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-apple-darwin.from-2.7.13.bsdiff, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-apple-darwin.from-2.7.13.bsdiff.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-pc-windows-msvc.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-pc-windows-msvc.zip.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-pc-windows-msvc.from-2.7.13.bsdiff, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-pc-windows-msvc.from-2.7.13.bsdiff.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-apple-darwin, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-apple-darwin.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-apple-darwin.from-2.7.13, bsdiff)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-apple-darwin.from-2.7.13.bsdiff"
+    },
+    {
+      "name": "deno LatestRelease (x86_64-pc-windows-msvc.from-2.7.13, bsdiff)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-x86_64-pc-windows-msvc.from-2.7.13.bsdiff"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-apple-darwin, zip)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-apple-darwin.zip"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-pc-windows-msvc, zip)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-pc-windows-msvc.zip"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-pc-windows-msvc.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-pc-windows-msvc.zip.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-pc-windows-msvc, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-pc-windows-msvc.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-apple-darwin.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-apple-darwin.zip.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-apple-darwin, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-apple-darwin.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-apple-darwin.from-2.7.13.bsdiff, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-apple-darwin.from-2.7.13.bsdiff.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-pc-windows-msvc.from-2.7.13.bsdiff, sha256sum)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-pc-windows-msvc.from-2.7.13.bsdiff.sha256sum"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-pc-windows-msvc.from-2.7.13, bsdiff)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-pc-windows-msvc.from-2.7.13.bsdiff"
+    },
+    {
+      "name": "deno LatestRelease (aarch64-apple-darwin.from-2.7.13, bsdiff)",
+      "link": "/github-release/denoland/deno/LatestRelease/deno-aarch64-apple-darwin.from-2.7.13.bsdiff"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-unknown-linux-gnu, zip)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-unknown-linux-gnu.zip"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-unknown-linux-gnu.from-2.7.13.bsdiff, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-unknown-linux-gnu.from-2.7.13.bsdiff.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-unknown-linux-gnu, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-unknown-linux-gnu.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-unknown-linux-gnu.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-unknown-linux-gnu.zip.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-unknown-linux-gnu.from-2.7.13, bsdiff)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-unknown-linux-gnu.from-2.7.13.bsdiff"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-unknown-linux-gnu, zip)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-unknown-linux-gnu.zip"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-unknown-linux-gnu.from-2.7.13.bsdiff, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-unknown-linux-gnu.from-2.7.13.bsdiff.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-unknown-linux-gnu.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-unknown-linux-gnu.zip.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-unknown-linux-gnu, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-unknown-linux-gnu.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-unknown-linux-gnu.from-2.7.13, bsdiff)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-unknown-linux-gnu.from-2.7.13.bsdiff"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-pc-windows-msvc, zip)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-pc-windows-msvc.zip"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-apple-darwin, zip)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-apple-darwin.zip"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-apple-darwin.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-apple-darwin.zip.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-pc-windows-msvc, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-pc-windows-msvc.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-apple-darwin.from-2.7.13.bsdiff, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-apple-darwin.from-2.7.13.bsdiff.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-pc-windows-msvc.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-pc-windows-msvc.zip.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-pc-windows-msvc.from-2.7.13.bsdiff, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-pc-windows-msvc.from-2.7.13.bsdiff.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-apple-darwin, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-apple-darwin.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-apple-darwin.from-2.7.13, bsdiff)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-apple-darwin.from-2.7.13.bsdiff"
+    },
+    {
+      "name": "deno v2.7.14 (x86_64-pc-windows-msvc.from-2.7.13, bsdiff)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-x86_64-pc-windows-msvc.from-2.7.13.bsdiff"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-apple-darwin, zip)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-apple-darwin.zip"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-pc-windows-msvc, zip)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-pc-windows-msvc.zip"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-pc-windows-msvc.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-pc-windows-msvc.zip.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-pc-windows-msvc, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-pc-windows-msvc.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-apple-darwin.zip, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-apple-darwin.zip.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-apple-darwin, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-apple-darwin.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-apple-darwin.from-2.7.13.bsdiff, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-apple-darwin.from-2.7.13.bsdiff.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-pc-windows-msvc.from-2.7.13.bsdiff, sha256sum)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-pc-windows-msvc.from-2.7.13.bsdiff.sha256sum"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-pc-windows-msvc.from-2.7.13, bsdiff)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-pc-windows-msvc.from-2.7.13.bsdiff"
+    },
+    {
+      "name": "deno v2.7.14 (aarch64-apple-darwin.from-2.7.13, bsdiff)",
+      "link": "/github-release/denoland/deno/v2.7.14/deno-aarch64-apple-darwin.from-2.7.13.bsdiff"
+    }
+  ],
+  "ThuThesis 论文模板": [
+    {
+      "name": "7.6.0 (TeX Live, zip)",
+      "link": "/github-release/tuna/thuthesis/thuthesis-v7.6.0.zip"
+    },
+    {
+      "name": "7.5.2 (TeX Live, zip)",
+      "link": "/github-release/tuna/thuthesis/thuthesis-v7.5.2.zip"
+    },
+    {
+      "name": "7.5.1 (TeX Live, zip)",
+      "link": "/github-release/tuna/thuthesis/thuthesis-v7.5.1.zip"
+    }
+  ],
+  "Atom": [
+    {
+      "name": "Atom x86_64 (rpm)",
+      "link": "/github-release/atom/atom/LatestRelease/atom.x86_64.rpm"
+    },
+    {
+      "name": "Atom x64 (Windows)",
+      "link": "/github-release/atom/atom/LatestRelease/AtomSetup-x64.exe"
+    },
+    {
+      "name": "Atom amd64 (tar.gz)",
+      "link": "/github-release/atom/atom/LatestRelease/atom-amd64.tar.gz"
+    },
+    {
+      "name": "Atom amd64 (deb)",
+      "link": "/github-release/atom/atom/LatestRelease/atom-amd64.deb"
+    },
+    {
+      "name": "Atom  (Windows)",
+      "link": "/github-release/atom/atom/LatestRelease/AtomSetup.exe"
+    },
+    {
+      "name": "Atom (Mac)",
+      "link": "/github-release/atom/atom/LatestRelease/atom-mac.zip"
+    }
+  ],
+  "OBS": [
+    {
+      "name": "OBS-Studio-32.1.2-Windows-x64-PDBs (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.2/OBS-Studio-32.1.2-Windows-x64-PDBs.zip"
+    },
+    {
+      "name": "OBS-Studio-32.1.2-Windows-x64-Installer (exe)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.2/OBS-Studio-32.1.2-Windows-x64-Installer.exe"
+    },
+    {
+      "name": "OBS-Studio-32.1.2-Windows-x64 (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.2/OBS-Studio-32.1.2-Windows-x64.zip"
+    },
+    {
+      "name": "OBS-Studio-32.1.2-Windows-arm64-PDBs (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.2/OBS-Studio-32.1.2-Windows-arm64-PDBs.zip"
+    },
+    {
+      "name": "OBS-Studio-32.1.2-Windows-arm64 (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.2/OBS-Studio-32.1.2-Windows-arm64.zip"
+    },
+    {
+      "name": "OBS-Studio-32.1.2-macOS-Intel (dmg)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.2/OBS-Studio-32.1.2-macOS-Intel.dmg"
+    },
+    {
+      "name": "OBS-Studio-32.1.2-macOS-Apple (dmg)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.2/OBS-Studio-32.1.2-macOS-Apple.dmg"
+    },
+    {
+      "name": "OBS-Studio-32.1.1-Windows-x64-PDBs (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.1/OBS-Studio-32.1.1-Windows-x64-PDBs.zip"
+    },
+    {
+      "name": "OBS-Studio-32.1.1-Windows-x64-Installer (exe)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.1/OBS-Studio-32.1.1-Windows-x64-Installer.exe"
+    },
+    {
+      "name": "OBS-Studio-32.1.1-Windows-x64 (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.1/OBS-Studio-32.1.1-Windows-x64.zip"
+    },
+    {
+      "name": "OBS-Studio-32.1.1-Windows-arm64-PDBs (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.1/OBS-Studio-32.1.1-Windows-arm64-PDBs.zip"
+    },
+    {
+      "name": "OBS-Studio-32.1.1-Windows-arm64 (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.1/OBS-Studio-32.1.1-Windows-arm64.zip"
+    },
+    {
+      "name": "OBS-Studio-32.1.1-macOS-Intel (dmg)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.1/OBS-Studio-32.1.1-macOS-Intel.dmg"
+    },
+    {
+      "name": "OBS-Studio-32.1.1-macOS-Apple (dmg)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.1/OBS-Studio-32.1.1-macOS-Apple.dmg"
+    },
+    {
+      "name": "OBS-Studio-32.1.0-Windows-x64-PDBs (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.0/OBS-Studio-32.1.0-Windows-x64-PDBs.zip"
+    },
+    {
+      "name": "OBS-Studio-32.1.0-Windows-x64-Installer (exe)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.0/OBS-Studio-32.1.0-Windows-x64-Installer.exe"
+    },
+    {
+      "name": "OBS-Studio-32.1.0-Windows-x64 (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.0/OBS-Studio-32.1.0-Windows-x64.zip"
+    },
+    {
+      "name": "OBS-Studio-32.1.0-Windows-arm64-PDBs (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.0/OBS-Studio-32.1.0-Windows-arm64-PDBs.zip"
+    },
+    {
+      "name": "OBS-Studio-32.1.0-Windows-arm64 (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.0/OBS-Studio-32.1.0-Windows-arm64.zip"
+    },
+    {
+      "name": "OBS-Studio-32.1.0-macOS-Intel (dmg)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.0/OBS-Studio-32.1.0-macOS-Intel.dmg"
+    },
+    {
+      "name": "OBS-Studio-32.1.0-macOS-Apple (dmg)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.1.0/OBS-Studio-32.1.0-macOS-Apple.dmg"
+    },
+    {
+      "name": "OBS-Studio-32.0.4-Windows-x64-PDBs (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.4/OBS-Studio-32.0.4-Windows-x64-PDBs.zip"
+    },
+    {
+      "name": "OBS-Studio-32.0.4-Windows-x64-Installer (exe)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.4/OBS-Studio-32.0.4-Windows-x64-Installer.exe"
+    },
+    {
+      "name": "OBS-Studio-32.0.4-Windows-x64 (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.4/OBS-Studio-32.0.4-Windows-x64.zip"
+    },
+    {
+      "name": "OBS-Studio-32.0.4-Windows-arm64-PDBs (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.4/OBS-Studio-32.0.4-Windows-arm64-PDBs.zip"
+    },
+    {
+      "name": "OBS-Studio-32.0.4-Windows-arm64 (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.4/OBS-Studio-32.0.4-Windows-arm64.zip"
+    },
+    {
+      "name": "OBS-Studio-32.0.4-macOS-Intel (dmg)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.4/OBS-Studio-32.0.4-macOS-Intel.dmg"
+    },
+    {
+      "name": "OBS-Studio-32.0.4-macOS-Apple (dmg)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.4/OBS-Studio-32.0.4-macOS-Apple.dmg"
+    },
+    {
+      "name": "OBS-Studio-32.0.3-Windows-x64-PDBs (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.3/OBS-Studio-32.0.3-Windows-x64-PDBs.zip"
+    },
+    {
+      "name": "OBS-Studio-32.0.3-Windows-x64-Installer (exe)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.3/OBS-Studio-32.0.3-Windows-x64-Installer.exe"
+    },
+    {
+      "name": "OBS-Studio-32.0.3-Windows-x64 (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.3/OBS-Studio-32.0.3-Windows-x64.zip"
+    },
+    {
+      "name": "OBS-Studio-32.0.3-Windows-arm64-PDBs (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.3/OBS-Studio-32.0.3-Windows-arm64-PDBs.zip"
+    },
+    {
+      "name": "OBS-Studio-32.0.3-Windows-arm64 (zip)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.3/OBS-Studio-32.0.3-Windows-arm64.zip"
+    },
+    {
+      "name": "OBS-Studio-32.0.3-macOS-Intel (dmg)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.3/OBS-Studio-32.0.3-macOS-Intel.dmg"
+    },
+    {
+      "name": "OBS-Studio-32.0.3-macOS-Apple (dmg)",
+      "link": "/github-release/obsproject/obs-studio/OBS Studio 32.0.3/OBS-Studio-32.0.3-macOS-Apple.dmg"
+    }
+  ],
+  "杂项": [
+    {
+      "name": "riscv-gnu-toolchain.tar.gz",
+      "link": "/dist/misc/riscv-gnu-toolchain.tar.gz"
+    },
+    {
+      "name": "MobaXterm-green.zip",
+      "link": "/dist/misc/MobaXterm-green.zip"
+    }
+  ],
+  "Xilinx (闭源)": [
+    {
+      "name": "2024.2.2",
+      "link": "/dist/xilinx/FPGAs_AdaptiveSoCs_Unified_2024.2.2_0306_2141.tar"
+    },
+    {
+      "name": "2024.2.2",
+      "link": "/dist/xilinx/FPGAs_AdaptiveSoCs_Unified_2024.2.2_0306_2141.tar.st"
+    },
+    {
+      "name": "2022.2",
+      "link": "/dist/xilinx/Xilinx_Unified_2022.2_1014_8888.tar.gz"
+    },
+    {
+      "name": "2020.2",
+      "link": "/dist/xilinx/Xilinx_Unified_2020.2_1118_1232.tar.gz"
+    },
+    {
+      "name": "2019.2",
+      "link": "/dist/xilinx/Xilinx_Vivado_2019.2_1106_2127.tar.gz"
+    },
+    {
+      "name": "2018.3",
+      "link": "/dist/xilinx/Xilinx_Vivado_SDK_2018.3_1207_2324.tar.gz"
+    }
+  ],
+  "Conda": [
+    {
+      "name": "Miniconda3-latest (Linux/x86_64, sh)",
+      "link": "/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh"
+    },
+    {
+      "name": "Miniconda3-latest (Linux/x86, sh)",
+      "link": "/anaconda/miniconda/Miniconda3-latest-Linux-x86.sh"
+    },
+    {
+      "name": "Miniconda3-latest (Windows/x86_64, exe)",
+      "link": "/anaconda/miniconda/Miniconda3-latest-Windows-x86_64.exe"
+    },
+    {
+      "name": "Miniconda3-latest (Windows/x86, exe)",
+      "link": "/anaconda/miniconda/Miniconda3-latest-Windows-x86.exe"
+    },
+    {
+      "name": "Miniconda3-latest (MacOSX/x86_64, sh)",
+      "link": "/anaconda/miniconda/Miniconda3-latest-MacOSX-x86_64.sh"
+    },
+    {
+      "name": "Miniconda3-latest (MacOSX/x86_64, pkg)",
+      "link": "/anaconda/miniconda/Miniconda3-latest-MacOSX-x86_64.pkg"
+    },
+    {
+      "name": "Miniconda3-latest (MacOSX/x86, sh)",
+      "link": "/anaconda/miniconda/Miniconda3-latest-MacOSX-x86.sh"
+    },
+    {
+      "name": "Anaconda3 2025.12-2 (Linux/x86_64, sh)",
+      "link": "/anaconda/archive/Anaconda3-2025.12-2-Linux-x86_64.sh"
+    },
+    {
+      "name": "Anaconda3 2025.12-2 (Windows/x86_64, exe)",
+      "link": "/anaconda/archive/Anaconda3-2025.12-2-Windows-x86_64.exe"
+    }
+  ]
+}
