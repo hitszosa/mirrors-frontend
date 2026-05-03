@@ -7,6 +7,7 @@
             v-for="column in columns"
             :key="column.key"
             scope="col"
+            :aria-sort="getAriaSort(column)"
             class="px-4 py-3 text-left text-sm font-medium text-slate-600 dark:text-slate-200"
           >
             <button
@@ -156,6 +157,18 @@ const sortIndicator = (columnKey: string) => {
     return ''
   }
   return activeSort.value.direction === 'asc' ? '▲' : '▼'
+}
+
+const getAriaSort = (column: TableColumn) => {
+  if (!column.sortable) {
+    return undefined
+  }
+
+  if (activeSort.value?.column !== column.key) {
+    return 'none'
+  }
+
+  return activeSort.value.direction === 'asc' ? 'ascending' : 'descending'
 }
 
 const getRowKey = (row: Record<string, unknown>, index: number) => {
