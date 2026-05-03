@@ -1,0 +1,28 @@
+---
+import BaseSectionHeading from '../../base/SectionHeading.vue'
+import Icon from '../../Icon.vue'
+import type { ArticleDigest } from '../../news/ArticleDigest'
+import NewsWidgetItem from './NewsWidgetItem.astro'
+
+interface Props {
+  digests: ArticleDigest[]
+}
+
+const { digests } = Astro.props
+---
+
+<section class="space-y-4">
+  <BaseSectionHeading>
+    <Icon slot="icon" name="icon-park-outline:newspaper-folding" />
+    Recent News
+  </BaseSectionHeading>
+  <ul class="space-y-2 list-none list-inside">
+    {digests.map((digest) => <NewsWidgetItem digest={digest} />)}
+  </ul>
+  <a
+    href="/news"
+    class="mt-4 inline-flex h-9 w-full items-center justify-center gap-2 rounded-xl bg-white px-4 text-base font-medium text-slate-700 shadow-sm ring-1 ring-slate-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 hocus:bg-slate-50 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700 dark:hocus:bg-slate-800"
+  >
+    Read More
+  </a>
+</section>

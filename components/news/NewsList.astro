@@ -1,0 +1,17 @@
+---
+import type { ArticleDigest } from './ArticleDigest'
+import NewsListItem from './NewsListItem.astro'
+
+interface Props {
+  digests: ArticleDigest[]
+}
+
+const { digests } = Astro.props
+---
+
+<ul
+  class="flex flex-wrap
+  gap-y-2 md:justify-start md:gap-x-8 md:gap-y-4"
+>
+  {digests.map((digest) => <NewsListItem digest={digest} />)}
+</ul>
