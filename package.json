@@ -2,9 +2,10 @@
   "name": "mirrors-frontend",
   "private": true,
   "scripts": {
-    "build": "astro build",
+    "build": "bun run fixtures:clean && astro build",
     "dev": "astro dev",
     "preview": "astro preview",
+    "preview:fixtures": "bun run fixtures:sync && astro build && astro preview",
     "check": "astro check",
     "format": "eslint --fix \"*.{js,mjs,cjs,ts}\" \"components/**/*.{ts,vue}\" \"scripts/**/*.{js,mjs,cjs,ts}\" \"src/**/*.{ts,vue}\"",
     "fixtures:sync": "bun scripts/sync-fixtures.mjs",

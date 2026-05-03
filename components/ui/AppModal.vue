@@ -9,7 +9,7 @@
       ref="dialogRef"
       v-bind="$attrs"
       role="dialog"
-      aria-modal="true"
+      :aria-modal="modelValue ? 'true' : undefined"
       tabindex="-1"
       class="max-h-full w-full max-w-4xl overflow-hidden rounded-2xl focus:outline-none"
     >
