@@ -30,11 +30,19 @@ async function isTrackedByGit(rootDir, file) {
 }
 
 export async function cleanFixtures(rootDir = defaultRootDir) {
+  const trackedFiles = []
+
   for (const file of generatedFiles) {
     if (await isTrackedByGit(rootDir, file)) {
-      throw new Error(`Refusing to delete tracked fixture copy: ${file}`)
+      trackedFiles.push(file)
     }
+  }
 
+  if (trackedFiles.length > 0) {
+    throw new Error(`Refusing to delete tracked fixture copy: ${trackedFiles[0]}`)
+  }
+
+  for (const file of generatedFiles) {
     await rm(resolve(rootDir, file), { force: true })
   }
 }
