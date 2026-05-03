@@ -90,8 +90,9 @@ import BaseSlidingTransition from '~/components/base/SlidingTransition.vue'
 import Icon from '~/components/Icon.vue'
 import NavButton from '~/components/NavButton.vue'
 
-defineProps<{
+const props = defineProps<{
   titleName: string
+  currentPath?: string | null
 }>()
 
 enum ThemeState {
@@ -102,9 +103,9 @@ enum ThemeState {
 
 const STORAGE_KEY = 'nuxt-color-mode'
 const themes = [ThemeState.System, ThemeState.Light, ThemeState.Dark]
-const currentPath = ref<string | null>(null)
+const fallbackCurrentPath = ref<string | null>(null)
 const theme = ref<ThemeState>(ThemeState.System)
-const normalizedCurrentPath = computed(() => normalizePath(currentPath.value))
+const normalizedCurrentPath = computed(() => normalizePath(props.currentPath ?? fallbackCurrentPath.value))
 
 let mediaQuery: MediaQueryList | null = null
 
@@ -167,7 +168,10 @@ const onNextTheme = () => {
 }
 
 onMounted(() => {
-  currentPath.value = window.location.pathname
+  if (props.currentPath == null) {
+    fallbackCurrentPath.value = window.location.pathname
+  }
+
   theme.value = getStoredTheme()
   applyTheme(theme.value)
 
