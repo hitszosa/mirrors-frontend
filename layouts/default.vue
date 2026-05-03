@@ -2,6 +2,7 @@
   <div class="flex flex-col text-slate-800 dark:text-slate-200 w-screen">
     <Navbar
       title-name="HITSZ OSA Mirrors"
+      :current-path="route.path"
       class="fixed top-0 left-0"
     >
       <template #logo>
@@ -21,3 +22,7 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const route = useRoute()
+</script>
