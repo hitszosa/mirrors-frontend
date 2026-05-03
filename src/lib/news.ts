@@ -2,7 +2,7 @@ import type { CollectionEntry } from 'astro:content'
 import type { ArticleDigest } from '../../components/news/ArticleDigest'
 
 export const toArticleDigest = (entry: CollectionEntry<'news'>): ArticleDigest => ({
-  _path: `/news/${entry.slug}`,
+  _path: `/news/${entry.id}`,
   title: entry.data.title,
   description: entry.data.description,
   date: entry.data.date.toISOString(),
