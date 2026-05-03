@@ -7,6 +7,16 @@ import assert from 'node:assert/strict'
 
 import { cleanFixtures } from './clean-fixtures.mjs'
 
+async function fileExists(path) {
+  try {
+    await access(path)
+    return true
+  }
+  catch {
+    return false
+  }
+}
+
 async function createRepoFixture(paths) {
   const rootDir = await mkdtemp(join(os.tmpdir(), 'clean-fixtures-'))
 
@@ -44,4 +54,19 @@ test('deletes untracked fixture copies and ignores missing files', async () => {
   await cleanFixtures(rootDir)
 
   await assert.rejects(access(join(rootDir, 'public/tunasync_status.json')))
+})
+
+test('refuses mixed tracked state without deleting any target', async () => {
+  const rootDir = await createRepoFixture([
+    ['public/tunasync_status.json', false],
+    ['public/static/res_link.json', true],
+  ])
+
+  await assert.rejects(
+    cleanFixtures(rootDir),
+    /Refusing to delete tracked fixture copy: public\/static\/res_link\.json/
+  )
+
+  assert.equal(await fileExists(join(rootDir, 'public/tunasync_status.json')), true)
+  assert.equal(await fileExists(join(rootDir, 'public/static/res_link.json')), true)
 })
