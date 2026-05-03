@@ -60,6 +60,9 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { storeToRefs } from 'pinia'
+import BaseRadioSelection from '~/components/base/RadioSelection.vue'
+import BaseSectionHeading from '~/components/base/SectionHeading.vue'
+import Icon from '~/components/Icon.vue'
 import AppButton from '~/components/ui/AppButton.vue'
 import AppCard from '~/components/ui/AppCard.vue'
 import AppSkeleton from '~/components/ui/AppSkeleton.vue'
@@ -73,12 +76,14 @@ defineEmits<{
 }>()
 
 const collectionIndex = ref(0)
-const currentCollection = ref(Object.values(resourceCollection.value)[0])
 
 const collections = computed(() => Object.keys(resourceCollection.value))
+const currentCollection = computed(() => {
+  const selectedCollection = collections.value[collectionIndex.value]
+  return selectedCollection ? resourceCollection.value[selectedCollection] ?? [] : []
+})
 
-const onCollectionUpdate = (collection: string, index: number) => {
+const onCollectionUpdate = (_collection: string, index: number) => {
   collectionIndex.value = index
-  currentCollection.value = resourceCollection.value[collection]
 }
 </script>

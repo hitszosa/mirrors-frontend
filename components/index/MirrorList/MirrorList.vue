@@ -7,8 +7,8 @@
       Index of Mirrors
     </BaseSectionHeading>
     <AppInput
-      ref="search"
       v-model="mirrorFilter"
+      id="mirror-search-input"
       placeholder="Press '/' key to search for mirrors..."
     />
     <AppTable
@@ -46,23 +46,24 @@
         </AppBadge>
       </template>
       <template #files-data="{ row }">
-        <NuxtLink
+        <a
           v-if="row.files"
-          :to="row.files"
+          :href="row.files"
           target="_blank"
           class="transition-colors text-lg hocus:text-blue-400"
         >
           <Icon name="icon-park-outline:folder-open" />
-        </NuxtLink>
+        </a>
       </template>
     </AppTable>
   </section>
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { storeToRefs } from 'pinia'
-import { useKeypress } from 'vue3-keypress'
+import BaseSectionHeading from '~/components/base/SectionHeading.vue'
+import Icon from '~/components/Icon.vue'
 import AppBadge from '~/components/ui/AppBadge.vue'
 import AppInput from '~/components/ui/AppInput.vue'
 import AppTable from '~/components/ui/AppTable.vue'
@@ -133,17 +134,39 @@ const getHelpUrl = (mirror: string) => {
 }
 
 const triggerSearchFocus = () => {
-  (document.querySelector('input.form-input') as HTMLInputElement).focus()
+  document.getElementById('mirror-search-input')?.focus()
 }
 
-useKeypress({
-  keyEvent: 'keyup',
-  keyBinds: [
-    {
-      keyCode: '/',
-      success: triggerSearchFocus,
-      preventDefault: true,
-    },
-  ],
+const isEditableElement = (target: EventTarget | null) => {
+  if (!(target instanceof HTMLElement)) {
+    return false
+  }
+
+  if (target.id === 'mirror-search-input') {
+    return false
+  }
+
+  return target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)
+}
+
+const onKeydown = (event: KeyboardEvent) => {
+  if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) {
+    return
+  }
+
+  if (isEditableElement(event.target)) {
+    return
+  }
+
+  event.preventDefault()
+  triggerSearchFocus()
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', onKeydown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', onKeydown)
 })
 </script>

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { fetchMockResourceCollection } from './mockResourceCollection'
+import { onMounted, ref } from 'vue'
 
 export type Resource = {
   name: string
@@ -14,12 +14,15 @@ const fetchResourceCollection = async () => {
 
 export const useDownloadStore = defineStore('resource-collection', () => {
   const resourceCollection = ref<ResourceCollection>({})
+
   const createData = async () => {
     resourceCollection.value = await fetchResourceCollection()
   }
+
   onMounted(async () => {
     await createData()
   })
+
   return {
     resourceCollection,
   }

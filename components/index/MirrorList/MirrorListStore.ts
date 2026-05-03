@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import * as dayjs from 'dayjs'
+import { onMounted, ref } from 'vue'
 
 type RowData = {
   id: number
@@ -9,17 +10,25 @@ type RowData = {
   status: string
 }
 
+type MirrorListItem = {
+  name: string
+  last_update_ts: number
+  status: string
+}
+
 const getMirrorListData = async () => {
   return await fetch('/tunasync_status.json')
 }
 
 export const useMirrorListStore = defineStore('mirror-list', () => {
   const rows = ref<RowData[]>([])
-  const rawData = ref(null)
+  const rawData = ref<MirrorListItem[] | null>(null)
   const loading = ref(true)
+
   const createData = async () => {
     const tunasync = await getMirrorListData()
-    const data = await tunasync.json()
+    const data = await tunasync.json() as MirrorListItem[]
+
     rawData.value = data
     rows.value = data
       .sort((a, b) => a.name.localeCompare(b.name))
@@ -36,9 +45,11 @@ export const useMirrorListStore = defineStore('mirror-list', () => {
       })
     loading.value = false
   }
+
   onMounted(async () => {
     await createData()
   })
+
   return {
     rows,
     loading,

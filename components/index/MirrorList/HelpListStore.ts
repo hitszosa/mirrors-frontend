@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { fetchMockHelpList } from './mockHelpList'
+import { onMounted, ref } from 'vue'
 
 const fetchHelpList = async () => {
   const res = await fetch('https://mirrors-help.osa.moe/help_list.json')
@@ -8,12 +8,15 @@ const fetchHelpList = async () => {
 
 export const useHelpListStore = defineStore('help-list', () => {
   const helpList = ref<string[]>([])
+
   const createData = async () => {
     helpList.value = await fetchHelpList()
   }
+
   onMounted(async () => {
     await createData()
   })
+
   return {
     helpList,
   }
