@@ -1,13 +1,22 @@
 <template>
-  <ul class="flex flex-col h-min list-none bg-gray-100 dark:bg-gray-800 p-1 rounded-xl whitespace-nowrap">
+  <ul
+    role="radiogroup"
+    aria-orientation="vertical"
+    class="flex flex-col h-min list-none bg-gray-100 dark:bg-gray-800 p-1 rounded-xl whitespace-nowrap"
+  >
     <li
       v-for="(item, idx) in $props.items"
       :key="item"
-      @click="onSelect(item, idx)"
+      role="presentation"
     >
       <button
+        type="button"
+        role="radio"
+        :aria-checked="props.index === idx"
+        :tabindex="props.index === idx ? 0 : -1"
         class="transition-colors p-3 w-full rounded-xl"
         :class="getButtonStyle(idx)"
+        @click="onSelect(item, idx)"
       >
         {{ item }}
       </button>
