@@ -1,22 +1,21 @@
 <template>
-  <Teleport to="body">
+  <div
+    v-show="modelValue"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 px-4 py-8"
+    :aria-hidden="modelValue ? undefined : 'true'"
+    @click="onBackdropClick"
+  >
     <div
-      v-if="modelValue"
-      class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 px-4 py-8"
-      @click="onBackdropClick"
+      ref="dialogRef"
+      v-bind="$attrs"
+      role="dialog"
+      aria-modal="true"
+      tabindex="-1"
+      class="max-h-full w-full max-w-4xl overflow-hidden rounded-2xl focus:outline-none"
     >
-      <div
-        ref="dialogRef"
-        v-bind="$attrs"
-        role="dialog"
-        aria-modal="true"
-        tabindex="-1"
-        class="max-h-full w-full max-w-4xl overflow-hidden rounded-2xl focus:outline-none"
-      >
-        <slot />
-      </div>
+      <slot />
     </div>
-  </Teleport>
+  </div>
 </template>
 
 <script setup lang="ts">
