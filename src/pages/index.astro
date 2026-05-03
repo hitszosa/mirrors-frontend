@@ -1,29 +1,55 @@
 ---
+import { getCollection } from 'astro:content'
 import Layout from '../layouts/Layout.astro'
+import MirrorList from '../../components/index/MirrorList/MirrorList.vue'
+import DownloadWidget from '../../components/index/DownloadWidget/DownloadWidget.vue'
+import { sortNewsByDateDesc, toArticleDigest } from '../lib/news'
+
+const news = sortNewsByDateDesc(await getCollection('news')).map(toArticleDigest).slice(0, 3)
+
+const formatDate = (value: string) => {
+  return new Intl.DateTimeFormat('zh-CN', {
+    month: 'short',
+    day: 'numeric',
+    timeZone: 'UTC',
+  }).format(new Date(value))
+}
 ---
 
 <Layout>
   <div class="flex w-full max-w-screen-xl min-w-0 flex-col space-y-12 md:flex-row md:space-x-12 md:space-y-0 md:items-start">
     <div class="flex min-w-0 grow flex-col space-y-4">
-      <section class="rounded-xl bg-slate-50 p-7 dark:bg-gray-800">
-        <h1 class="text-2xl font-semibold">HITSZ OSA Mirrors</h1>
-        <p class="mt-3 text-slate-600 dark:text-slate-300">
-          镜像列表将在后续迁移 Vue 组件时接入。
-        </p>
-      </section>
+      <MirrorList client:load />
     </div>
     <div class="flex min-w-0 flex-col p-7 space-y-10 h-min bg-slate-50 dark:bg-gray-800 rounded-xl md:min-w-[20em] md:w-[32vw] md:max-w-[30em]">
       <section>
-        <h2 class="text-lg font-semibold">下载配置</h2>
-        <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
-          下载小组件占位内容。
-        </p>
+        <DownloadWidget client:load />
       </section>
       <section>
-        <h2 class="text-lg font-semibold">最新消息</h2>
-        <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
-          新闻小组件占位内容。
-        </p>
+        <h2 class="text-2xl font-medium">Recent News</h2>
+        <ul class="mt-4 space-y-2 list-none list-inside">
+          {
+            news.map((item) => (
+              <li class="flex items-center justify-between gap-4">
+                <a
+                  href={item._path}
+                  class="min-w-0 truncate transition-colors relative inline-block z-10 decoration-dotted underline-offset-4 hocus:underline hover:cursor-pointer"
+                >
+                  {item.title}
+                </a>
+                <span class="shrink-0 text-sm text-slate-500 dark:text-slate-400">
+                  {formatDate(item.date)}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+        <a
+          href="/news"
+          class="mt-4 flex min-h-10 w-full items-center justify-center rounded-xl bg-white px-4 text-base font-medium text-slate-700 shadow-sm ring-1 ring-slate-200 transition-colors hocus:bg-slate-50 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700 dark:hocus:bg-slate-800"
+        >
+          Read More
+        </a>
       </section>
     </div>
   </div>

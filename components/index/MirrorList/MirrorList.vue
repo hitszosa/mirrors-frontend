@@ -137,12 +137,12 @@ const triggerSearchFocus = () => {
   document.getElementById('mirror-search-input')?.focus()
 }
 
+const isDialogOpen = () => {
+  return document.querySelector('[role="dialog"][aria-modal="true"]') !== null
+}
+
 const isEditableElement = (target: EventTarget | null) => {
   if (!(target instanceof HTMLElement)) {
-    return false
-  }
-
-  if (target.id === 'mirror-search-input') {
     return false
   }
 
@@ -151,6 +151,10 @@ const isEditableElement = (target: EventTarget | null) => {
 
 const onKeydown = (event: KeyboardEvent) => {
   if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) {
+    return
+  }
+
+  if (isDialogOpen()) {
     return
   }
 
