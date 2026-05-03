@@ -5,7 +5,14 @@
       class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 px-4 py-8"
       @click="onBackdropClick"
     >
-      <div class="max-h-full w-full max-w-4xl overflow-hidden rounded-2xl">
+      <div
+        ref="dialogRef"
+        v-bind="$attrs"
+        role="dialog"
+        aria-modal="true"
+        tabindex="-1"
+        class="max-h-full w-full max-w-4xl overflow-hidden rounded-2xl focus:outline-none"
+      >
         <slot />
       </div>
     </div>
@@ -13,7 +20,11 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeUnmount, watch } from 'vue'
+import { nextTick, onBeforeUnmount, ref, watch } from 'vue'
+
+defineOptions({
+  inheritAttrs: false,
+})
 
 const props = defineProps<{
   modelValue: boolean
@@ -22,6 +33,9 @@ const props = defineProps<{
 const emit = defineEmits<{
   'update:modelValue': [value: boolean]
 }>()
+
+const dialogRef = ref<HTMLDivElement | null>(null)
+const previousActiveElement = ref<HTMLElement | null>(null)
 
 const close = () => {
   emit('update:modelValue', false)
@@ -45,11 +59,19 @@ watch(() => props.modelValue, (isOpen) => {
   }
 
   if (isOpen) {
+    previousActiveElement.value = document.activeElement instanceof HTMLElement ? document.activeElement : null
     window.addEventListener('keydown', onKeydown)
+    nextTick(() => {
+      dialogRef.value?.focus()
+    })
     return
   }
 
   window.removeEventListener('keydown', onKeydown)
+  if (previousActiveElement.value?.isConnected) {
+    previousActiveElement.value.focus()
+  }
+  previousActiveElement.value = null
 }, { immediate: true })
 
 onBeforeUnmount(() => {
