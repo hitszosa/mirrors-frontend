@@ -16,6 +16,7 @@
           color="white"
           variant="ghost"
           size="sm"
+          aria-label="Close dialog"
           @click="$emit('close')"
         >
           <Icon name="icon-park-outline:close" />

@@ -69,7 +69,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, useSlots, watch } from 'vue'
+import { computed, ref, useSlots } from 'vue'
 
 type SortDirection = 'asc' | 'desc'
 
@@ -92,11 +92,7 @@ const props = defineProps<{
 }>()
 
 const slots = useSlots()
-const activeSort = ref<TableSort | null>(props.sort ?? null)
-
-watch(() => props.sort, (value) => {
-  activeSort.value = value ?? null
-})
+const activeSort = ref<TableSort | null>(props.sort ? { ...props.sort } : null)
 
 const hasSlot = (key: string) => {
   return Boolean(slots[`${key}-data`])
