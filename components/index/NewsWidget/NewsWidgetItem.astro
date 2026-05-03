@@ -1,8 +1,4 @@
 ---
-import dayjs from 'dayjs'
-import relativeTime from 'dayjs/plugin/relativeTime'
-import utc from 'dayjs/plugin/utc'
-
 import Icon from '../../Icon.vue'
 import type { ArticleDigest } from '../../news/ArticleDigest'
 
@@ -10,10 +6,13 @@ interface Props {
   digest: ArticleDigest
 }
 
-dayjs.extend(utc)
-dayjs.extend(relativeTime)
-
 const { digest } = Astro.props
+const dateString = new Intl.DateTimeFormat('zh-CN', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+}).format(new Date(digest.date))
 ---
 
 <li class="flex justify-between items-center">
@@ -30,7 +29,7 @@ const { digest } = Astro.props
   </div>
   <div class="shrink-0">
     <span class="inline-block">
-      {dayjs.utc(digest.date).fromNow()}
+      {dateString}
     </span>
   </div>
 </li>
