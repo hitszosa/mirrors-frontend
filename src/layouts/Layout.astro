@@ -18,7 +18,7 @@ const themeInitScript = `(function(){const key='nuxt-color-mode';const stored=lo
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <script is:inline>{themeInitScript}</script>
+    <script is:inline set:html={themeInitScript}></script>
   </head>
   <body class="dark:bg-gray-900">
     <div class="dark:bg-gray-900">
