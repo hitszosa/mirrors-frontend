@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout>
-  <div class="flex w-full max-w-screen-xl flex-col space-y-12 md:flex-row md:space-x-12 md:space-y-0 md:items-start">
-    <div class="flex flex-col space-y-4 grow">
+  <div class="flex w-full max-w-screen-xl min-w-0 flex-col space-y-12 md:flex-row md:space-x-12 md:space-y-0 md:items-start">
+    <div class="flex min-w-0 grow flex-col space-y-4">
       <section class="rounded-xl bg-slate-50 p-7 dark:bg-gray-800">
         <h1 class="text-2xl font-semibold">HITSZ OSA Mirrors</h1>
         <p class="mt-3 text-slate-600 dark:text-slate-300">
@@ -12,7 +12,7 @@ import Layout from '../layouts/Layout.astro'
         </p>
       </section>
     </div>
-    <div class="flex flex-col p-7 space-y-10 h-min bg-slate-50 dark:bg-gray-800 rounded-xl min-w-[20em] md:w-[32vw] md:max-w-[30em]">
+    <div class="flex min-w-0 flex-col p-7 space-y-10 h-min bg-slate-50 dark:bg-gray-800 rounded-xl md:min-w-[20em] md:w-[32vw] md:max-w-[30em]">
       <section>
         <h2 class="text-lg font-semibold">下载配置</h2>
         <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">

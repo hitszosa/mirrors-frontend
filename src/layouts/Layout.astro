@@ -17,7 +17,7 @@ const { title = 'HITSZ OSA Mirrors' } = Astro.props
   </head>
   <body class="dark:bg-gray-900">
     <div class="dark:bg-gray-900">
-      <div class="flex flex-col text-slate-800 dark:text-slate-200 w-screen">
+      <div class="flex w-full flex-col text-slate-800 dark:text-slate-200">
         <nav class="fixed top-0 left-0 z-50 w-full bg-white/90 shadow-sm backdrop-blur dark:bg-gray-900/90">
           <div class="mx-auto flex h-20 items-center justify-between px-6 md:h-12 md:px-12">
             <a class="flex items-center gap-3 font-semibold" href="/" aria-label="HITSZ OSA Mirrors">
@@ -31,7 +31,7 @@ const { title = 'HITSZ OSA Mirrors' } = Astro.props
           </div>
         </nav>
         <div class="flex flex-col justify-between min-h-screen bg-inherit pt-20 px-6 md:pt-12 md:px-12">
-          <main class="flex justify-around px-auto py-12">
+          <main class="mx-auto flex w-full justify-around py-12">
             <slot />
           </main>
           <footer class="mt-6 py-8 text-center text-sm text-slate-500 dark:text-slate-400">
