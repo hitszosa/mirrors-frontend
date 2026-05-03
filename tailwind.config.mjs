@@ -6,11 +6,8 @@ import plugin from 'tailwindcss/plugin'
 
 export default {
   content: [
+    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
     './components/**/*.{js,vue,ts}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}',
   ],
   darkMode: 'class',
   plugins: [
