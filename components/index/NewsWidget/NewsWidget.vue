@@ -13,7 +13,7 @@
         :digest="digest"
       />
     </ul>
-    <NuxtLink to="/news">
+    <a href="/news">
       <AppButton
         color="white"
         variant="solid"
@@ -22,20 +22,18 @@
       >
         Read More
       </AppButton>
-    </NuxtLink>
+    </a>
   </section>
 </template>
 
 <script setup lang="ts">
+import BaseSectionHeading from '~/components/base/SectionHeading.vue'
+import Icon from '~/components/Icon.vue'
 import { type ArticleDigest } from '~/components/news/ArticleDigest'
 import AppButton from '~/components/ui/AppButton.vue'
+import IndexNewsWidgetItem from './NewsWidgetItem.vue'
 
-const rawData = await useAsyncData(
-  'news',
-  () => queryContent('news')
-    .only(['title', '_path', 'description', 'date', 'tags'])
-    .sort({ date: -1 })
-    .find(),
-)
-const digests = (rawData.data.value ?? []) as ArticleDigest[]
+defineProps<{
+  digests: ArticleDigest[]
+}>()
 </script>

@@ -3,17 +3,10 @@ import { getCollection } from 'astro:content'
 import Layout from '../layouts/Layout.astro'
 import MirrorList from '../../components/index/MirrorList/MirrorList.vue'
 import DownloadWidget from '../../components/index/DownloadWidget/DownloadWidget.vue'
+import NewsWidget from '../../components/index/NewsWidget/NewsWidget.vue'
 import { sortNewsByDateDesc, toArticleDigest } from '../lib/news'
 
 const news = sortNewsByDateDesc(await getCollection('news')).map(toArticleDigest).slice(0, 3)
-
-const formatDate = (value: string) => {
-  return new Intl.DateTimeFormat('zh-CN', {
-    month: 'short',
-    day: 'numeric',
-    timeZone: 'UTC',
-  }).format(new Date(value))
-}
 ---
 
 <Layout>
@@ -26,30 +19,7 @@ const formatDate = (value: string) => {
         <DownloadWidget client:load />
       </section>
       <section>
-        <h2 class="text-2xl font-medium">Recent News</h2>
-        <ul class="mt-4 space-y-2 list-none list-inside">
-          {
-            news.map((item) => (
-              <li class="flex items-center justify-between gap-4">
-                <a
-                  href={item._path}
-                  class="min-w-0 truncate transition-colors relative inline-block z-10 decoration-dotted underline-offset-4 hocus:underline hover:cursor-pointer"
-                >
-                  {item.title}
-                </a>
-                <span class="shrink-0 text-sm text-slate-500 dark:text-slate-400">
-                  {formatDate(item.date)}
-                </span>
-              </li>
-            ))
-          }
-        </ul>
-        <a
-          href="/news"
-          class="mt-4 flex min-h-10 w-full items-center justify-center rounded-xl bg-white px-4 text-base font-medium text-slate-700 shadow-sm ring-1 ring-slate-200 transition-colors hocus:bg-slate-50 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700 dark:hocus:bg-slate-800"
-        >
-          Read More
-        </a>
+        <NewsWidget client:load digests={news} />
       </section>
     </div>
   </div>
