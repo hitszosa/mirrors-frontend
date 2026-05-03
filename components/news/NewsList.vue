@@ -12,14 +12,10 @@
 </template>
 
 <script setup lang="ts">
+import NewsListItem from './NewsListItem.vue'
 import { type ArticleDigest } from './ArticleDigest'
 
-const rawData = await useAsyncData(
-  'news',
-  () => queryContent('news')
-    .only(['title', '_path', 'description', 'date', 'tags'])
-    .sort({ date: -1 })
-    .find(),
-)
-const digests = (rawData.data.value ?? []) as ArticleDigest[]
+defineProps<{
+  digests: ArticleDigest[]
+}>()
 </script>

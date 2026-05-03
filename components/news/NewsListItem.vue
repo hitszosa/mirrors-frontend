@@ -7,8 +7,8 @@
     <article
       class="flex flex-col space-y-2 p-4 w-full border-t-[0.1em] border-slate-300 dark:border-slate-600"
     >
-      <NuxtLink
-        :to="digest._path"
+      <a
+        :href="digest._path"
         class="transition-colors max-w-min hocus:text-blue-400 dark:hocus:text-blue-300"
       >
         <h2
@@ -16,7 +16,7 @@
         >
           {{ digest.title }}
         </h2>
-      </NuxtLink>
+      </a>
       <p>{{ digest.description }}</p>
       <div class="flex justify-between pt-1 text-slate-400 text-sm">
         <div>
@@ -41,11 +41,16 @@
 </template>
 
 <script setup lang="ts">
+import Icon from '~/components/Icon.vue'
 import { type ArticleDigest } from './ArticleDigest'
 
 const props = defineProps<{
   digest: ArticleDigest
 }>()
-const date = new Date(props.digest.date)
-const dateString = `${date.getFullYear()} 年 ${date.getMonth()} 月 ${date.getDay()} 日`
+const dateString = new Intl.DateTimeFormat('zh-CN', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+}).format(new Date(props.digest.date))
 </script>
