@@ -13,15 +13,11 @@
         :digest="digest"
       />
     </ul>
-    <a href="/news">
-      <AppButton
-        color="white"
-        variant="solid"
-        block
-        class="transition-colors h-9 mt-4"
-      >
-        Read More
-      </AppButton>
+    <a
+      href="/news"
+      class="mt-4 inline-flex h-9 w-full items-center justify-center gap-2 rounded-xl bg-white px-4 text-base font-medium text-slate-700 shadow-sm ring-1 ring-slate-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 hocus:bg-slate-50 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700 dark:hocus:bg-slate-800"
+    >
+      Read More
     </a>
   </section>
 </template>
@@ -30,7 +26,6 @@
 import BaseSectionHeading from '~/components/base/SectionHeading.vue'
 import Icon from '~/components/Icon.vue'
 import { type ArticleDigest } from '~/components/news/ArticleDigest'
-import AppButton from '~/components/ui/AppButton.vue'
 import IndexNewsWidgetItem from './NewsWidgetItem.vue'
 
 defineProps<{
