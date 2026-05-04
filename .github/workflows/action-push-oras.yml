@@ -16,7 +16,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: mirrors-frontend-build
-          path: public/
+          path: dist/
       - name: Install jq
         uses: dcarbone/install-jq-action@v3.1.1
       - name: Install ORAS
@@ -35,7 +35,7 @@ jobs:
           jq -c '{ "$manifest": .labels }' meta.json > annotations.json
           oras push \
             --annotation-file annotations.json \
-            $REGISTRY/$IMAGE_BASENAME:$first_tag ./public/
+            $REGISTRY/$IMAGE_BASENAME:$first_tag ./dist/
           for tag in $extra_tags; do
             oras tag $REGISTRY/$IMAGE_BASENAME:$first_tag $tag
           done

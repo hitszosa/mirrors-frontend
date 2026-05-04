@@ -1,10 +1,14 @@
-# Nuxt dev/build outputs
+# Generated build outputs
 .output
 .data
 .nuxt
 .nitro
 .cache
+.astro
 dist
+public/tunasync_status.json
+public/static/res_link.json
+public/help_list.json
 
 # Node dependencies
 node_modules
@@ -22,7 +26,3 @@ logs
 .env
 .env.*
 !.env.example
-
-# Nuxt
-.nuxt-storybook
-storybook-static

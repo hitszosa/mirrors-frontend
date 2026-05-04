@@ -1,0 +1,16 @@
+---
+import SectionHeading from '../../base/SectionHeading.astro'
+import { Icon } from 'astro-icon/components'
+import DownloadWidgetAction from './DownloadWidgetAction.vue'
+---
+
+<section class="space-y-4">
+  <SectionHeading>
+    <Icon slot="icon" name="icon-park-outline:record-disc" />
+    LiveCD & Software
+  </SectionHeading>
+  <p>
+    在此处下载本站镜像的 Linux 发行版 LiveCD 和开源软件。
+  </p>
+  <DownloadWidgetAction client:load />
+</section>

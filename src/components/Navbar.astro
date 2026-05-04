@@ -1,0 +1,106 @@
+---
+import ThemeToggle from '@hitszosa/ui/components/ThemeToggle.astro'
+
+interface Props {
+  titleName: string
+  currentPath?: string | null
+}
+
+const { titleName, currentPath = null } = Astro.props
+
+const navItems = [
+  { label: 'Home', link: '/' },
+  { label: 'Help', link: 'https://mirrors-help.osa.moe/', isExternalLink: true },
+  { label: 'News', link: '/news' },
+  { label: 'About', link: '/about' },
+]
+
+const normalizePath = (path: string | null) => {
+  if (path === null) {
+    return null
+  }
+
+  if (!path || path === '/') {
+    return '/'
+  }
+
+  return path.endsWith('/') ? path.slice(0, -1) : path
+}
+
+const normalizedCurrentPath = normalizePath(currentPath)
+
+const isLinkActive = (link: string) => {
+  const normalizedLink = normalizePath(link)
+
+  if (normalizedCurrentPath === null || normalizedLink === null) {
+    return false
+  }
+
+  if (normalizedLink === '/news') {
+    return normalizedCurrentPath === normalizedLink
+      || normalizedCurrentPath.startsWith(`${normalizedLink}/`)
+  }
+
+  return normalizedCurrentPath === normalizedLink
+}
+
+const getNavLinkClass = (isActive: boolean) => {
+  return isActive
+    ? 'text-primary after:w-full after:h-2 after:bg-osa-fg/10'
+    : 'text-osa-fg after:bg-osa-fg/20 after:w-0 after:h-0'
+}
+---
+
+<header
+  class="whitespace-nowrap flex items-center px-10 z-50 w-screen border-b border-surface-border/70 shadow-sm
+  backdrop-blur-md backdrop-saturate-200 bg-surface/80
+  flex-col h-28 justify-evenly md:flex-row md:py-0 md:h-16 md:justify-between md:space-x-12"
+>
+  <a class="justify-start" href="/">
+    <div class="flex items-center">
+      <div
+        class="flex items-center justify-center mr-3 content-stretch
+        h-8 w-8 md:h-10 md:w-10"
+      >
+        <slot name="logo" />
+      </div>
+      <span class="text-xl font-medium text-surface-fg">
+        {titleName}
+      </span>
+    </div>
+  </a>
+  <nav class="flex flex-row space-x-7 justify-end font-medium text-base items-center">
+    <ul class="flex flex-row list-none space-x-7">
+      {
+        navItems.map((item) => {
+          const isActive = isLinkActive(item.link)
+
+          return (
+            <li>
+              <a
+                href={item.link}
+                target={item.isExternalLink ? '_blank' : undefined}
+                rel={item.isExternalLink ? 'noreferrer noopener' : undefined}
+                aria-current={isActive ? 'page' : undefined}
+                class:list={[
+                  'transition-colors after:transition-all relative inline-block rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+                  'hocus:text-primary after:block after:absolute after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:rounded-full after:-z-10',
+                  'hocus:after:w-full hocus:after:h-2 hocus:after:bg-osa-fg/40',
+                  getNavLinkClass(isActive),
+                ]}
+              >
+                {item.label}
+              </a>
+            </li>
+          )
+        })
+      }
+    </ul>
+    <ThemeToggle
+      size="sm"
+      storageKey="nuxt-color-mode"
+      defaultMode="system"
+      class="rounded-sm"
+    />
+  </nav>
+</header>

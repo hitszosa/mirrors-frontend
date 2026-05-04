@@ -1,0 +1,11 @@
+---
+import { Icon as IconifyIcon } from '@iconify/vue'
+
+interface Props {
+  name: string
+}
+
+const { name, ...props } = Astro.props
+---
+
+<IconifyIcon icon={name} {...props} />

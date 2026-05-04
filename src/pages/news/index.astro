@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '../../layouts/Layout.astro'
+import NewsList from '@components/news/NewsList.astro'
+import { sortNewsByDateDesc, toArticleDigest } from '../../lib/news'
+
+const news = sortNewsByDateDesc(await getCollection('news')).map(toArticleDigest)
+---
+
+<Layout title="News | HITSZ OSA Mirrors">
+  <div class="flex flex-col w-full min-w-0 max-w-screen-lg">
+    <h1 class="pb-8 text-3xl font-semibold">News</h1>
+    <NewsList digests={news} />
+  </div>
+</Layout>

@@ -14,7 +14,7 @@ const getName = () => {
 
 // 🚫 Bad example
 function getName() {
-  return 'Obama'
+  return 'Obama';
 }
 ```
 
@@ -96,20 +96,13 @@ Use Tailwind CSS as much as possible. Write all the styles in `class` attribute.
 
 ```html
 // ✅ Use hover and focus selectors with hocus
-<NuxtLink
-  :to="/"
-  class="hocus:underline hover:cursor-pointer"
->
+<NuxtLink :to="/" class="hocus:underline hover:cursor-pointer">
   Obama
 </NuxtLink>
 
 // 🚫 Bad example
-<span class="hover:underline">
-  Obama
-</span>
-<span class="focus:underline hover:underline">
-  Obama
-</span>
+<span class="hover:underline"> Obama </span>
+<span class="focus:underline hover:underline"> Obama </span>
 ```
 
 ## Directory Structure

@@ -1,0 +1,29 @@
+import { defineStore } from 'pinia';
+import { onMounted, ref } from 'vue';
+
+export type Resource = {
+  name: string;
+  link: string;
+};
+export type ResourceCollection = Record<string, Resource[]>;
+
+const fetchResourceCollection = async () => {
+  const res = await fetch('/static/res_link.json');
+  return await res.json();
+};
+
+export const useDownloadStore = defineStore('resource-collection', () => {
+  const resourceCollection = ref<ResourceCollection>({});
+
+  const createData = async () => {
+    resourceCollection.value = await fetchResourceCollection();
+  };
+
+  onMounted(async () => {
+    await createData();
+  });
+
+  return {
+    resourceCollection,
+  };
+});

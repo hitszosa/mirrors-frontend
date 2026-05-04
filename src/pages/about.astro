@@ -1,0 +1,18 @@
+---
+import { getEntry, render } from 'astro:content'
+import Layout from '../layouts/Layout.astro'
+
+const entry = await getEntry('pages', 'about')
+
+if (!entry) {
+  throw new Error('Missing pages/about content entry')
+}
+
+const { Content } = await render(entry)
+---
+
+<Layout title={`${entry.data.title} | HITSZ OSA Mirrors`}>
+  <article class="flex flex-col w-full max-w-screen-lg prose dark:prose-invert prose-slate">
+    <Content />
+  </article>
+</Layout>

@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from 'astro:content'
+import Layout from '../../layouts/Layout.astro'
+
+export async function getStaticPaths() {
+  const news = await getCollection('news')
+
+  return news.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+---
+
+<Layout title={`${entry.data.title} | HITSZ OSA Mirrors`}>
+  <article class="flex flex-col w-full max-w-screen-lg prose dark:prose-invert prose-slate">
+    <Content />
+  </article>
+</Layout>

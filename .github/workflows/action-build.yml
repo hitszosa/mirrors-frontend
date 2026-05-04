@@ -9,13 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: 'yarn'
-      - run: yarn install
-      - run: yarn generate
+          node-version: '22.12.0'
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.10
+      - run: bun install --frozen-lockfile
+      - run: bun run build
       - uses: actions/upload-artifact@v4
         with:
           name: mirrors-frontend-build
-          path: .output/public/
+          path: dist/
