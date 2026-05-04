@@ -1,0 +1,28 @@
+---
+import SectionHeading from '../../base/SectionHeading.astro'
+import { Icon } from 'astro-icon/components'
+import type { ArticleDigest } from '../../news/ArticleDigest'
+import NewsWidgetItem from './NewsWidgetItem.astro'
+
+interface Props {
+  digests: ArticleDigest[]
+}
+
+const { digests } = Astro.props
+---
+
+<section class="space-y-4">
+  <SectionHeading>
+    <Icon slot="icon" name="icon-park-outline:newspaper-folding"/>
+    Recent News
+  </SectionHeading>
+  <ul class="space-y-2 list-none list-inside">
+    {digests.map((digest) => <NewsWidgetItem digest={digest} />)}
+  </ul>
+  <a
+    href="/news"
+    class="mt-4 inline-flex h-9 w-full items-center justify-center gap-2 rounded-xl bg-surface px-4 text-base font-medium text-surface-fg shadow-sm ring-1 ring-surface-border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hocus:bg-page-bg hocus:text-primary"
+  >
+    Read More
+  </a>
+</section>

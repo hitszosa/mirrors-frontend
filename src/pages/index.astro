@@ -1,10 +1,12 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '../layouts/Layout.astro'
-import MirrorList from '../../components/index/MirrorList/MirrorList.vue'
-import DownloadWidget from '../../components/index/DownloadWidget/DownloadWidget.vue'
-import NewsWidget from '../../components/index/NewsWidget/NewsWidget.astro'
+import MirrorList from '@components/index/MirrorList/MirrorList.vue'
+import DownloadWidget from '@components/index/DownloadWidget/DownloadWidget.astro'
+import NewsWidget from '@components/index/NewsWidget/NewsWidget.astro'
 import { sortNewsByDateDesc, toArticleDigest } from '../lib/news'
+import SectionHeading from '@components/base/SectionHeading.astro'
+import { Icon } from 'astro-icon/components'
 
 const news = sortNewsByDateDesc(await getCollection('news')).map(toArticleDigest).slice(0, 3)
 ---
@@ -12,11 +14,15 @@ const news = sortNewsByDateDesc(await getCollection('news')).map(toArticleDigest
 <Layout>
   <div class="flex w-full max-w-screen-xl flex-col space-y-12 md:items-start md:flex-row md:space-x-12 md:space-y-0">
     <div class="grow space-y-4">
+      <SectionHeading>
+        <Icon slot="icon" name="icon-park-outline:dropbox"/>
+        Index of mirrors
+      </SectionHeading>
       <MirrorList client:load />
     </div>
     <div class="flex h-min min-w-[20em] flex-col space-y-10 rounded-xl border border-surface-border bg-surface px-7 py-7 shadow-sm md:w-[32vw] md:max-w-[30em]">
       <section>
-        <DownloadWidget client:load />
+        <DownloadWidget />
       </section>
       <section>
         <NewsWidget digests={news} />

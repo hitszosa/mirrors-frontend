@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css'
-import Footer from '../../components/Footer.astro'
-import Navbar from '../../components/Navbar.vue'
+import Footer from '@components/Footer.astro'
+import Navbar from '@components/Navbar.astro'
 
 interface Props {
   title?: string
@@ -9,7 +9,6 @@ interface Props {
 
 const { title = 'HITSZ OSA Mirrors' } = Astro.props
 const currentPath = Astro.url.pathname
-const themeInitScript = `(function(){const key='nuxt-color-mode';const stored=localStorage.getItem(key);const theme=stored==='light'||stored==='dark'||stored==='system'?stored:'system';const prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;const isDark=theme==='dark'||(theme==='system'&&prefersDark);document.documentElement.classList.toggle('dark',isDark);document.documentElement.style.colorScheme=isDark?'dark':'light'})()`
 ---
 
 <!doctype html>
@@ -18,13 +17,12 @@ const themeInitScript = `(function(){const key='nuxt-color-mode';const stored=lo
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <script is:inline set:html={themeInitScript}></script>
   </head>
   <body class="bg-page-bg text-page-fg">
     <div class="bg-page-bg">
       <div class="flex w-full flex-col text-page-fg">
         <div class="fixed top-0 left-0 z-50 w-full">
-          <Navbar client:load titleName="HITSZ OSA Mirrors" currentPath={currentPath}>
+          <Navbar titleName="HITSZ OSA Mirrors" currentPath={currentPath}>
             <img slot="logo" class="h-full w-full" src="/images/logo.svg" alt="" />
           </Navbar>
         </div>

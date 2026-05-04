@@ -1,0 +1,35 @@
+---
+import Icon from '../../Icon.astro'
+import type { ArticleDigest } from '../../news/ArticleDigest'
+
+interface Props {
+  digest: ArticleDigest
+}
+
+const { digest } = Astro.props
+const dateString = new Intl.DateTimeFormat('zh-CN', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+}).format(new Date(digest.date))
+---
+
+<li class="flex items-center justify-between gap-4 text-sm text-muted-fg">
+  <div class="flex min-w-0 items-center text-page-fg">
+    <div class="flex items-center justify-center pr-2 text-primary">
+      <Icon name="icon-park-outline:align-text-left" />
+    </div>
+    <a
+      href={digest._path}
+      class="relative inline-block truncate decoration-dotted underline-offset-4 transition-colors hocus:cursor-pointer hocus:text-primary hocus:underline"
+    >
+      {digest.title}
+    </a>
+  </div>
+  <div class="shrink-0">
+    <span class="inline-block">
+      {dateString}
+    </span>
+  </div>
+</li>

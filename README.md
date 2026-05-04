@@ -31,8 +31,8 @@ Use `bun run format` to apply the repository ESLint rules before every commit.
 
 If you need local mock runtime JSON for frontend work, use:
 
-- `bun run fixtures:sync` to copy fixture data into `public/`
-- `bun run fixtures:clean` to remove those local fixture copies again
+- `bun run mockdata:sync` to copy local mock data into `public/`
+- `bun run mockdata:clean` to remove those local mock copies again
 
 ### Build and Deploy
 
