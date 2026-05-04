@@ -1,5 +1,4 @@
 ---
-import { ClientRouter } from "astro:transitions";
 import ThemeToggle from '@hitszosa/ui/components/ThemeToggle.astro'
 
 interface Props {
@@ -81,7 +80,7 @@ const getNavLinkClass = (isActive: boolean) => {
               <a
                 href={item.link}
                 target={item.isExternalLink ? '_blank' : undefined}
-                rel={item.isExternalLink ? 'noreferrer' : undefined}
+                rel={item.isExternalLink ? 'noreferrer noopener' : undefined}
                 aria-current={isActive ? 'page' : undefined}
                 class:list={[
                   'transition-colors after:transition-all relative inline-block rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
@@ -105,4 +104,3 @@ const getNavLinkClass = (isActive: boolean) => {
     />
   </nav>
 </header>
-<ClientRouter/>

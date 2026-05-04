@@ -41,6 +41,7 @@
             <a
               :href="resource.link"
               target="_blank"
+              rel="noreferrer noopener"
               class="rounded-sm text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hocus:text-osa-hover"
             >
               {{ resource.name }}

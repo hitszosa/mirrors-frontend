@@ -8,6 +8,7 @@ const rootDir = resolve(scriptDir, '..')
 const copies = [
   ['mock/tunasync_status.json', 'public/tunasync_status.json'],
   ['mock/static/res_link.json', 'public/static/res_link.json'],
+  ['mock/help_list.json', 'public/help_list.json'],
 ]
 
 for (const [source, target] of copies) {
