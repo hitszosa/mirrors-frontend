@@ -1,5 +1,5 @@
 import type { CollectionEntry } from 'astro:content'
-import type { ArticleDigest } from '../../components/news/ArticleDigest'
+import type { ArticleDigest } from '../components/news/ArticleDigest'
 
 export const toArticleDigest = (entry: CollectionEntry<'news'>): ArticleDigest => ({
   _path: `/news/${entry.id}`,

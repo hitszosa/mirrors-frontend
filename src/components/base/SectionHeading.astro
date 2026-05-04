@@ -1,0 +1,23 @@
+---
+interface Props {
+  compact?: boolean
+}
+
+const { compact = false } = Astro.props
+---
+
+<h2
+  class:list={[
+    'flex flex-nowrap space-x-1.5 font-medium text-surface-fg',
+    compact ? 'text-xl' : 'text-2xl',
+  ]}
+>
+  <span class="inline-block translate-y-[3px]">
+    <slot name="icon" />
+  </span>
+  <span
+    class="relative z-10 inline-block transition-colors after:absolute after:-right-5 after:bottom-1 after:-z-10 after:block after:h-1 after:w-4 after:rounded-md after:bg-osa-fg/20 after:transition-all hocus:text-primary hocus:after:right-0 hocus:after:h-2 hocus:after:w-full"
+  >
+    <slot />
+  </span>
+</h2>

@@ -1,20 +1,7 @@
+@import 'tailwindcss';
 @import '@hitszosa/ui/styles/theme.css';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --mirrors-brand: var(--ui-osa-fg);
-  --mirrors-brand-soft: theme(colors.osa.100);
-  --mirrors-brand-strong: theme(colors.osa.700);
-  --mirrors-fg: var(--ui-page-fg);
-  --mirrors-muted: var(--ui-muted-fg);
-  --mirrors-surface: var(--ui-surface);
-  --mirrors-surface-muted: var(--ui-page-bg);
-  --mirrors-border: var(--ui-surface-border);
-  --mirrors-ring: var(--ui-osa-fg);
-}
+@config '../../tailwind.config.mjs';
+@source '../../node_modules/@hitszosa/ui/dist';
 
 body {
   @apply bg-page-bg text-page-fg dark:bg-page-bg;
