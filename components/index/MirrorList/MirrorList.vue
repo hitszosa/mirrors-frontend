@@ -6,7 +6,7 @@
       </span>
       <span
         class="transition-colors after:transition-all relative inline-block z-10
-        after:block after:absolute after:bg-blue-100 dark:after:bg-slate-700 after:rounded-md
+        after:block after:absolute after:bg-brand-soft/80 after:rounded-md
         after:w-4 after:h-1 after:-right-5 after:bottom-1 after:-z-10
         hocus:after:w-full hocus:after:h-2 hocus:after:right-0"
       >
@@ -17,7 +17,7 @@
       :value="mirrorFilter"
       id="mirror-search-input"
       placeholder="Press '/' key to search for mirrors..."
-      class="form-input w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-slate-800 shadow-sm outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:focus:border-blue-400 dark:focus:ring-blue-400/20"
+      class="form-input w-full rounded-xl border border-border bg-surface px-4 py-2 text-fg shadow-sm outline-none transition placeholder:text-muted focus:border-brand focus:ring-2 focus:ring-ring"
       @input="onSearchInput"
     >
     <AppTable
@@ -29,7 +29,7 @@
       <template #name-data="{ row }">
         <a
           v-if="isShowHelp(row.name)"
-          class="group flex gap-1 items-center cursor-pointer transition-colors hocus:text-blue-400"
+          class="group flex gap-1 items-center cursor-pointer rounded-sm text-fg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring hocus:text-brand"
           :href="getHelpUrl(row.name)"
           target="_blank"
         >
@@ -39,9 +39,8 @@
           <IconifyIcon
             class="text-sm
             transition
-            text-slate-400
-            group-hover:text-blue-400 group-focus:text-blue-400
-            dark:group-hover:text-blue-400 dark:group-focus:text-blue-400"
+            text-muted
+            group-hover:text-brand group-focus:text-brand"
             icon="icon-park-outline:help"
           />
         </a>
@@ -62,7 +61,7 @@
           v-if="row.files"
           :href="row.files"
           target="_blank"
-          class="transition-colors text-lg hocus:text-blue-400"
+           class="rounded-sm text-lg text-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring hocus:text-brand"
         >
           <IconifyIcon icon="icon-park-outline:folder-open" />
         </a>
@@ -87,13 +86,13 @@ const helpSet = computed(() => new Set(helpList.value))
 const getStatusBadgeClass = (status: string) => {
   switch (status) {
     case 'success':
-      return 'bg-green-100 text-green-700 dark:bg-green-500/15 dark:text-green-300'
+      return 'border border-green-200 bg-green-100 text-green-700 dark:border-green-500/30 dark:bg-green-500/15 dark:text-green-300'
     case 'syncing':
-      return 'bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300'
+      return 'border border-brand-soft bg-brand-soft/60 text-brand-strong dark:border-brand/30 dark:bg-brand/15 dark:text-brand-soft'
     case 'failed':
-      return 'bg-red-100 text-red-700 dark:bg-red-500/15 dark:text-red-300'
+      return 'border border-red-200 bg-red-100 text-red-700 dark:border-red-500/30 dark:bg-red-500/15 dark:text-red-300'
     default:
-      return 'bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-200'
+      return 'border border-border bg-surface-muted text-muted'
   }
 }
 
