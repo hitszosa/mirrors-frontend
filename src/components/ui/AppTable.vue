@@ -1,5 +1,7 @@
 <template>
-  <div class="overflow-hidden rounded-2xl border border-surface-border bg-surface shadow-sm">
+  <div
+    class="overflow-hidden rounded-2xl border border-surface-border bg-surface shadow-sm"
+  >
     <table class="min-w-full divide-y divide-surface-border">
       <thead class="bg-page-bg/80">
         <tr>
@@ -17,7 +19,9 @@
               @click="toggleSort(column.key)"
             >
               <span>{{ column.label }}</span>
-              <span class="text-xs text-muted-fg">{{ sortIndicator(column.key) }}</span>
+              <span class="text-xs text-muted-fg">{{
+                sortIndicator(column.key)
+              }}</span>
             </button>
             <span v-else>{{ column.label }}</span>
           </th>
@@ -29,7 +33,7 @@
             :colspan="columns.length"
             class="px-4 py-6 text-center text-sm text-muted-fg"
           >
-            {{ loading ? "Loading..." : errorMessage }}
+            {{ loading ? 'Loading...' : errorMessage }}
           </td>
         </tr>
         <tr v-else-if="sortedRows.length === 0">
@@ -68,33 +72,37 @@
 <script setup lang="ts">
 import { computed, ref, useSlots, watch } from 'vue'
 
-type SortDirection = 'asc' | 'desc'
+type SortDirection = 'asc' | 'desc';
 
 interface TableColumn {
-  key: string
-  label: string
-  sortable?: boolean
+  key: string;
+  label: string;
+  sortable?: boolean;
 }
 
 interface TableSort {
-  column: string
-  direction: SortDirection
+  column: string;
+  direction: SortDirection;
 }
 
 const props = defineProps<{
-  columns: TableColumn[]
-  rows: Record<string, unknown>[]
-  sort?: TableSort
-  loading?: boolean
-  errorMessage?: string
+  columns: TableColumn[];
+  rows: Record<string, unknown>[];
+  sort?: TableSort;
+  loading?: boolean;
+  errorMessage?: string;
 }>()
 
 const slots = useSlots()
 const activeSort = ref<TableSort | null>(props.sort ? { ...props.sort } : null)
 
-watch(() => props.sort, (sort) => {
-  activeSort.value = sort ? { ...sort } : null
-}, { deep: true })
+watch(
+  () => props.sort,
+  (sort) => {
+    activeSort.value = sort ? { ...sort } : null
+  },
+  { deep: true },
+)
 
 const hasSlot = (key: string) => {
   return Boolean(slots[`${key}-data`])
@@ -133,7 +141,10 @@ const sortedRows = computed(() => {
 
   const { column, direction } = activeSort.value
   return renderedRows.sort((left, right) => {
-    const result = compareValues(getCellValue(left, column), getCellValue(right, column))
+    const result = compareValues(
+      getCellValue(left, column),
+      getCellValue(right, column),
+    )
     return direction === 'asc' ? result : -result
   })
 })

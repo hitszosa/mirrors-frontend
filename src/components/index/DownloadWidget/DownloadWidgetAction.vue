@@ -6,10 +6,7 @@
   >
     Get LiveCD & Software
   </button>
-  <AppModal
-    v-model="isOpen"
-    aria-labelledby="download-modal-title"
-  >
+  <AppModal v-model="isOpen" aria-labelledby="download-modal-title">
     <IndexDownloadModal @close="onCloseModal" />
   </AppModal>
 </template>

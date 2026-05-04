@@ -21,8 +21,7 @@ export const useHelpListStore = defineStore('help-list', () => {
   const createData = async () => {
     try {
       helpList.value = await fetchHelpList()
-    }
-    catch {
+    } catch {
       helpList.value = []
     }
   }

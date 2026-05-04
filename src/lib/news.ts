@@ -1,7 +1,9 @@
 import type { CollectionEntry } from 'astro:content'
 import type { ArticleDigest } from '../components/news/ArticleDigest'
 
-export const toArticleDigest = (entry: CollectionEntry<'news'>): ArticleDigest => ({
+export const toArticleDigest = (
+  entry: CollectionEntry<'news'>,
+): ArticleDigest => ({
   _path: `/news/${entry.id}`,
   title: entry.data.title,
   description: entry.data.description,
@@ -10,5 +12,7 @@ export const toArticleDigest = (entry: CollectionEntry<'news'>): ArticleDigest =
 })
 
 export const sortNewsByDateDesc = (entries: CollectionEntry<'news'>[]) => {
-  return [...entries].sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  return [...entries].sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+  )
 }

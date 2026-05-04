@@ -20,8 +20,7 @@ async function isTrackedByGit(rootDir, file) {
       cwd: rootDir,
     })
     return true
-  }
-  catch (error) {
+  } catch (error) {
     if (error.code === 1) {
       return false
     }
@@ -34,8 +33,7 @@ async function fileExists(path) {
   try {
     await access(path)
     return true
-  }
-  catch {
+  } catch {
     return false
   }
 }
@@ -44,13 +42,18 @@ export async function cleanMockdata(rootDir = defaultRootDir) {
   const trackedFiles = []
 
   for (const file of generatedFiles) {
-    if (await isTrackedByGit(rootDir, file) && await fileExists(resolve(rootDir, file))) {
+    if (
+      (await isTrackedByGit(rootDir, file)) &&
+      (await fileExists(resolve(rootDir, file)))
+    ) {
       trackedFiles.push(file)
     }
   }
 
   if (trackedFiles.length > 0) {
-    throw new Error(`Refusing to delete tracked mockdata copy: ${trackedFiles[0]}`)
+    throw new Error(
+      `Refusing to delete tracked mockdata copy: ${trackedFiles[0]}`,
+    )
   }
 
   for (const file of generatedFiles) {
@@ -61,8 +64,7 @@ export async function cleanMockdata(rootDir = defaultRootDir) {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   try {
     await cleanMockdata()
-  }
-  catch (error) {
+  } catch (error) {
     console.error(error.message)
     process.exitCode = 1
   }

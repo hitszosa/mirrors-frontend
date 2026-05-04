@@ -26,11 +26,11 @@ defineOptions({
 })
 
 const props = defineProps<{
-  modelValue: boolean
+  modelValue: boolean;
 }>()
 
 const emit = defineEmits<{
-  'update:modelValue': [value: boolean]
+  'update:modelValue': [value: boolean];
 }>()
 
 const dialogRef = ref<HTMLDivElement | null>(null)
@@ -60,8 +60,11 @@ const getFocusableElements = () => {
     return [] as HTMLElement[]
   }
 
-  return Array.from(dialogRef.value.querySelectorAll<HTMLElement>(focusableSelector))
-    .filter(element => !element.hasAttribute('disabled') && element.tabIndex !== -1)
+  return Array.from(
+    dialogRef.value.querySelectorAll<HTMLElement>(focusableSelector),
+  ).filter(
+    (element) => !element.hasAttribute('disabled') && element.tabIndex !== -1,
+  )
 }
 
 const focusFirstElement = () => {
@@ -82,7 +85,10 @@ const trapFocus = (event: KeyboardEvent) => {
   const lastElement = focusableElements[focusableElements.length - 1]
   const activeElement = document.activeElement
 
-  if (event.shiftKey && (activeElement === firstElement || activeElement === dialogRef.value)) {
+  if (
+    event.shiftKey &&
+    (activeElement === firstElement || activeElement === dialogRef.value)
+  ) {
     event.preventDefault()
     lastElement.focus()
     return
@@ -105,26 +111,33 @@ const onKeydown = (event: KeyboardEvent) => {
   }
 }
 
-watch(() => props.modelValue, (isOpen) => {
-  if (typeof window === 'undefined') {
-    return
-  }
+watch(
+  () => props.modelValue,
+  (isOpen) => {
+    if (typeof window === 'undefined') {
+      return
+    }
 
-  if (isOpen) {
-    previousActiveElement.value = document.activeElement instanceof HTMLElement ? document.activeElement : null
-    window.addEventListener('keydown', onKeydown)
-    nextTick(() => {
-      focusFirstElement()
-    })
-    return
-  }
+    if (isOpen) {
+      previousActiveElement.value =
+        document.activeElement instanceof HTMLElement
+          ? document.activeElement
+          : null
+      window.addEventListener('keydown', onKeydown)
+      nextTick(() => {
+        focusFirstElement()
+      })
+      return
+    }
 
-  window.removeEventListener('keydown', onKeydown)
-  if (previousActiveElement.value?.isConnected) {
-    previousActiveElement.value.focus()
-  }
-  previousActiveElement.value = null
-}, { immediate: true })
+    window.removeEventListener('keydown', onKeydown)
+    if (previousActiveElement.value?.isConnected) {
+      previousActiveElement.value.focus()
+    }
+    previousActiveElement.value = null
+  },
+  { immediate: true },
+)
 
 onBeforeUnmount(() => {
   if (typeof window !== 'undefined') {

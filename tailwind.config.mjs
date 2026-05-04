@@ -17,13 +17,13 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            'h1': {
+            h1: {
               fontSize: '26px',
             },
-            'h2': {
+            h2: {
               fontSize: '22px',
             },
-            'h3': {
+            h3: {
               fontSize: '18px',
             },
             'h1, h2, h3, h4': {
@@ -33,7 +33,7 @@ export default {
             'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a': {
               textDecoration: 'none',
             },
-            'code': {
+            code: {
               fontWeight: 400,
             },
             'code::before': {
@@ -47,21 +47,21 @@ export default {
               marginBottom: '0.25em',
               paddingInlineStart: '1.25em',
             },
-            'li': {
+            li: {
               marginTop: '0.25em',
               marginBottom: '0.25em',
             },
-            'p': {
+            p: {
               marginTop: '0.75em',
               marginBottom: '0.75em',
             },
-            'a': {
+            a: {
               fontWeight: '400',
             },
-            'strong': {
+            strong: {
               fontWeight: '400',
             },
-            'blockquote': {
+            blockquote: {
               fontWeight: '300',
               fontStyle: 'normal',
             },

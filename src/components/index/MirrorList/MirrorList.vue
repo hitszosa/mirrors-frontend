@@ -6,7 +6,7 @@
       placeholder="Press '/' key to search for mirrors..."
       class="form-input w-full rounded-xl border border-surface-border bg-surface px-4 py-2 text-surface-fg shadow-sm outline-none transition placeholder:text-muted-fg focus:border-primary focus:ring-2 focus:ring-primary"
       @input="onSearchInput"
-    >
+    />
     <AppTable
       :columns="columns"
       :rows="filteredRows"
@@ -26,10 +26,7 @@
             {{ row.name }}
           </span>
           <IconifyIcon
-            class="text-sm
-            transition
-            text-muted-fg
-            group-hover:text-primary group-focus:text-primary"
+            class="text-sm transition text-muted-fg group-hover:text-primary group-focus:text-primary"
             icon="icon-park-outline:help"
           />
         </a>
@@ -116,7 +113,9 @@ const filteredRows = computed(() => {
   if (!mirrorFilter.value) {
     return rows.value
   }
-  return rows.value.filter(row => isNameMatched(row.name, mirrorFilter.value))
+  return rows.value.filter((row) =>
+    isNameMatched(row.name, mirrorFilter.value),
+  )
 })
 
 const isShowHelp = (mirror: string) => {
@@ -148,7 +147,10 @@ const isEditableElement = (target: EventTarget | null) => {
     return false
   }
 
-  return target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)
+  return (
+    target.isContentEditable ||
+    ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)
+  )
 }
 
 const onKeydown = (event: KeyboardEvent) => {

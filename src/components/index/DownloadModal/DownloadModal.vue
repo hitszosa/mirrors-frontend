@@ -1,5 +1,7 @@
 <template>
-  <section class="flex flex-col h-full overflow-hidden rounded-2xl bg-surface text-surface-fg shadow-xl ring-1 ring-surface-border">
+  <section
+    class="flex flex-col h-full overflow-hidden rounded-2xl bg-surface text-surface-fg shadow-xl ring-1 ring-surface-border"
+  >
     <header class="p-6">
       <div class="flex flex-row justify-between">
         <h2 class="flex flex-nowrap space-x-1.5 text-xl font-medium">
@@ -33,11 +35,10 @@
           :index="collectionIndex"
           @update:index="onCollectionUpdate"
         />
-        <ul class="grow h-full min-h-0 overflow-y-auto list-disc p-1 pl-6 text-lg space-y-1">
-          <li
-            v-for="resource in currentCollection"
-            :key="resource.name"
-          >
+        <ul
+          class="grow h-full min-h-0 overflow-y-auto list-disc p-1 pl-6 text-lg space-y-1"
+        >
+          <li v-for="resource in currentCollection" :key="resource.name">
             <a
               :href="resource.link"
               target="_blank"
@@ -49,10 +50,7 @@
           </li>
         </ul>
       </div>
-      <div
-        v-else
-        class="flex flex-row space-x-6"
-      >
+      <div v-else class="flex flex-row space-x-6">
         <div class="h-[32em] w-40 animate-pulse rounded-xl bg-page-bg" />
         <div class="h-[32em] grow animate-pulse rounded-xl bg-page-bg" />
       </div>
@@ -71,7 +69,7 @@ const store = useDownloadStore()
 const { resourceCollection } = storeToRefs(store)
 
 defineEmits<{
-  close: []
+  close: [];
 }>()
 
 const collectionIndex = ref(0)
@@ -79,7 +77,9 @@ const collectionIndex = ref(0)
 const collections = computed(() => Object.keys(resourceCollection.value))
 const currentCollection = computed(() => {
   const selectedCollection = collections.value[collectionIndex.value]
-  return selectedCollection ? resourceCollection.value[selectedCollection] ?? [] : []
+  return selectedCollection
+    ? (resourceCollection.value[selectedCollection] ?? [])
+    : []
 })
 
 const onCollectionUpdate = (_collection: string, index: number) => {
