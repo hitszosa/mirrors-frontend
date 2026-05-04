@@ -1,3 +1,5 @@
+import astro from 'eslint-plugin-astro'
+import tsPlugin from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
 import vuePlugin from 'eslint-plugin-vue'
 import vueParser from 'vue-eslint-parser'
@@ -10,12 +12,9 @@ const styleRules = {
 
 export default [
   {
-    ignores: [
-      '.astro/',
-      'dist/',
-      'node_modules/',
-    ],
+    ignores: ['.astro/', 'dist/', 'node_modules/'],
   },
+  ...astro.configs['flat/recommended'],
   {
     files: ['**/*.{js,mjs,cjs,ts}'],
     languageOptions: {
@@ -24,6 +23,22 @@ export default [
       sourceType: 'module',
     },
     rules: styleRules,
+  },
+  {
+    files: ['**/*.{ts,mts,cts}'],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': tsPlugin,
+    },
+    rules: {
+      'no-undef': 'off',
+    },
   },
   {
     files: ['**/*.vue'],
