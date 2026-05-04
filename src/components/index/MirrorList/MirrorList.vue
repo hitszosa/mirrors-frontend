@@ -20,6 +20,7 @@
           class="group flex gap-1 items-center cursor-pointer rounded-sm text-surface-fg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hocus:text-primary"
           :href="getHelpUrl(row.name)"
           target="_blank"
+          rel="noreferrer noopener"
         >
           <span>
             {{ row.name }}
@@ -49,6 +50,7 @@
           v-if="row.files"
           :href="row.files"
           target="_blank"
+          rel="noreferrer noopener"
           class="rounded-sm text-lg text-muted-fg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hocus:text-primary"
         >
           <IconifyIcon icon="icon-park-outline:folder-open" />

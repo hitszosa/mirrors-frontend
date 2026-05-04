@@ -7,6 +7,11 @@ const fetchHelpList = async () => {
       ? '/help_list.json'
       : 'https://mirrors-help.osa.moe/help_list.json',
   )
+
+  if (!res.ok) {
+    throw new Error(`Help list request failed with ${res.status}`)
+  }
+
   return await res.json()
 }
 
@@ -14,7 +19,12 @@ export const useHelpListStore = defineStore('help-list', () => {
   const helpList = ref<string[]>([])
 
   const createData = async () => {
-    helpList.value = await fetchHelpList()
+    try {
+      helpList.value = await fetchHelpList()
+    }
+    catch {
+      helpList.value = []
+    }
   }
 
   onMounted(async () => {

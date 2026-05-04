@@ -66,8 +66,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, useSlots } from 'vue'
-import { Icon as IconifyIcon } from '@iconify/vue'
+import { computed, ref, useSlots, watch } from 'vue'
 
 type SortDirection = 'asc' | 'desc'
 
@@ -92,6 +91,10 @@ const props = defineProps<{
 
 const slots = useSlots()
 const activeSort = ref<TableSort | null>(props.sort ? { ...props.sort } : null)
+
+watch(() => props.sort, (sort) => {
+  activeSort.value = sort ? { ...sort } : null
+}, { deep: true })
 
 const hasSlot = (key: string) => {
   return Boolean(slots[`${key}-data`])
