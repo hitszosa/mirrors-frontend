@@ -1,6 +1,6 @@
 import { execFile } from 'node:child_process'
 import { promisify } from 'node:util'
-import { rm } from 'node:fs/promises'
+import { access, rm } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -30,11 +30,21 @@ async function isTrackedByGit(rootDir, file) {
   }
 }
 
+async function fileExists(path) {
+  try {
+    await access(path)
+    return true
+  }
+  catch {
+    return false
+  }
+}
+
 export async function cleanMockdata(rootDir = defaultRootDir) {
   const trackedFiles = []
 
   for (const file of generatedFiles) {
-    if (await isTrackedByGit(rootDir, file)) {
+    if (await isTrackedByGit(rootDir, file) && await fileExists(resolve(rootDir, file))) {
       trackedFiles.push(file)
     }
   }

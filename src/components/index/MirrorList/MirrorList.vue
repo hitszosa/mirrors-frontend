@@ -49,7 +49,7 @@
           v-if="row.files"
           :href="row.files"
           target="_blank"
-            class="rounded-sm text-lg text-muted-fg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hocus:text-primary"
+          class="rounded-sm text-lg text-muted-fg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hocus:text-primary"
         >
           <IconifyIcon icon="icon-park-outline:folder-open" />
         </a>
