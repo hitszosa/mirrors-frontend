@@ -2,19 +2,15 @@
   <ul
     role="radiogroup"
     aria-orientation="vertical"
-    class="flex flex-col h-full overflow-y-auto list-none rounded-xl border border-surface-border bg-page-bg p-1 whitespace-nowrap"
+    class="flex flex-col h-full p-2 overflow-y-auto list-none rounded-xl border border-surface-border bg-page-bg whitespace-nowrap"
   >
-    <li
-      v-for="(item, idx) in $props.items"
-      :key="item"
-      role="presentation"
-    >
+    <li v-for="(item, idx) in $props.items" :key="item" role="presentation">
       <button
         type="button"
         role="radio"
         :aria-checked="props.index === idx"
         :tabindex="props.index === idx ? 0 : -1"
-        class="w-full rounded-xl p-3 text-left text-muted-fg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        class="w-full rounded-xl p-2 text-left text-muted-fg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         :class="getButtonStyle(idx)"
         @click="onSelect(item, idx)"
       >
