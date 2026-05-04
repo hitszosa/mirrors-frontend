@@ -1,4 +1,4 @@
-import type { ResourceCollection } from './DownloadStore'
+import type { ResourceCollection } from './DownloadStore';
 
 const mockResourceCollection: ResourceCollection = {
   Fedora: [
@@ -196,9 +196,9 @@ const mockResourceCollection: ResourceCollection = {
   Dummy1: [],
   Dummy2: [],
   Dummy3: [],
-}
+};
 
 export const fetchMockResourceCollection = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 500))
-  return mockResourceCollection
-}
+  await new Promise((resolve) => setTimeout(resolve, 500));
+  return mockResourceCollection;
+};

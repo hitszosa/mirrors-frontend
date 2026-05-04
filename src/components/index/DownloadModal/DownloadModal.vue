@@ -59,30 +59,30 @@
 </template>
 
 <script setup lang="ts">
-import { Icon as IconifyIcon } from '@iconify/vue'
-import { storeToRefs } from 'pinia'
-import { computed, ref } from 'vue'
-import BaseRadioSelection from '@components/base/RadioSelection.vue'
-import { useDownloadStore } from './DownloadStore'
+import { Icon as IconifyIcon } from '@iconify/vue';
+import { storeToRefs } from 'pinia';
+import { computed, ref } from 'vue';
+import BaseRadioSelection from '@components/base/RadioSelection.vue';
+import { useDownloadStore } from './DownloadStore';
 
-const store = useDownloadStore()
-const { resourceCollection } = storeToRefs(store)
+const store = useDownloadStore();
+const { resourceCollection } = storeToRefs(store);
 
 defineEmits<{
   close: [];
-}>()
+}>();
 
-const collectionIndex = ref(0)
+const collectionIndex = ref(0);
 
-const collections = computed(() => Object.keys(resourceCollection.value))
+const collections = computed(() => Object.keys(resourceCollection.value));
 const currentCollection = computed(() => {
-  const selectedCollection = collections.value[collectionIndex.value]
+  const selectedCollection = collections.value[collectionIndex.value];
   return selectedCollection
     ? (resourceCollection.value[selectedCollection] ?? [])
-    : []
-})
+    : [];
+});
 
 const onCollectionUpdate = (_collection: string, index: number) => {
-  collectionIndex.value = index
-}
+  collectionIndex.value = index;
+};
 </script>

@@ -1,5 +1,5 @@
-import type { CollectionEntry } from 'astro:content'
-import type { ArticleDigest } from '../components/news/ArticleDigest'
+import type { CollectionEntry } from 'astro:content';
+import type { ArticleDigest } from '../components/news/ArticleDigest';
 
 export const toArticleDigest = (
   entry: CollectionEntry<'news'>,
@@ -9,10 +9,10 @@ export const toArticleDigest = (
   description: entry.data.description,
   date: entry.data.date.toISOString(),
   tags: entry.data.tags,
-})
+});
 
 export const sortNewsByDateDesc = (entries: CollectionEntry<'news'>[]) => {
   return [...entries].sort(
     (a, b) => b.data.date.getTime() - a.data.date.getTime(),
-  )
-}
+  );
+};

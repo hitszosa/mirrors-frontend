@@ -58,30 +58,30 @@
 </template>
 
 <script setup lang="ts">
-import { Icon as IconifyIcon } from '@iconify/vue'
-import { storeToRefs } from 'pinia'
-import { computed, onMounted, onUnmounted, ref } from 'vue'
-import AppTable from '@components/ui/AppTable.vue'
-import { useHelpListStore } from './HelpListStore'
-import { useMirrorListStore } from './MirrorListStore'
+import { Icon as IconifyIcon } from '@iconify/vue';
+import { storeToRefs } from 'pinia';
+import { computed, onMounted, onUnmounted, ref } from 'vue';
+import AppTable from '@components/ui/AppTable.vue';
+import { useHelpListStore } from './HelpListStore';
+import { useMirrorListStore } from './MirrorListStore';
 
-const { rows, loading, errorMessage } = storeToRefs(useMirrorListStore())
-const { helpList } = storeToRefs(useHelpListStore())
+const { rows, loading, errorMessage } = storeToRefs(useMirrorListStore());
+const { helpList } = storeToRefs(useHelpListStore());
 
-const helpSet = computed(() => new Set(helpList.value))
+const helpSet = computed(() => new Set(helpList.value));
 
 const getStatusBadgeClass = (status: string) => {
   switch (status) {
     case 'success':
-      return 'border border-green-200 bg-green-100 text-green-700 dark:border-green-500/30 dark:bg-green-500/15 dark:text-green-300'
+      return 'border border-green-200 bg-green-100 text-green-700 dark:border-green-500/30 dark:bg-green-500/15 dark:text-green-300';
     case 'syncing':
-      return 'border border-blue-200 bg-blue-100 text-blue-700 dark:border-blue-500/30 dark:bg-blue-500/15 dark:text-blue-300'
+      return 'border border-blue-200 bg-blue-100 text-blue-700 dark:border-blue-500/30 dark:bg-blue-500/15 dark:text-blue-300';
     case 'failed':
-      return 'border border-red-200 bg-red-100 text-red-700 dark:border-red-500/30 dark:bg-red-500/15 dark:text-red-300'
+      return 'border border-red-200 bg-red-100 text-red-700 dark:border-red-500/30 dark:bg-red-500/15 dark:text-red-300';
     default:
-      return 'border border-surface-border bg-page-bg text-muted-fg'
+      return 'border border-surface-border bg-page-bg text-muted-fg';
   }
-}
+};
 
 const createColumns = () => {
   return [
@@ -104,77 +104,77 @@ const createColumns = () => {
       label: 'Status',
       sortable: true,
     },
-  ]
-}
-const columns = ref(createColumns())
-const mirrorFilter = ref('')
+  ];
+};
+const columns = ref(createColumns());
+const mirrorFilter = ref('');
 
 const filteredRows = computed(() => {
   if (!mirrorFilter.value) {
-    return rows.value
+    return rows.value;
   }
   return rows.value.filter((row) =>
     isNameMatched(row.name, mirrorFilter.value),
-  )
-})
+  );
+});
 
 const isShowHelp = (mirror: string) => {
-  return helpSet.value.has(mirror)
-}
+  return helpSet.value.has(mirror);
+};
 
 const isNameMatched = (mirror: string, filter: string) => {
-  return mirror.toLowerCase().includes(filter.toLowerCase())
-}
+  return mirror.toLowerCase().includes(filter.toLowerCase());
+};
 
 const getHelpUrl = (mirror: string) => {
-  return `https://mirrors-help.osa.moe/${mirror}`
-}
+  return `https://mirrors-help.osa.moe/${mirror}`;
+};
 
 const onSearchInput = (event: Event) => {
-  mirrorFilter.value = (event.target as HTMLInputElement).value
-}
+  mirrorFilter.value = (event.target as HTMLInputElement).value;
+};
 
 const triggerSearchFocus = () => {
-  document.getElementById('mirror-search-input')?.focus()
-}
+  document.getElementById('mirror-search-input')?.focus();
+};
 
 const isDialogOpen = () => {
-  return document.querySelector('[role="dialog"][aria-modal="true"]') !== null
-}
+  return document.querySelector('[role="dialog"][aria-modal="true"]') !== null;
+};
 
 const isEditableElement = (target: EventTarget | null) => {
   if (!(target instanceof HTMLElement)) {
-    return false
+    return false;
   }
 
   return (
     target.isContentEditable ||
     ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)
-  )
-}
+  );
+};
 
 const onKeydown = (event: KeyboardEvent) => {
   if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) {
-    return
+    return;
   }
 
   if (isDialogOpen()) {
-    return
+    return;
   }
 
   if (isEditableElement(event.target)) {
-    return
+    return;
   }
 
-  event.preventDefault()
-  triggerSearchFocus()
-}
+  event.preventDefault();
+  triggerSearchFocus();
+};
 
 onMounted(() => {
-  window.addEventListener('keydown', onKeydown)
-})
+  window.addEventListener('keydown', onKeydown);
+});
 
 onUnmounted(() => {
-  window.removeEventListener('keydown', onKeydown)
-})
+  window.removeEventListener('keydown', onKeydown);
+});
 </script>

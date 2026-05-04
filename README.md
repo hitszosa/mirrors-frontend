@@ -27,12 +27,14 @@ Use `bun run dev` to start the Astro dev server with hot module replacement.
 
 Use `bun run check` for Astro type/content validation.
 
-Use `bun run format` to apply the repository ESLint rules before every commit.
+Use `bun run format` to apply the repository Prettier rules before every commit.
+
+Use `bun run lint:fix` to apply the repository ESLint rules.
 
 If you need local mock runtime JSON for frontend work, use:
 
-- `bun run mockdata:sync` to copy local mock data into `public/`
-- `bun run mockdata:clean` to remove those local mock copies again
+- `bun run mock:sync` to copy local mock data into `public/`
+- `bun run mock:clean` to remove those local mock copies again
 
 ### Build and Deploy
 

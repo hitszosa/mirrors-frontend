@@ -1,15 +1,15 @@
 ---
 interface Props {
-  link: string
+  link: string;
 }
 
-const { link } = Astro.props
+const { link } = Astro.props;
 ---
 
 <a
   href={link}
   target="_blank"
-  rel="noreferrer"
+  rel="noopener noreferrer"
   class="underline decoration-dotted underline-offset-4"
 >
   <slot />

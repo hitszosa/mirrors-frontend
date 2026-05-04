@@ -1,14 +1,14 @@
-import astro from 'eslint-plugin-astro'
-import tsPlugin from '@typescript-eslint/eslint-plugin'
-import tsParser from '@typescript-eslint/parser'
-import vuePlugin from 'eslint-plugin-vue'
-import vueParser from 'vue-eslint-parser'
+import astro from 'eslint-plugin-astro';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import vuePlugin from 'eslint-plugin-vue';
+import vueParser from 'vue-eslint-parser';
 
 const styleRules = {
   indent: ['error', 2, { SwitchCase: 1 }],
   quotes: ['error', 'single', { avoidEscape: true }],
-  semi: ['error', 'never'],
-}
+  semi: 'off',
+};
 
 export default [
   {
@@ -60,4 +60,4 @@ export default [
       'vue/script-indent': ['error', 2, { baseIndent: 0, switchCase: 1 }],
     },
   },
-]
+];

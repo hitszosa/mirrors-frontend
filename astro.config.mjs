@@ -1,6 +1,6 @@
-import vue from '@astrojs/vue'
-import { defineConfig } from 'astro/config'
-import icon from 'astro-icon'
+import vue from '@astrojs/vue';
+import { defineConfig } from 'astro/config';
+import icon from 'astro-icon';
 
 export default defineConfig({
   integrations: [
@@ -14,4 +14,4 @@ export default defineConfig({
       },
     }),
   ],
-})
+});

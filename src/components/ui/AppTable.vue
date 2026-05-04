@@ -70,7 +70,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, useSlots, watch } from 'vue'
+import { computed, ref, useSlots, watch } from 'vue';
 
 type SortDirection = 'asc' | 'desc';
 
@@ -91,99 +91,99 @@ const props = defineProps<{
   sort?: TableSort;
   loading?: boolean;
   errorMessage?: string;
-}>()
+}>();
 
-const slots = useSlots()
-const activeSort = ref<TableSort | null>(props.sort ? { ...props.sort } : null)
+const slots = useSlots();
+const activeSort = ref<TableSort | null>(props.sort ? { ...props.sort } : null);
 
 watch(
   () => props.sort,
   (sort) => {
-    activeSort.value = sort ? { ...sort } : null
+    activeSort.value = sort ? { ...sort } : null;
   },
   { deep: true },
-)
+);
 
 const hasSlot = (key: string) => {
-  return Boolean(slots[`${key}-data`])
-}
+  return Boolean(slots[`${key}-data`]);
+};
 
 const getCellValue = (row: Record<string, unknown>, key: string) => {
-  return row[key]
-}
+  return row[key];
+};
 
 const getCellText = (row: Record<string, unknown>, key: string) => {
-  const value = getCellValue(row, key)
-  return value == null ? '' : String(value)
-}
+  const value = getCellValue(row, key);
+  return value == null ? '' : String(value);
+};
 
 const compareValues = (left: unknown, right: unknown) => {
   if (left == null && right == null) {
-    return 0
+    return 0;
   }
   if (left == null) {
-    return -1
+    return -1;
   }
   if (right == null) {
-    return 1
+    return 1;
   }
   if (typeof left === 'number' && typeof right === 'number') {
-    return left - right
+    return left - right;
   }
-  return String(left).localeCompare(String(right))
-}
+  return String(left).localeCompare(String(right));
+};
 
 const sortedRows = computed(() => {
-  const renderedRows = [...props.rows]
+  const renderedRows = [...props.rows];
   if (!activeSort.value) {
-    return renderedRows
+    return renderedRows;
   }
 
-  const { column, direction } = activeSort.value
+  const { column, direction } = activeSort.value;
   return renderedRows.sort((left, right) => {
     const result = compareValues(
       getCellValue(left, column),
       getCellValue(right, column),
-    )
-    return direction === 'asc' ? result : -result
-  })
-})
+    );
+    return direction === 'asc' ? result : -result;
+  });
+});
 
 const toggleSort = (columnKey: string) => {
   if (activeSort.value?.column === columnKey) {
     activeSort.value = {
       column: columnKey,
       direction: activeSort.value.direction === 'asc' ? 'desc' : 'asc',
-    }
-    return
+    };
+    return;
   }
 
   activeSort.value = {
     column: columnKey,
     direction: 'asc',
-  }
-}
+  };
+};
 
 const sortIndicator = (columnKey: string) => {
   if (activeSort.value?.column !== columnKey) {
-    return ''
+    return '';
   }
-  return activeSort.value.direction === 'asc' ? '▲' : '▼'
-}
+  return activeSort.value.direction === 'asc' ? '▲' : '▼';
+};
 
 const getAriaSort = (column: TableColumn) => {
   if (!column.sortable) {
-    return undefined
+    return undefined;
   }
 
   if (activeSort.value?.column !== column.key) {
-    return 'none'
+    return 'none';
   }
 
-  return activeSort.value.direction === 'asc' ? 'ascending' : 'descending'
-}
+  return activeSort.value.direction === 'asc' ? 'ascending' : 'descending';
+};
 
 const getRowKey = (row: Record<string, unknown>, index: number) => {
-  return String(row.name ?? row.id ?? index)
-}
+  return String(row.name ?? row.id ?? index);
+};
 </script>

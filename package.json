@@ -16,8 +16,8 @@
     "mock:clean": "bun scripts/clean-mock.mjs"
   },
   "lint-staged": {
-    "*.{astro,css,js,json,md,mjs,ts,vue}": [
-      "prettier --write"
+    "*.{astro,css,js,json,mjs,ts,vue}": [
+      "prettier --write --plugin prettier-plugin-astro"
     ],
     "*.{js,mjs,cjs,ts,vue}": [
       "eslint --fix"

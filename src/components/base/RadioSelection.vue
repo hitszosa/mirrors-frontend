@@ -21,35 +21,35 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted } from 'vue';
 
 const props = defineProps<{
   items: string[];
   index: number;
-}>()
+}>();
 const emit = defineEmits<{
   'update:index': [item: string, index: number];
-}>()
+}>();
 
 const getButtonStyle = (idx: number) => {
   return idx === props.index
     ? 'bg-surface text-primary shadow-sm ring-1 ring-surface-border'
-    : 'hocus:text-surface-fg cursor-pointer'
-}
+    : 'hocus:text-surface-fg cursor-pointer';
+};
 
 const emitUpdate = () => {
   if (props.items.length === 0) {
-    return
+    return;
   }
 
-  emit('update:index', props.items[0], 0)
-}
+  emit('update:index', props.items[0], 0);
+};
 
 const onSelect = (item: string, index: number) => {
-  emit('update:index', item, index)
-}
+  emit('update:index', item, index);
+};
 
 onMounted(() => {
-  emitUpdate()
-})
+  emitUpdate();
+});
 </script>

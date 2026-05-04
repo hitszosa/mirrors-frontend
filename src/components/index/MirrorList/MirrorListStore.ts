@@ -1,6 +1,6 @@
-import { defineStore } from 'pinia'
-import dayjs from 'dayjs'
-import { onMounted, ref } from 'vue'
+import { defineStore } from 'pinia';
+import dayjs from 'dayjs';
+import { onMounted, ref } from 'vue';
 
 type RowData = {
   id: number;
@@ -17,29 +17,29 @@ type MirrorListItem = {
 };
 
 const getMirrorListData = async () => {
-  return await fetch('/tunasync_status.json')
-}
+  return await fetch('/tunasync_status.json');
+};
 
 export const useMirrorListStore = defineStore('mirror-list', () => {
-  const rows = ref<RowData[]>([])
-  const rawData = ref<MirrorListItem[] | null>(null)
-  const loading = ref(true)
-  const errorMessage = ref('')
+  const rows = ref<RowData[]>([]);
+  const rawData = ref<MirrorListItem[] | null>(null);
+  const loading = ref(true);
+  const errorMessage = ref('');
 
   const createData = async () => {
-    loading.value = true
-    errorMessage.value = ''
+    loading.value = true;
+    errorMessage.value = '';
 
     try {
-      const tunasync = await getMirrorListData()
+      const tunasync = await getMirrorListData();
 
       if (!tunasync.ok) {
-        throw new Error(`Mirror status request failed with ${tunasync.status}`)
+        throw new Error(`Mirror status request failed with ${tunasync.status}`);
       }
 
-      const data = (await tunasync.json()) as MirrorListItem[]
+      const data = (await tunasync.json()) as MirrorListItem[];
 
-      rawData.value = data
+      rawData.value = data;
       rows.value = data
         .sort((a, b) => a.name.localeCompare(b.name))
         .map((item, idx) => {
@@ -51,25 +51,25 @@ export const useMirrorListStore = defineStore('mirror-list', () => {
               .unix(item.last_update_ts)
               .format('YYYY-MM-DD HH:mm'),
             status: item.status,
-          }
-        })
+          };
+        });
     } catch {
-      rawData.value = null
-      rows.value = []
-      errorMessage.value = 'Mirror list is temporarily unavailable.'
+      rawData.value = null;
+      rows.value = [];
+      errorMessage.value = 'Mirror list is temporarily unavailable.';
     } finally {
-      loading.value = false
+      loading.value = false;
     }
-  }
+  };
 
   onMounted(async () => {
-    await createData()
-  })
+    await createData();
+  });
 
   return {
     rows,
     loading,
     errorMessage,
     rawData,
-  }
-})
+  };
+});

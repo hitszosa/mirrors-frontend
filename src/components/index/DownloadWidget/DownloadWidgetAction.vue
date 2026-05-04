@@ -12,17 +12,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import AppModal from '@components/ui/AppModal.vue'
-import IndexDownloadModal from '../DownloadModal/DownloadModal.vue'
+import { ref } from 'vue';
+import AppModal from '@components/ui/AppModal.vue';
+import IndexDownloadModal from '../DownloadModal/DownloadModal.vue';
 
-const isOpen = ref(false)
+const isOpen = ref(false);
 
 const onToggleModal = () => {
-  isOpen.value = true
-}
+  isOpen.value = true;
+};
 
 const onCloseModal = () => {
-  isOpen.value = false
-}
+  isOpen.value = false;
+};
 </script>

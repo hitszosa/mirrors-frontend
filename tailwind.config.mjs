@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 
-import uiPreset from '@hitszosa/ui/tailwind/preset'
-import typography from '@tailwindcss/typography'
-import plugin from 'tailwindcss/plugin'
+import uiPreset from '@hitszosa/ui/tailwind/preset';
+import typography from '@tailwindcss/typography';
+import plugin from 'tailwindcss/plugin';
 
 export default {
   presets: [uiPreset],
   plugins: [
     plugin(function ({ addVariant }) {
-      addVariant('hocus', ['&:hover', '&:focus'])
+      addVariant('hocus', ['&:hover', '&:focus']);
     }),
     typography,
   ],
@@ -79,4 +79,4 @@ export default {
       },
     },
   },
-}
+};
