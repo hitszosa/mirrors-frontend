@@ -20,15 +20,15 @@ const themeInitScript = `(function(){const key='nuxt-color-mode';const stored=lo
     <title>{title}</title>
     <script is:inline set:html={themeInitScript}></script>
   </head>
-  <body class="dark:bg-gray-900">
-    <div class="dark:bg-gray-900">
-      <div class="flex w-full flex-col text-slate-800 dark:text-slate-200">
+  <body class="bg-page-bg text-page-fg">
+    <div class="bg-page-bg">
+      <div class="flex w-full flex-col text-page-fg">
         <div class="fixed top-0 left-0 z-50 w-full">
           <Navbar client:load titleName="HITSZ OSA Mirrors" currentPath={currentPath}>
             <img slot="logo" class="h-full w-full" src="/images/logo.svg" alt="" />
           </Navbar>
         </div>
-        <div class="flex flex-col justify-between min-h-screen bg-inherit pt-28 px-6 md:pt-16 md:px-12">
+        <div class="flex min-h-screen flex-col justify-between bg-inherit px-6 pt-28 md:px-12 md:pt-16">
           <main class="mx-auto flex w-full justify-around py-12">
             <slot />
           </main>

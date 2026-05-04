@@ -15,14 +15,14 @@ const dateString = new Intl.DateTimeFormat('zh-CN', {
 }).format(new Date(digest.date))
 ---
 
-<li class="flex justify-between items-center">
-  <div class="min-w-0 flex items-center">
-    <div class="pr-2 flex items-center justify-center">
+<li class="flex items-center justify-between gap-4 text-sm text-muted">
+  <div class="flex min-w-0 items-center text-fg">
+    <div class="flex items-center justify-center pr-2 text-brand">
       <Icon name="icon-park-outline:align-text-left" />
     </div>
     <a
       href={digest._path}
-      class="truncate transition-colors relative inline-block z-10 decoration-dotted underline-offset-4 hocus:underline hover:cursor-pointer"
+      class="relative inline-block truncate decoration-dotted underline-offset-4 transition-colors hocus:cursor-pointer hocus:text-brand hocus:underline"
     >
       {digest.title}
     </a>
