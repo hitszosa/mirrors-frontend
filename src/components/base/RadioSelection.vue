@@ -24,11 +24,11 @@
 import { onMounted } from 'vue'
 
 const props = defineProps<{
-  items: string[]
-  index: number
+  items: string[];
+  index: number;
 }>()
 const emit = defineEmits<{
-  'update:index': [item: string, index: number]
+  'update:index': [item: string, index: number];
 }>()
 
 const getButtonStyle = (idx: number) => {

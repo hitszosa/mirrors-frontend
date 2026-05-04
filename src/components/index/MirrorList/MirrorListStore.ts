@@ -3,18 +3,18 @@ import dayjs from 'dayjs'
 import { onMounted, ref } from 'vue'
 
 type RowData = {
-  id: number
-  name: string
-  files: string
-  lastUpdate: string
-  status: string
-}
+  id: number;
+  name: string;
+  files: string;
+  lastUpdate: string;
+  status: string;
+};
 
 type MirrorListItem = {
-  name: string
-  last_update_ts: number
-  status: string
-}
+  name: string;
+  last_update_ts: number;
+  status: string;
+};
 
 const getMirrorListData = async () => {
   return await fetch('/tunasync_status.json')
@@ -37,7 +37,7 @@ export const useMirrorListStore = defineStore('mirror-list', () => {
         throw new Error(`Mirror status request failed with ${tunasync.status}`)
       }
 
-      const data = await tunasync.json() as MirrorListItem[]
+      const data = (await tunasync.json()) as MirrorListItem[]
 
       rawData.value = data
       rows.value = data
@@ -53,13 +53,11 @@ export const useMirrorListStore = defineStore('mirror-list', () => {
             status: item.status,
           }
         })
-    }
-    catch {
+    } catch {
       rawData.value = null
       rows.value = []
       errorMessage.value = 'Mirror list is temporarily unavailable.'
-    }
-    finally {
+    } finally {
       loading.value = false
     }
   }
