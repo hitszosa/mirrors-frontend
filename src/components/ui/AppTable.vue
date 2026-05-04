@@ -13,12 +13,12 @@
             <button
               v-if="column.sortable"
               type="button"
-               class="inline-flex items-center gap-1 rounded-sm transition-colors hocus-visible:outline-none hocus-visible:ring-2 hocus-visible:ring-primary hocus:text-primary hover:cursor-pointer"
-               @click="toggleSort(column.key)"
-             >
-               <span>{{ column.label }}</span>
-               <span class="text-xs text-muted-fg">{{ sortIndicator(column.key) }}</span>
-             </button>
+              class="inline-flex items-center gap-1 rounded-sm transition-colors hocus-visible:outline-none hocus-visible:ring-2 hocus-visible:ring-primary hocus:text-primary hover:cursor-pointer"
+              @click="toggleSort(column.key)"
+            >
+              <span>{{ column.label }}</span>
+              <span class="text-xs text-muted-fg">{{ sortIndicator(column.key) }}</span>
+            </button>
             <span v-else>{{ column.label }}</span>
           </th>
         </tr>

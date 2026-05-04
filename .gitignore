@@ -8,6 +8,7 @@
 dist
 public/tunasync_status.json
 public/static/res_link.json
+public/help_list.json
 
 # Node dependencies
 node_modules
