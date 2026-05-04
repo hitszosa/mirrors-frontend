@@ -1,7 +1,7 @@
 <template>
   <header
-    class="whitespace-nowrap flex items-center px-10 z-50 w-screen shadow-sm
-    backdrop-blur-md backdrop-saturate-200 bg-white/70 dark:bg-gray-900/70
+    class="whitespace-nowrap flex items-center px-10 z-50 w-screen border-b border-border/70 shadow-sm
+    backdrop-blur-md backdrop-saturate-200 bg-surface/80
     flex-col h-28 justify-evenly md:flex-row md:py-0 md:h-16 md:justify-between md:space-x-12"
   >
     <a
@@ -15,7 +15,7 @@
         >
           <slot name="logo" />
         </div>
-        <span class="text-xl font-medium text-slate-800 dark:text-slate-200">
+        <span class="text-xl font-medium text-fg">
           {{ $props.titleName }}
         </span>
       </div>
@@ -31,10 +31,10 @@
             :target="item.isExternalLink ? '_blank' : undefined"
             :rel="item.isExternalLink ? 'noreferrer' : undefined"
             :aria-current="isLinkActive(item.link) ? 'page' : undefined"
-            class="transition-colors after:transition-all relative inline-block
-            hocus:text-blue-400 dark:hocus:text-blue-300
+            class="transition-colors after:transition-all relative inline-block rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring
+            hocus:text-brand
             after:block after:absolute after:left-1/2 after:-bottom-2 after:-translate-x-1/2 after:rounded-full after:-z-10
-            hocus:after:w-full hocus:after:h-2 hocus:after:bg-slate-100"
+            hocus:after:w-full hocus:after:h-2 hocus:after:bg-brand-soft/70"
             :class="getNavLinkClass(isLinkActive(item.link))"
           >
             {{ item.label }}
@@ -43,8 +43,8 @@
       </ul>
       <button
         name="Change theme"
-        class="transition-colors flex items-center w-4 h-4 text-lg text-slate-500 dark:text-slate-400
-        hocus:text-blue-400 dark:hocus:text-blue-300"
+        class="transition-colors flex items-center w-4 h-4 rounded-sm text-lg text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring
+        hocus:text-brand"
         @click="onNextTheme"
       >
         <Transition
@@ -161,8 +161,8 @@ const isLinkActive = (link: string) => {
 
 const getNavLinkClass = (isActive: boolean) => {
   return isActive
-    ? 'text-blue-400 dark:text-blue-300 after:w-full after:h-2 after:bg-blue-400/20 dark:after:bg-blue-300/20'
-    : 'text-slate-500 dark:text-slate-400 after:bg-blue-400/20 dark:after:bg-blue-300/20 after:w-0 after:h-0'
+    ? 'text-brand after:w-full after:h-2 after:bg-brand-soft/80'
+    : 'text-muted after:bg-brand-soft/80 after:w-0 after:h-0'
 }
 
 watch(theme, () => {

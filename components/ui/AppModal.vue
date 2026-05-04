@@ -1,7 +1,7 @@
 <template>
   <div
     v-show="modelValue"
-    class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 px-4 py-8"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 px-4 py-8 backdrop-blur-sm"
     :aria-hidden="modelValue ? undefined : 'true'"
     @click="onBackdropClick"
   >
@@ -11,7 +11,7 @@
       role="dialog"
       :aria-modal="modelValue ? 'true' : undefined"
       tabindex="-1"
-      class="h-[calc(100vh-4em)] max-h-full w-full max-w-4xl overflow-hidden rounded-2xl focus:outline-none"
+      class="h-[calc(100vh-4em)] max-h-full w-full max-w-4xl overflow-hidden rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
     >
       <slot />
     </div>

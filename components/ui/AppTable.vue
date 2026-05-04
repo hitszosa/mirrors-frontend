@@ -1,45 +1,45 @@
 <template>
-  <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
-    <table class="min-w-full divide-y divide-slate-200 dark:divide-slate-700">
-      <thead class="bg-slate-50 dark:bg-slate-800/80">
+  <div class="overflow-hidden rounded-2xl border border-border bg-surface shadow-sm">
+    <table class="min-w-full divide-y divide-border">
+      <thead class="bg-surface-muted/80">
         <tr>
           <th
             v-for="column in columns"
             :key="column.key"
             scope="col"
             :aria-sort="getAriaSort(column)"
-            class="px-4 py-3 text-left text-sm font-medium text-slate-600 dark:text-slate-200"
+            class="px-4 py-3 text-left text-sm font-medium text-muted"
           >
             <button
               v-if="column.sortable"
               type="button"
-              class="inline-flex items-center gap-1 transition-colors hocus:text-blue-500"
-              @click="toggleSort(column.key)"
-            >
-              <span>{{ column.label }}</span>
-              <span class="text-xs text-slate-400 dark:text-slate-500">{{ sortIndicator(column.key) }}</span>
-            </button>
+               class="inline-flex items-center gap-1 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring hocus:text-brand"
+               @click="toggleSort(column.key)"
+             >
+               <span>{{ column.label }}</span>
+               <span class="text-xs text-muted">{{ sortIndicator(column.key) }}</span>
+             </button>
             <span v-else>{{ column.label }}</span>
           </th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+      <tbody class="divide-y divide-border">
         <tr v-if="loading">
           <td
             :colspan="columns.length"
             class="px-4 py-6"
           >
             <div class="space-y-3">
-              <div class="h-4 w-1/3 animate-pulse rounded-full bg-slate-200 dark:bg-slate-700" />
-              <div class="h-4 w-full animate-pulse rounded-full bg-slate-200 dark:bg-slate-700" />
-              <div class="h-4 w-2/3 animate-pulse rounded-full bg-slate-200 dark:bg-slate-700" />
-            </div>
-          </td>
-        </tr>
+               <div class="h-4 w-1/3 animate-pulse rounded-full bg-surface-muted" />
+               <div class="h-4 w-full animate-pulse rounded-full bg-surface-muted" />
+               <div class="h-4 w-2/3 animate-pulse rounded-full bg-surface-muted" />
+             </div>
+           </td>
+         </tr>
         <tr v-else-if="sortedRows.length === 0">
           <td
             :colspan="columns.length"
-            class="px-4 py-6 text-center text-sm text-slate-500 dark:text-slate-400"
+            class="px-4 py-6 text-center text-sm text-muted"
           >
             No results found.
           </td>
@@ -48,7 +48,7 @@
           <tr
             v-for="(row, rowIndex) in sortedRows"
             :key="getRowKey(row, rowIndex)"
-            class="text-sm text-slate-700 dark:text-slate-200"
+            class="text-sm text-fg transition-colors hocus:bg-surface-muted/60"
           >
             <td
               v-for="column in columns"

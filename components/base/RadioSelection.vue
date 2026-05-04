@@ -2,7 +2,7 @@
   <ul
     role="radiogroup"
     aria-orientation="vertical"
-    class="flex flex-col h-full overflow-y-auto list-none bg-gray-100 dark:bg-gray-800 p-1 rounded-xl whitespace-nowrap"
+    class="flex flex-col h-full overflow-y-auto list-none rounded-xl border border-border bg-surface-muted p-1 whitespace-nowrap"
   >
     <li
       v-for="(item, idx) in $props.items"
@@ -14,7 +14,7 @@
         role="radio"
         :aria-checked="props.index === idx"
         :tabindex="props.index === idx ? 0 : -1"
-        class="transition-colors p-3 w-full rounded-xl"
+        class="w-full rounded-xl p-3 text-left text-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         :class="getButtonStyle(idx)"
         @click="onSelect(item, idx)"
       >
@@ -36,7 +36,9 @@ const emit = defineEmits<{
 }>()
 
 const getButtonStyle = (idx: number) => {
-  return idx === props.index ? 'bg-white dark:bg-gray-900 shadow-sm' : ''
+  return idx === props.index
+    ? 'bg-surface text-brand shadow-sm ring-1 ring-border'
+    : 'hocus:bg-surface hocus:text-fg'
 }
 
 const emitUpdate = () => {
